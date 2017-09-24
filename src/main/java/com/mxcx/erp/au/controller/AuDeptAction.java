@@ -54,7 +54,6 @@ public class AuDeptAction extends BaseController {
 	@RequestMapping(value = "/manager/erp/au/findAuDeptList.do", method = RequestMethod.POST)
 	@ResponseBody
 	public DataGrid findList(HttpServletRequest request, @ModelAttribute("pp") PageParameter pageParameter) {
-		System.out.println(111);
 		return auDeptService.findList(pageParameter);
 	}
 
