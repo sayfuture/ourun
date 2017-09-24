@@ -1,0 +1,18 @@
+[{
+	"id":"#4CB052",
+	"text":"绿色",
+	"icon":"4CB052.jpg"
+},{
+	"id":"#668CB3",
+	"text":"青色",
+	"icon":"668CB3.jpg"
+},{
+	"id":"#B373B3",
+	"text":"紫色",
+	"icon":"B373B3.jpg",
+	"selected":true
+},{
+	"id":"#D96666",
+	"text":"绯红",
+	"icon":"D96666.jpg"
+}]

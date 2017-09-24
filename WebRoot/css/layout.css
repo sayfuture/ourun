@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	width:100%;
+	height:100%; 
+	margin:0; 
+	position:relative;
+	}
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:"微软雅黑";
+	background:#fff;
+	position:relative;
+	background: -webkit-radial-gradient(#6d6d6d 20%,#353535 80%); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#6d6d6d 20%,#353535 80%); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#6d6d6d 20%,#353535 80%); /* Firefox 3.6 - 15 */
+    background: radial-gradient(#6d6d6d 20%,#353535 80%); /* 标准的语法 */
+	}
+#container{
+	width: 980px;
+	height: 500px;
+	margin: 0 auto;
+	background-image: url(../image/background.jpg);
+	border-radius: 2px;
+	background-repeat: no-repeat;
+	position: absolute; left: 461.5px; top:90px;box-shadow:0px 0px 20px #000;
+	}
+/*图片和链接去除边框*/
+img{
+	border:0;
+	}
+a{
+	outline:none;
+	}
+/*左侧图片*/
+.left{
+	float: left;
+	width: 517px;
+	height: 375px;
+	}
+/*右侧表单*/
+.right{
+	float:left;
+	width:343px;
+	height:343px;
+	margin:70px 0 42px 30px;
+	}
+form#loginForm {
+	width:100%;
+    padding:0;
+	}
+form#loginForm fieldset{
+	outline:none;
+	display:block;
+	width:100%;
+	height:100%;
+	padding:0;
+	border:0;
+	}
+form#loginForm h1 {
+	width:100%;
+	height:40px;
+	line-height:40px;
+    color:#000;
+	margin:0 auto 20px auto;
+	font-family:"微软雅黑";
+    font-size:28px;
+	font-weight:normal;
+	}
+form#loginForm ol{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	}
+.sks1 {
+	float:left;
+	-webkit-border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	margin-bottom:10px;
+	}
+.sks2 {
+	float:left;
+	-webkit-border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	margin-bottom:10px;
+	}
+.sks3 {
+	float:left;
+	-webkit-border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	margin-bottom:10px;
+	_margin-left:2px;
+	_margin-top:0px;
+	}
+.sks{
+	float:right;
+	line-height: 30px;
+	margin-top:1px;
+	margin-right:24px;
+	_margin-right:10px;
+	}
+form#loginForm label {
+	float:left;
+	font-family:"微软雅黑";
+	font-size: 16px;
+	width:80px;
+	line-height:28px;
+	}
+.text {
+	color: #000000;
+	background: #ffffff;
+	border: #CBCBCB solid 1px;
+	-webkit-border-radius: 3px;
+	font: normal 13px "微软雅黑";
+	outline: none;
+	padding: 5px;
+	width: 240px;
+	height:30px;
+	}
+.txt{
+	background: #ffffff;
+	border: #CBCBCB solid 1px;
+	-webkit-border-radius: 3px;
+	font: normal 13px "微软雅黑";
+	outline: none;
+	padding: 5px;
+	width:120px;
+	height:30px;
+	}
+form#loginForm input:not([type=button]):focus {
+	background: #FFFFFF;
+	border-top:1px solid #666;
+	border-bottom:1px solid #333;
+	box-shadow:2px 2px 4px #333;
+	/*border: #F44735 solid 1px;*/
+	}
+.button{
+	border:0;
+	cursor: pointer;
+	color:#FFFFFF;
+	font-size:16px;
+	font-weight:bold;
+	width:90px;
+	height:67px;
+    background: -webkit-linear-gradient(#353535,#6d6d6d,#353535); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#353535,#6d6d6d,#353535); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#353535,#6d6d6d,#353535); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#353535,#6d6d6d,#353535); /* 标准的语法 */
+	border-radius:4px;
+}
+	
+

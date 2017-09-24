@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+           http://www.springframework.org/schema/context  
+           http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+           http://www.springframework.org/schema/aop  
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd  
+           http://www.springframework.org/schema/task
+           http://www.springframework.org/schema/task/spring-task-4.0.xsd
+           ">
+
+	<context:annotation-config />
+
+
+
+	<!-- spring的属性加载器，加载properties文件中的属性 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:/config.properties</value>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders">
+			<value>true</value>
+		</property>
+		<property name="fileEncoding" value="utf-8" />
+	</bean>
+
+	<context:component-scan base-package="com">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${db.initialSize}" />
+		<!-- 连接池最大使用连接数量 -->
+		<property name="maxActive" value="${db.maxActive}" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${db.maxIdle}" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${db.minIdle}" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${db.maxWait}" />
+
+		<!-- <property name="poolPreparedStatements" value="true" /> <property 
+			name="maxPoolPreparedStatementPerConnectionSize" value="33" /> -->
+
+		<property name="validationQuery" value="${db.validationQuery}" />
+		<property name="testOnBorrow" value="${db.testOnBorrow}" />
+		<property name="testOnReturn" value="${db.testOnReturn}" />
+		<property name="testWhileIdle" value="${db.testWhileIdle}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${db.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${db.minEvictableIdleTimeMillis}" />
+		<!-- 打开removeAbandoned功能 -->
+		<property name="removeAbandoned" value="${db.removeAbandoned}" />
+		<!-- 1800秒，也就是30分钟 -->
+		<property name="removeAbandonedTimeout" value="${db.removeAbandonedTimeout}" />
+		<!-- 关闭abanded连接时输出错误日志 -->
+		<property name="logAbandoned" value="${db.logAbandoned}" />
+		<!-- 监控数据库 -->
+		<!-- <property name="filters" value="stat" /> -->
+		<property name="filters" value="${db.filters}" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hbm2ddl.auto">${db.hbm2ddl_auto}</prop>
+				<prop key="hibernate.show_sql">${db.show_sql}</prop>
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">${db.use_jdbc_metadata_defaults}</prop>
+				<prop key="hibernate.dialect">${db.dialect}</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="${db.packagesToScan}" />
+	</bean>
+	<!-- 电商数据库 -->
+	<bean name="dataSource1" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${db1.url}" />
+		<property name="username" value="${db1.username}" />
+		<property name="password" value="${db1.password}" />
+
+		<property name="initialSize" value="${db1.initialSize}" />
+		<property name="maxActive" value="${db1.maxActive}" />
+		<property name="maxIdle" value="${db1.maxIdle}" />
+		<property name="minIdle" value="${db1.minIdle}" />
+		<property name="maxWait" value="${db1.maxWait}" />
+
+		<!-- <property name="poolPreparedStatements" value="true" /> <property 
+			name="maxPoolPreparedStatementPerConnectionSize" value="33" /> -->
+
+		<property name="validationQuery" value="${db1.validationQuery}" />
+		<property name="testOnBorrow" value="${db1.testOnBorrow}" />
+		<property name="testOnReturn" value="${db1.testOnReturn}" />
+		<property name="testWhileIdle" value="${db1.testWhileIdle}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${db1.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${db1.minEvictableIdleTimeMillis}" />
+		<!-- 打开removeAbandoned功能 -->
+		<property name="removeAbandoned" value="${db1.removeAbandoned}" />
+		<!-- 1800秒，也就是30分钟 -->
+		<property name="removeAbandonedTimeout" value="${db1.removeAbandonedTimeout}" />
+		<!-- 关闭abanded连接时输出错误日志 -->
+		<property name="logAbandoned" value="${db1.logAbandoned}" />
+		<!-- 监控数据库 -->
+		<!-- <property name="filters" value="stat" /> -->
+		<property name="filters" value="${db1.filters}" />
+	</bean>
+
+	<bean id="sessionFactory1"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource1"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hbm2ddl.auto">${db1.hbm2ddl_auto}</prop>
+				<prop key="hibernate.show_sql">${db1.show_sql}</prop>
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">${db1.use_jdbc_metadata_defaults}</prop>
+				<prop key="hibernate.dialect">${db1.dialect}</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="${db1.packagesToScan}" />
+	</bean>
+
+	<bean id="" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="${db.configLocation}" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="${db.configLocation}" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:com/mxcx/erp/*/dao/mybatis/*.xml" />
+		<property name="typeAliasesPackage" value="com.mxcx.erp.*.dao.entity" />
+	</bean>
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean id="sqlSessionFactory1" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="${db1.configLocation}" />
+		<property name="dataSource" ref="dataSource1" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.mxcx.erp.base.commons.service" />
+	</bean>
+
+	<bean id="tmm_mybatis"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="tmm_mybatis1"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource1" />
+	</bean>
+
+	<tx:advice id="txAdvice_mybatis" transaction-manager="tmm_mybatis">
+		<tx:attributes>
+			<tx:method name="find_mybatis_*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<tx:advice id="txAdvice_mybatis1" transaction-manager="tmm_mybatis1">
+		<tx:attributes>
+			<tx:method name="find_mybatis_*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config expose-proxy="true">
+		<aop:pointcut id="txPointcut_mybatis" expression="${mbt.txPointcut}" />
+		<aop:advisor advice-ref="txAdvice_mybatis" pointcut-ref="txPointcut" />
+	</aop:config>
+
+	<aop:config expose-proxy="true">
+		<aop:pointcut id="txPointcut_mybatis1" expression="${mbt1.txPointcut}" />
+		<aop:advisor advice-ref="txAdvice_mybatis1" pointcut-ref="txPointcut1" />
+	</aop:config>
+
+	<aop:aspectj-autoproxy expose-proxy="true" />
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="transactionManager1"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory1"></property>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="modify*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="put*" propagation="REQUIRED" />
+			<tx:method name="use*" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="query*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+		</tx:attributes>
+	</tx:advice>
+	<aop:config expose-proxy="true">
+		<aop:pointcut id="txPointcut" expression="${aop.pointcut}" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+	</aop:config>
+
+
+	<tx:annotation-driven transaction-manager="transactionManager1" />
+	<tx:advice id="txAdvice1" transaction-manager="transactionManager1">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="modify*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="put*" propagation="REQUIRED" />
+			<tx:method name="use*" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="query*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+		</tx:attributes>
+	</tx:advice>
+	<aop:config expose-proxy="true">
+		<aop:pointcut id="txPointcut1" expression="${aop1.pointcut}" />
+		<aop:advisor advice-ref="txAdvice1" pointcut-ref="txPointcut1" />
+	</aop:config>
+
+	<!-- <bean id="TestMapper" class="org.mybatis.spring.mapper.MapperFactoryBean"> 
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" /> 注意指定的映射器类必须是一个接口，而不是具体的实现类 
+		<property name="mapperInterface" value="com.leSaaS.cerp.core.dao.TestMapper" 
+		/> </bean> -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.host}" />
+		<property name="port" value="${mail.port}" />
+		<property name="username" value="${mail.name}" />
+		<property name="password" value="${mail.password}" />
+		<!-- SMTP服务器验证 -->
+		<property name="javaMailProperties">
+			<props>
+				<!-- 验证身份 -->
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+				<prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="emailBaseInfo"
+		class="com.mxcx.erp.base.commons.service.email.EmailBaseInfo">
+		<property name="fromEmail" value="${mail.fromEmail}" />
+	</bean>
+	<bean id="multipartResolver" class="com.mxcx.erp.base.commons.controller.CommonsMultipartResolverExt">
+	  <property name="maxInMemorySize" value="1000000" />
+ 	  <property name="maxUploadSize" value="20000000000" />
+      <property name="defaultEncoding" value="utf8" />
+   </bean>
+   
+   
+   	<bean id="baseDao" class="com.mxcx.ec.base.commons.dao.BaseDao">
+  	 	<property name="sessionFactory" ref="sessionFactory"></property>
+  	 	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+   	</bean>
+    <bean id="baseDao1" class="com.mxcx.ec.base.commons.dao.BaseDao1">
+    	<property name="sessionFactory1" ref="sessionFactory1"></property>
+    	<property name="sqlSessionFactory1" ref="sqlSessionFactory1"></property>
+    </bean>
+      
+      <bean id="sayHelloService1"  class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">  
+        <property name="serviceUrl"      value="http://localhost:8080/ZjhdManager/say.act" />  
+        <property name="serviceInterface"    value="com.mxcx.erp.te.SayHelloService1"/>  
+     </bean> 
+    <task:annotation-driven/>
+    
+    
+	 <import resource="classpath:/redis-context.xml"/> 
+    
+</beans>

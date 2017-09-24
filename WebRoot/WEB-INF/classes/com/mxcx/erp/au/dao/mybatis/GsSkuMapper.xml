@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.mxcx.ec.base.commons.dao.BaseDao">  
+    <select id="find_mybatis_GsSKu" parameterType="map" resultType="com.mxcx.erp.gs.dao.entity.GsSku">
+		<![CDATA[  
+			select * from (
+         	 ${sqlString}
+          ) a   limit #{start},#{row}   
+		]]>
+	</select>
+	
+	 <select id="find_mybatis_GsSKu1" parameterType="map" resultType="com.mxcx.erp.gs.dao.entity.GsSku">
+		<![CDATA[  
+          ${sqlString}
+		]]>
+	</select>
+	
+</mapper>  

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/js/fullcalendar-2.0.1,WebRoot/js/jquery-easyui-1.3.5,WebRoot/js/ckeditor,WebRoot/js/commons
+validator.Unchecked=

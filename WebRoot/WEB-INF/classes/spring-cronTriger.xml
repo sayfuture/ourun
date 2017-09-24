@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean name="collateTimer" class="com.mxcx.ec.timer.CollateTimer" />
+	<bean id="collateDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="collateTimer" />
+		</property>
+		<property name="targetMethod">
+			<value>collate</value>
+		</property>
+	</bean>
+	<bean id="collateTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="collateDetail" />
+		</property>
+		<!-- 每天的晚上2点触发 0 0 2 * * ? 0 * 08-21 * * ? -->
+		<property name="cronExpression">
+			<value>0/10 * * * * ?</value>
+		</property>
+	</bean>
+	<!-- 配置整个系统的触发器列表 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- <ref bean="collateTrigger" /> -->
+			</list>
+		</property>
+	</bean>
+</beans>

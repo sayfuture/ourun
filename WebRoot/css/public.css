@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*公共方法*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255,0,0,0); /*点击后不会出现虚边框*/
+}
+
+body {
+    font-family: "黑体";
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*当你点击一个链接或者通过Javascript定义
+            的可点击元素的时候，它就会出现一个半透明的灰色背景(只针对ios ipad)*/
+}
+
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+}
+
+
+
+h1, h2, h3, h4 {
+font-weight:normal;}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic; /*图像失真不现象*/
+}
+
+
+
+input, textarea {
+    outline: none; /*外框为0*/
+    background-color: transparent; /*背景颜色透明*/
+    border: 0px;
+    -webkit-appearance: none;
+}
+
+
+
+    /*去掉苹果浏览器自带的样式 可以去掉苹果的渲染，从而实现网页在android，ios系统下显示一致。*/
+    input[type="button"], input[type="submit"], input[type="reset"] {
+        -webkit-appearance: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+
+     /*按钮按下当然瞬间出现颜色
+         input[type=button]:active, input[type="submit"]:active {
+            background-color: yellow;
+        }*/
+
+
+
+/*清除浮动*/
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
