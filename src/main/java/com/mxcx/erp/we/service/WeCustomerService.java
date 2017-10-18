@@ -13,7 +13,10 @@ import com.mxcx.erp.we.dao.entity.WeCustomer;
 public interface WeCustomerService {
 
 	public Boolean deleteWeCustomer(String id, AuEmployee auEmployee);
-	public Boolean modifyWeCustomer(WeCustomer weCustomer, AuEmployee auEmployee);
+
+     public   void modifyWeCustomer(WeCustomer weCustomer);
+
+       public Boolean modifyWeCustomer(WeCustomer weCustomer, AuEmployee auEmployee);
 	public DataGrid findWeCustomerList(PageParameter pageParameter,AuEmployee auEmployee);
 	public WeCustomer findWeCustomerByID(String id);
 	public void saveWeChatUser();

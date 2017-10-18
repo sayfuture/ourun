@@ -24,11 +24,16 @@ public class WeCustomer extends BasePo {
 	private Integer is_follow;
 	@Column(name = "PHONE")
 	private String phone;
+   @Column(name = "CITY")
+   private String city;
+   @Column(name = "PROVINCE")
+   private String province;
+   @Column(name = "ADDRESS")
+   private String address;
 	@Column(name = "CUSTOMER_NAME")
 	private String customer_name;
-	@Column(name = "COMPANYID")
-	private String companyId;
-	
+	@Column(name = "COMPANYIDS")
+	private String companyIds;
 	@Column(name = "CAR_TYPE")
 	private String car_type;
 	@Column(name = "KILOMETERS")
@@ -62,11 +67,11 @@ public class WeCustomer extends BasePo {
 	public String getCustomer_name(){
 		return customer_name;
 	}
-	public void setCompanyId(String companyId){
-	this.companyId=companyId;
+	public void setCompanyIds(String companyIds){
+	this.companyIds=companyIds;
 	}
-	public String getCompanyId(){
-		return companyId;
+	public String getCompanyIds(){
+		return companyIds;
 	}
 	public String getOpenId() {
 		return openId;
@@ -98,5 +103,29 @@ public class WeCustomer extends BasePo {
 	public void setNext_maintain_content(String next_maintain_content) {
 		this.next_maintain_content = next_maintain_content;
 	}
-}
+
+	   public String getCity() {
+		   return city;
+	   }
+
+	   public void setCity(String city) {
+		   this.city = city;
+	   }
+
+	   public String getProvince() {
+		   return province;
+	   }
+
+	   public void setProvince(String province) {
+		   this.province = province;
+	   }
+
+	   public String getAddress() {
+		   return address;
+	   }
+
+	   public void setAddress(String address) {
+		   this.address = address;
+	   }
+   }
 

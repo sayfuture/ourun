@@ -96,7 +96,9 @@ public class AuEmployeeServiceImpl extends BaseService<AuEmployee> implements
 			if(null!=filePathName && !filePathName.isEmpty()){
 				auEmployee.setShop_file_name1(timedate.replace("//", "/")+filePathName);
 			}
-			
+			auEmployee.setAppid(Constant.APPID);
+			auEmployee.setAppsecret(Constant.APPSECRET);
+			auEmployee.setWxname(Constant.WXNAME);
 			this.addPo(auEmployee, auEmployeeTemp);
 
 			// AuDept auDept =

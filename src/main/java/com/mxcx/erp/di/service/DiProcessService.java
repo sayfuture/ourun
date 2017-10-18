@@ -27,8 +27,8 @@ public interface DiProcessService {
 	public DiProcess findDiProcessByID(String cardId,String openId);
 	public Boolean saveDiProcessInfo(AuEmployee auEmployee, DiCard diCard,
 			WeCustomer weCustomer);
-	public void saveProcessInfo(HttpServletRequest request,ModelAndView view, DiSendRecode diSendRecode,
-			String openId, String cardId, AuEmployee auEmployee);
+	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode,
+                                String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone);
 	
 }
 

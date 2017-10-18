@@ -19,6 +19,7 @@ public class Constant {
 	 */
 	public static final String APPID="wxcddc3ffbcdf9acf3";
 	public static final String APPSECRET="ac3f6ae887ab4a45eae281c8b0db9c6b";
+	public static final String WXNAME="gh_a02648605eb2";
 	/**
 	 * tokenURL
 	 */

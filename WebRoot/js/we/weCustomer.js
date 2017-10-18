@@ -31,6 +31,48 @@ $(function() {
 			title : '车型',
 			width : 150
 		}, {
+            field : 'province',
+            title : '省',
+            width : 80,
+			formatter:function(value,row){
+                $.ajax({
+                    method : 'get',
+                    url : getCurProjPath()+'/news/erp/findProvincesById.do',
+                    data : 'provinceId=' + value,
+                    dataType : "json",
+                    async : false,
+                    success : function(data) {
+                       return data.p;
+                    },
+                    error : function(msg) {
+                        return '';
+                    }
+                });
+			}
+        }, {
+            field : 'city',
+            title : '市',
+            width : 80,
+            formatter:function(value,row){
+                $.ajax({
+                    method : 'get',
+                    url : getCurProjPath()+'/news/erp/findCitiesById.do',
+                    data : 'cityId=' + value,
+                    dataType : "json",
+                    async : false,
+                    success : function(data) {
+                        return data.n;
+                    },
+                    error : function(msg) {
+                        return '';
+                    }
+                });
+            }
+        }, {
+            field : 'address',
+            title : '地址',
+            width : 200
+        }, {
 			field : 'kilometers',
 			title : '行驶公里数',
 			width : 100

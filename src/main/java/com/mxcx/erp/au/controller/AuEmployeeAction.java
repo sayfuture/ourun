@@ -54,7 +54,7 @@ public class AuEmployeeAction extends BaseController {
 	 * 通过人员和权限确定按钮id的集合
 	 * @param map
 	 * @param request
-	 * @param functionType权限
+	 * @param functionType 权限
 	 * @return
 	 */
 	@RequestMapping(value = "/manager/getEmployeeButtons.do", method = RequestMethod.POST)

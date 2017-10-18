@@ -88,7 +88,7 @@
       				<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">手&nbsp;机&nbsp;号&nbsp;</th> 
    					<td class="shandan"><span><input name="tel"  id="tel" class="easyui-validatebox" data-options="required:true,validType:'length[1,20]'" style="width:200px;height:25px;" /></span></td>  
   				</tr>
-  				<tr>
+  			<!--	<tr>
   					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">微信appid</th> 
    					<td class="shandan">
    						<span>
@@ -98,7 +98,7 @@
       				<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">微信appsecret</th> 
    					<td class="shandan"><span>
    					<input name="appsecret"  id="appsecret" class="easyui-validatebox" data-options="required:true,validType:'length[1,50]'" style="width:200px;height:25px;" /></span></td>  
-  				</tr>
+  				</tr>-->
   				<tr> 
  				 	<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">店&nbsp;铺&nbsp;图&nbsp;片</th> 
    					<td class="shandan">
@@ -107,9 +107,9 @@
    					<input id="shop_file_name" idm="preview1" type="file" size="25" name="shop_file_name" onchange="javascript:setImagePreview(this);"  data-options="required:true,validType:'length[1,100]'"></input>
    					</span></td>  
   				    
-  				    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">微&nbsp;信&nbsp;号</th> 
+  				  <!--  <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">微&nbsp;信&nbsp;号</th>
    					<td class="shandan"><span>
-   					<input name="wxname"  id="wxname" class="easyui-validatebox" data-options="required:true,validType:'length[1,50]'" style="width:200px;height:25px;" /></span></td>  
+   					<input name="wxname"  id="wxname" class="easyui-validatebox" data-options="required:true,validType:'length[1,50]'" style="width:200px;height:25px;" /></span></td>  -->
   				</tr>
   				<tr>
   				  <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">店&nbsp;铺&nbsp;地&nbsp;址</th> 

@@ -29,6 +29,6 @@
 //进入优惠券详情页面(type=0:进入自己可用的页面)(type=1:进入分享给朋友的页面)
 function goCouponDetails(type) {
 //location.href = 'cardInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&recode=${recode}&openId=${openId}&type=0';
- location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=http://www.vanloon123.cn/ourun/news/cardInfo.do&response_type=code&scope=snsapi_userinfo&state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${recode}#wechat_redirect';
+ location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=http://www.vanloon456.cn/ourun/news/cardInfo.do&response_type=code&scope=snsapi_userinfo&state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${recode}#wechat_redirect';
 }
 </script>

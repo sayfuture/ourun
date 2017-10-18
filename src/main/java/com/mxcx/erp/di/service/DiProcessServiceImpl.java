@@ -32,7 +32,6 @@ import com.mxcx.erp.utils.Constant;
 import com.mxcx.erp.we.dao.entity.WeCustomer;
 import com.mxcx.erp.we.service.WeCustomerService;
 import com.mxcx.erp.wechat.service.WeChatService;
-import com.mxcx.erp.wechat.service.WeChatServiceImpl;
 
 /**
  * DiProcessServiceImpl Thu Dec 29 20:53:47 CST 2016 hmy
@@ -179,7 +178,7 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 			return null;
 	}
 	@Override
-	public void saveProcessInfo(HttpServletRequest request,ModelAndView view,DiSendRecode diSendRecode,String openId,String cardId,AuEmployee auEmployee){
+	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode, String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone){
 		Date date=new Date();
 		if(diSendRecode!=null){
 			//同一个人
@@ -208,6 +207,18 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 					}else{
 						view.addObject("messageInfo", "本次活动优惠券已领取完了，请关注下次活动！");
 					}
+					WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
+					if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(car_type)||StringUtils.isEmpty(phone)){
+					}else{
+					weCustomer.setAddress(address);
+					weCustomer.setCar_type(car_type);
+					weCustomer.setCity(cityId);
+					weCustomer.setPhone(phone);
+					weCustomer.setProvince(provId);}
+					if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else {
+						weCustomer.setCompanyIds(weCustomer.getCompanyIds() + auEmployee.getCompany().getId() + "|");
+					}
+					weCustomerService.modifyWeCustomer(weCustomer);
 				}
 			}
 			//分享出去的情况
@@ -230,6 +241,18 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 							WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
 							if(weCustomer==null){
 								diSendRecode.setNew_weuser(diSendRecode.getNew_weuser()+1);
+							}else{
+								if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(car_type)||StringUtils.isEmpty(phone)){
+								}else{
+									weCustomer.setAddress(address);
+									weCustomer.setCar_type(car_type);
+									weCustomer.setCity(cityId);
+									weCustomer.setPhone(phone);
+									weCustomer.setProvince(provId);}
+								if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else {
+									weCustomer.setCompanyIds(weCustomer.getCompanyIds() + auEmployee.getCompany().getId() + "|");
+								}
+								weCustomerService.modifyWeCustomer(weCustomer);
 							}
 							diSendRecode.setSharenum(diSendRecode.getSharenum()+1);
 							diSendRecodeService.updateDiSendRecode(diSendRecode);

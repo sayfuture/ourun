@@ -65,7 +65,10 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 		}
 		return flag;
 	}
-
+	@Override
+	public void modifyWeCustomer(WeCustomer weCustomer){
+		this.modify(weCustomer);
+	}
 	@Override
 	public Boolean modifyWeCustomer(WeCustomer weCustomer, AuEmployee auEmployee) {
 		Boolean flag = true;
@@ -76,6 +79,7 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 			weCustomerTemp.setCustomer_name(weCustomer.getCustomer_name());
 			weCustomerTemp.setPhone(weCustomer.getPhone());
 			weCustomerTemp.setIs_follow(weCustomer.getIs_follow());
+			weCustomerTemp.setCompanyIds(weCustomer.getCompanyIds());
 			this.modify(weCustomerTemp, auEmployee);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -139,8 +143,8 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 			paraMap.put("end", end);
 		}	
 		if(StringUtils.isNotEmpty(companyId)&&!companyId.equals(Constant.COMPANYID)){
-			hql.append(" and weCustomer.companyId= :companyId");
-			paraMap.put("companyId",companyId);
+			hql.append(" and weCustomer.companyIds like :companyId");
+			paraMap.put("companyId","%"+companyId+"|%");
 		}
 		pageParameter.setParaMap(paraMap);
 		hql.append(" order by weCustomer.createDate desc");
@@ -169,16 +173,17 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 	  @Scheduled(cron="0 0/30 0,1  * * ? ")
 	  @Override
 	  public void saveWeChatUser(){
-		List<AuEmployee> auEmployees=(List<AuEmployee>) auEmployeeService.getAll(AuEmployee.class);
-		for(AuEmployee auEmployee:auEmployees){
-		List<WeCustomer> list=weCustomerDao.find("from WeCustomer w where w.state=1 and w.is_follow=1 and w.companyId='"+auEmployee.getAuDept().getId()+"'");
-			 for(WeCustomer weCustomer:list){
+//		List<AuEmployee> auEmployees=(List<AuEmployee>) auEmployeeService.getAll(AuEmployee.class);
+//		for(AuEmployee auEmployee:auEmployees){
+//		List<WeCustomer> list=weCustomerDao.find("from WeCustomer w where w.state=1 and w.is_follow=1 and w.companyIds like '%"+auEmployee.getAuDept().getId()+"|%'");
+		  List<WeCustomer> list=weCustomerDao.find("from WeCustomer w where w.state=1 and w.is_follow=1 ");
+			  for(WeCustomer weCustomer:list){
 				 Map<String,Object> map=new HashMap<String,Object>();
 				 try{
-					 map=weChatService.getUserinfo(weCustomer.getOpenId(), auEmployee);
+					 map=weChatService.getUserinfo(weCustomer.getOpenId());
 				 }catch(Exception e){
 				try {
-					map=weChatService.getUserinfo(weCustomer.getOpenId(), auEmployee);
+					map=weChatService.getUserinfo(weCustomer.getOpenId());
 					  } catch (Exception e1) {
 						  weCustomer.setIs_follow(0);
 							Log.error(e1);
@@ -190,9 +195,9 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 				 }else{
 					 weCustomer.setIs_follow(0);	 
 				 }
-				 this.modify(weCustomer,auEmployee);
+				 this.modify(weCustomer);
 			 }
-		}
+//		}
 	  }
 
 }

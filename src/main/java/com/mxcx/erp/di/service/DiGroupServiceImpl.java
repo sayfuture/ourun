@@ -42,7 +42,7 @@ DiGroupService {
 		String url =Constant.SEND_OPENID.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid()));
 		 Map<String,Object> param=new HashMap<String,Object>();
 		 Map<String,Object> content=new HashMap<String,Object>();
-	    String redirect_url="http://www.vanloon123.cn/ourun/news/user.do";
+	    String redirect_url="http://www.vanloon456.cn/ourun/news/user.do";
 	    String redurl=Constant.AUTHORIZE_CODE.replace("APPID",auEmployee.getAppid()).replace("REDIRECT_URI",redirect_url)
 	    		.replace("STATE", "auappid="+auEmployee.getAppid()+"-secret="+auEmployee.getAppsecret()+"-openId="+openids.get(0)+"-cardId="+cardId)
 	    		.replace("snsapi_base", "snsapi_userinfo");

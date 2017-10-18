@@ -23,6 +23,7 @@ import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -115,7 +116,7 @@ public class WeChatAction extends BaseController {
 	@RequestMapping("/manager/erp/wechat/link.do")
 	@ResponseBody
 	public void link(HttpServletRequest request,HttpServletResponse response) {
-		try{ 
+		try{
          SAXReader reader = new SAXReader();
          Document document=reader.read(request.getInputStream());
          Element root = document.getRootElement();
@@ -145,11 +146,14 @@ public class WeChatAction extends BaseController {
 				weCustomer=new WeCustomer();
 				weCustomer.setOpenId(openId);
 				weCustomer.setIs_follow(1);
-				weCustomer.setCompanyId(auEmployee.getCompany().getId());
+				weCustomer.setCompanyIds(auEmployee.getCompany().getId()+"|");
 				weCustomerService.addWeCustomer(weCustomer, auEmployee);
 			}else{
 				if(weCustomer.getIs_follow()!=null&&weCustomer.getIs_follow().equals(0)){
 					weCustomer.setIs_follow(1);
+					if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else{
+						weCustomer.setCompanyIds(weCustomer.getCompanyIds()+auEmployee.getCompany().getId()+"|");
+					}
 					weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
 				}
 			}

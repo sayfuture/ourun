@@ -18,7 +18,7 @@ public String generQRcode(HttpServletRequest request, String sence_id,
 		AuEmployee auEmployee);
 public String generPermanentQRcode(HttpServletRequest request,String sence_str,AuEmployee auEmployee);
 public List<String> userList(AuEmployee auEmployee) throws Exception;
-public Map<String,Object> getUserinfo(String openId,AuEmployee auEmployee)throws Exception;
+public Map<String,Object> getUserinfo(String openId)throws Exception;
 
 public Map<String,Object> sendNewsInfo(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;
 public Map<String,Object> addMedia(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;

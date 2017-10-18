@@ -62,21 +62,21 @@ public class AuDeptAction extends BaseController {
 	 * 
 	 * @param auDept 新组的基本信息
 	 * @return 对应操作成功与失败的布尔值
-	 * 
+	 *
 	 * @version 1.0
-	 */
+			*/
 	@RequestMapping(value = "/manager/erp/au/addAuDept.do", method = RequestMethod.POST)
 	@ResponseBody
 	public Boolean addAuDept(AuDept auDept, HttpServletRequest request) {
 		return auDeptService.addAuDept(auDept, this.getLoginUser(request));
 	}
-
 	/**
+
 	 * 修改组信息
-	 * 
+	 *
 	 * @param auDept 组修改后的信息
 	 * @return 对应操作成功与失败的布尔值
-	 * 
+	 *
 	 * @version 1.0
 	 */
 	@RequestMapping("/manager/erp/au/updateAuDept.do")
@@ -126,7 +126,7 @@ public class AuDeptAction extends BaseController {
 	/**
 	 * 根据id查询组信息
 	 * 
-	 * @param id组ID
+	 * @param id 组ID
 	 * @return 组对象json
 	 * 
 	 * @version 1.0

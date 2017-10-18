@@ -7,6 +7,7 @@
 	<link href="../css/public.css" rel="stylesheet" />
 	<link href="../css/Index.css" rel="stylesheet" />
 <script src="../js/commons/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/news/jquery.cityselect.js"></script>
 <script type="text/javascript">
 	   function share() {
 	          $("#div_heade").css('background-color', '#08B343');
@@ -65,10 +66,50 @@
         if (r != null) return unescape(r[2]); return null;
     }
 
-	function receiveCard(){
-		location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0';
-	}
+
+
 </script>
+    <#if whether=="false">
+    <script type="application/javascript">
+        $(function() {
+            $("#city_1").citySelect({
+                nodata: "none",
+                required: true
+            });
+        });
+        function receiveCard(){
+            var provId=$(".prov").val();
+            var cityId=$(".city").val();
+            var car_type=$("#car_type").val();
+            var address=$("#address").val();
+            var phone=$("#phone").val();
+            if(provId==null||cityId==null){
+                alert("请选择省市地区");
+                return;
+            }
+            if(car_type==null){
+                alert("请填写车辆类型");
+                return;
+            }
+            if(phone==null){
+                alert("请填写手机号码");
+                return;
+            }
+            if(address==null){
+                alert("请填写具体地址信息");
+                return;
+            }
+            location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0&provId='
+            +provId+'&cityId='+cityId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
+        }
+    </script>
+    <#else >
+        <script type="application/javascript">
+            function receiveCard(){
+                location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0';
+            }
+        </script>
+</#if>
 </head>
 <body class="h">
     <div id="mask1" style="display: none;">
@@ -97,7 +138,19 @@
     <div class="liqua">
         
         <h2>使用说明: ${diCard.use_explain}</h2>
-        
+        <#if whether=="false">
+            <div id="city_1">
+               省: <select class="prov" name="prov"></select>
+                </br>
+                市:<select class="city" disabled="disabled" name="city"></select>
+                </br>
+                具体地址:<input type="text" name="address" id="address" style="background: white "/><font color="red">*</font>
+                <br/>
+                车辆品牌型号:<input type="text" name="car_type"  id="car_type" style="background: white "><font color="red">*</font>
+                <br/>
+                手机号:<input type="text" name="phone"  id="phone" style="background: white "><font color="red">*</font>
+            </div>
+        </#if>
         <div class="liquimg">
             
             <div id="dlinkImg" onclick="goDetails()" style="width: 55px; height: 58px; left: 50%; top: 50%; margin-left: -30px; margin-top: -28px; position: absolute; z-index: 1; background-image: url('../image/serverft3.png');">

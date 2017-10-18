@@ -5,6 +5,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mxcx.erp.we.dao.entity.WeCustomer;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,16 +54,6 @@ public class NewsContentAction extends BaseController{
 		view.setViewName("/ftl/news/singlenews");
 		CoContent coContent=(CoContent) coContentService.getOne(id,CoContent.class);
 		view.addObject("coContent",coContent);
-		
-//	    String redirect_url="http://www.vanloon123.cn/ourun/news/cardInfo.do";
-//	    https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=http://www.vanloon123.cn/ourun/news/cardInfo.do&response_type=code&scope=snsapi_userinfo&state=auappid=${appid}-secret=${secret}-openId=${openId}-cardId=${cardId}-recode=${recode}#wechat_redirect
-//	    String redurl=Constant.AUTHORIZE_CODE.replace("APPID",auEmployee.getAppid()).replace("REDIRECT_URI",redirect_url)
-//	    		.replace("STATE", "auappid=${appid}-secret=${secret}-openId=${openId}-cardId=${cardId}-recode=${recode}")
-//	    		.replace("snsapi_base", "snsapi_userinfo");
-		
-		
-//		List<Map<String, Object>> content=coContentService.getRelArticles(coContent.getId(), coContent.getCoType().getId());
-//		view.addObject("content",content);
 		return view;
 	}
 	
@@ -99,37 +90,32 @@ public class NewsContentAction extends BaseController{
 		if(StringUtils.isEmpty(newOpenid))
 			newOpenid=openid;
 		System.out.println("newOpenid:-------"+newOpenid);
-		AuEmployee auEmployee=auEmployeeService.findAuEmployeeBywxInfo(appid,secret);
-		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
+			DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
+		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
 		DiSendRecode diSendRecode=diSendRecodeService.findDiSendRecode(openid, cardId);
-			view.addObject("card_num",diCard.getUse_num());
-		view.addObject("recode", diSendRecode.getId());
-		view.addObject("openId", newOpenid);
-		view.addObject("cardId",cardId);
-		view.addObject("appid",appid);
-		view.addObject("secret",secret);
-		view.addObject("auEmployeeInfo",auEmployee );
-		view.setViewName("/ftl/news/publicInfo");
+		try {
+			view.addObject("card_num", diCard.getUse_num());
+			view.addObject("recode", diSendRecode.getId());
+			view.addObject("openId", newOpenid);
+			view.addObject("cardId", cardId);
+			view.addObject("appid", appid);
+			view.addObject("secret", secret);
+			view.addObject("auEmployeeInfo", auEmployee);
+			view.setViewName("/ftl/news/publicInfo");
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		}
 		return view;
 	}
 	@RequestMapping(value = "/news/cardInfo.do")
 	public ModelAndView cardInfo(HttpServletRequest request){
 		ModelAndView view = new ModelAndView();
-//		String cardId=request.getParameter("cardId");
-//		String openId=request.getParameter("openId");
-//		String diSendRecode=request.getParameter("diSendRecode");
-//		String type=request.getParameter("type");
-//		String appid=request.getParameter("appid");
-//		String secret=request.getParameter("secret");
 		String code=request.getParameter("code");
 		String state=request.getParameter("state");
 		int appidstart=state.lastIndexOf("auappid=");
 		int appidend=state.indexOf("-openId");
 		String appid=state.substring(appidstart+8, appidend);
-//		int secretstart=state.lastIndexOf("secret=");
-//		int secretend=state.indexOf("-openId");
-//		String secret=state.substring(secretstart+7, secretend);
 		int openstart=state.indexOf("openId=");
 		int opentend=state.indexOf("-cardId");
 		String openid=state.substring(openstart+7, opentend);
@@ -139,7 +125,8 @@ public class NewsContentAction extends BaseController{
 		int recordstart=state.indexOf("recode=");
 		String record=state.substring(recordstart+7,state.length());
 		String newOpenid=openid;
-		AuEmployee auEmployee=auEmployeeService.findAuEmployeeBywxInfo(appid,null);
+		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
+		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
 		if(StringUtils.isNotEmpty(code)){
 		System.out.println("code------------:"+code);
 		System.out.println("appid:"+appid+"--secret:"+auEmployee.getAppsecret()+"--openid:"+openid+"--cardId:"+cardId);
@@ -162,9 +149,15 @@ public class NewsContentAction extends BaseController{
 		 newOpenid=(String) map.get("openid");
 		System.out.println("cardInfo---newOpenId:"+newOpenid);
 		}
-		
-		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
 		String endtime=DateUtil.format(diCard.getVaildtime(), "yyyy-MM-dd");
+		WeCustomer weCustomer=weCustomerService.findWeCustomerByID(newOpenid);
+		if(weCustomer==null||StringUtils.isEmpty(weCustomer.getProvince())||StringUtils.isEmpty(weCustomer.getCar_type())){
+			view.addObject("whether","false");
+		}
+			else{
+			view.addObject("whether","true");
+		}
+
 		view.addObject("cardId",diCard.getId());
 		view.addObject("diCard",diCard);
 		view.addObject("endtime",endtime);
@@ -178,7 +171,7 @@ public class NewsContentAction extends BaseController{
 		return view;
 	}
 	
-	@RequestMapping(value = "/news/processInfo.do")
+	@RequestMapping(value = "/news/processInfo.do" ,produces ="application/json;charset=UTF-8")
 	public ModelAndView processInfo(HttpServletRequest request){
 		ModelAndView view = new ModelAndView();
 		String cardId=request.getParameter("cardId");
@@ -187,7 +180,14 @@ public class NewsContentAction extends BaseController{
 		String type=request.getParameter("type");
 		String appid=request.getParameter("appid");
 		String secret=request.getParameter("secret");
-		AuEmployee auEmployee=auEmployeeService.findAuEmployeeBywxInfo(appid,secret);
+
+		String provId=request.getParameter("provId");
+		String cityId=request.getParameter("cityId");
+		String car_type=request.getParameter("car_type");
+		String address=request.getParameter("address");
+		String phone=request.getParameter("phone");
+		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
+		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
 		DiSendRecode diSendRecode=diSendRecodeService.findDiSendRecodeByID(diSendRecodeId);
 		view.setViewName("/ftl/news/resultPage");
 		if(diSendRecode==null){
@@ -195,7 +195,7 @@ public class NewsContentAction extends BaseController{
 		}else
 		{
 		
-		diProcessService.saveProcessInfo(request,view, diSendRecode, openId, cardId, auEmployee);
+		diProcessService.saveProcessInfo(request,view, diSendRecode, openId, cardId, auEmployee,provId,cityId,car_type,address,phone);
 		}
 		view.addObject("auEmployee",auEmployee);
 		
