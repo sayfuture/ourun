@@ -35,6 +35,7 @@ $(function() {
             title : '省',
             width : 80,
 			formatter:function(value,row){
+            	var temp;
                 $.ajax({
                     method : 'get',
                     url : getCurProjPath()+'/news/erp/findProvincesById.do',
@@ -42,18 +43,20 @@ $(function() {
                     dataType : "json",
                     async : false,
                     success : function(data) {
-                       return data.p;
+                        temp=data.p;
                     },
                     error : function(msg) {
-                        return '';
+                        temp=msg;
                     }
                 });
+                return temp;
 			}
         }, {
             field : 'city',
             title : '市',
             width : 80,
             formatter:function(value,row){
+            	var temp;
                 $.ajax({
                     method : 'get',
                     url : getCurProjPath()+'/news/erp/findCitiesById.do',
@@ -61,12 +64,13 @@ $(function() {
                     dataType : "json",
                     async : false,
                     success : function(data) {
-                        return data.n;
+                        temp= data.n;
                     },
                     error : function(msg) {
-                        return '';
+                        temp= msg;
                     }
                 });
+                return temp;
             }
         }, {
             field : 'address',

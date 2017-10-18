@@ -1,5 +1,6 @@
 package com.mxcx.erp.news.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -183,8 +184,14 @@ public class NewsContentAction extends BaseController{
 
 		String provId=request.getParameter("provId");
 		String cityId=request.getParameter("cityId");
-		String car_type=request.getParameter("car_type");
-		String address=request.getParameter("address");
+		String car_type= null;
+		String address=null;
+		try {
+			car_type = new String(request.getParameter("car_type").getBytes("ISO-8859-1"),"UTF-8");
+			address=new String(request.getParameter("address").getBytes("ISO-8859-1"),"UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		String phone=request.getParameter("phone");
 		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
 		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
