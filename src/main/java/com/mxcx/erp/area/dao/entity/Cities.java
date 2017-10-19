@@ -5,6 +5,7 @@ import com.mxcx.erp.base.commons.controller.BasePo;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * 按钮实体类
@@ -28,6 +29,10 @@ public class Cities  {
 	@JsonIgnore
 	private Provinces povinces; // 省区ID
 
+	@OneToMany(fetch=FetchType.EAGER,mappedBy="cities",cascade = {CascadeType.MERGE,CascadeType.REFRESH})
+	private Set<Areas> a;
+
+
 	public String getId() {
 		return id;
 	}
@@ -50,5 +55,13 @@ public class Cities  {
 
 	public void setPovinces(Provinces povinces) {
 		this.povinces = povinces;
+	}
+
+	public Set<Areas> getA() {
+		return a;
+	}
+
+	public void setA(Set<Areas> a) {
+		this.a = a;
 	}
 }

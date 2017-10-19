@@ -93,10 +93,10 @@
             }
             ;
 
-            // 遍历赋值市级下拉列表
+            // 遍历赋值市区级下拉列表
             temp_html = select_prehtml;
             $.each(city_json.citylist[prov_id].c[city_id].a, function(i, dist) {
-                temp_html += "<option value='" + dist.s + "'>" + dist.s + "</option>";
+                temp_html += "<option value='" + dist.id + "'>" + dist.s + "</option>";
             });
             dist_obj.html(temp_html).attr("disabled", false).css({"display": "", "visibility": ""});
         };

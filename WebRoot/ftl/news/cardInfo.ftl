@@ -80,11 +80,12 @@
         function receiveCard(){
             var provId=$(".prov").val();
             var cityId=$(".city").val();
+            var distId=$(".dist").val();
             var car_type=$("#car_type").val();
             var address=$("#address").val();
             var phone=$("#phone").val();
-            if(provId==null||cityId==null){
-                alert("请选择省市地区");
+            if(provId==null||cityId==null||distId==null){
+                alert("请选择省市地区信息");
                 return;
             }
             if(car_type==null){
@@ -100,7 +101,7 @@
                 return;
             }
             location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0&provId='
-            +provId+'&cityId='+cityId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
+            +provId+'&cityId='+cityId+'&distId='+distId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
         }
     </script>
     <#else >
@@ -140,9 +141,11 @@
         <h2>使用说明: ${diCard.use_explain}</h2>
         <#if whether=="false">
             <div id="city_1">
-               省: <select class="prov" name="prov"></select>
+               省: <select class="prov" name="prov" style="height:35px"></select>
                 </br>
-                市:<select class="city" disabled="disabled" name="city"></select>
+                市:<select class="city" disabled="disabled" name="city" style="height:35px"></select>
+                </br>
+                县(区):<select class="dist" disabled="disabled" name="dist" style="height:35px"></select>
                 </br>
                 具体地址:<input type="text" name="address" id="address" style="background: white "/><font color="red">*</font>
                 <br/>
