@@ -178,7 +178,7 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 			return null;
 	}
 	@Override
-	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode, String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone){
+	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode, String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone, String areaId){
 		Date date=new Date();
 		if(diSendRecode!=null){
 			//同一个人
@@ -214,7 +214,8 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 					weCustomer.setCar_type(car_type);
 					weCustomer.setCity(cityId);
 					weCustomer.setPhone(phone);
-					weCustomer.setProvince(provId);}
+					weCustomer.setProvince(provId);
+					weCustomer.setArea(areaId);}
 					if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else {
 						weCustomer.setCompanyIds(weCustomer.getCompanyIds() + auEmployee.getCompany().getId() + "|");
 					}
@@ -248,7 +249,8 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 									weCustomer.setCar_type(car_type);
 									weCustomer.setCity(cityId);
 									weCustomer.setPhone(phone);
-									weCustomer.setProvince(provId);}
+									weCustomer.setProvince(provId);
+									weCustomer.setArea(areaId);}
 								if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else {
 									weCustomer.setCompanyIds(weCustomer.getCompanyIds() + auEmployee.getCompany().getId() + "|");
 								}

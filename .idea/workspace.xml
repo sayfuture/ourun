@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297cb252-7296-4e1c-b022-4649040fcc43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/SystemCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/entity/Cities.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/entity/Cities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/entity/CityList.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/entity/CityList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" afterPath="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/js/news/jquery.cityselect.js" afterPath="$PROJECT_DIR$/WebRoot/js/news/jquery.cityselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/js/we/weCustomer.js" afterPath="$PROJECT_DIR$/WebRoot/js/we/weCustomer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessService.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,107 +27,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="NewsContentAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java">
+      <file leaf-file-name="WeCustomer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="195" column="9" lean-forward="true" selection-start-line="195" selection-start-column="9" selection-end-line="195" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="386">
+              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="23" />
+              <folding>
+                <element signature="e#3181#3182#0" expanded="true" />
+                <element signature="e#3210#3211#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weCustomer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="weCustomer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/js/we/weCustomer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+            <state relative-caret-position="414">
+              <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cardInfo.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cardInfo.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.cityselect.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/js/news/jquery.cityselect.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="98" column="72" lean-forward="false" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="72" />
+            <state relative-caret-position="-23">
+              <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Provinces.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Provinces.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding>
-                <element signature="e#1047#1048#0" expanded="true" />
-                <element signature="e#1062#1063#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Areas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding>
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CityList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
-              <folding>
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,8 +63,18 @@
       <file leaf-file-name="AreaAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="157">
+              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Areas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -138,8 +83,8 @@
       <file leaf-file-name="AreaServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="332">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -168,6 +113,8 @@
       <find>getCurProjPath</find>
       <find>weCustomer.getCompanyIds().contains</find>
       <find>auEmployee.getCompanyId</find>
+      <find>county</find>
+      <find>findProvinces</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,29 +137,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/DiCardServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AuDeptAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Provinces.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WeCustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WeCustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/manager/au/auEmployee.ftl" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/publicInfo.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiGroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/controller/AuEmployeeAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuEmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java" />
-        <option value="$PROJECT_DIR$/WebRoot/js/we/weCustomer.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java" />
         <option value="$PROJECT_DIR$/WebRoot/js/news/jquery.cityselect.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java" />
+        <option value="$PROJECT_DIR$/WebRoot/js/we/weCustomer.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/SystemCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -258,6 +206,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,6 +298,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
               <item name="wechat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,10 +377,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,7 +672,8 @@
       <workItem from="1507254730663" duration="6696000" />
       <workItem from="1507303192071" duration="28959000" />
       <workItem from="1508288691001" duration="11004000" />
-      <workItem from="1508415058646" duration="6577000" />
+      <workItem from="1508415058646" duration="6699000" />
+      <workItem from="1508673913133" duration="4808000" />
     </task>
     <task id="LOCAL-00001" summary="ourun">
       <created>1506257579086</created>
@@ -745,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508332705225</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="新增了区县级功能，地区信息有待优化，需要加载到缓存，区县级信息还没有持久化">
+      <created>1508425811408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508425811409</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95429000" />
+    <option name="totallyTimeSpent" value="100359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,7 +743,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27628756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28004292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -804,28 +769,16 @@
     <MESSAGE value="ourun" />
     <MESSAGE value="ourun改版大版本，但是没有解决中文数据乱码的问题" />
     <MESSAGE value="ourun完成了乱码问题以及城市不显示问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="ourun完成了乱码问题以及城市不显示问题" />
+    <MESSAGE value="新增了区县级功能，地区信息有待优化，需要加载到缓存，区县级信息还没有持久化" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增了区县级功能，地区信息有待优化，需要加载到缓存，区县级信息还没有持久化" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/commons/service/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="60" column="19" lean-forward="false" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WeCustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/js/di/diCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1104">
@@ -851,13 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -906,23 +852,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en_US.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_zh_CN.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/au/auEmployee.ftl">
@@ -950,7 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
           <caret line="132" column="66" lean-forward="true" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2668">
           <caret line="155" column="24" lean-forward="false" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="52" column="80" lean-forward="true" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1978">
           <caret line="127" column="16" lean-forward="false" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,42 +1047,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4922">
-          <caret line="247" column="69" lean-forward="false" selection-start-line="247" selection-start-column="69" selection-end-line="247" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5007#5023#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/js/we/weCustomer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="76" column="25" lean-forward="false" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="195" column="9" lean-forward="true" selection-start-line="195" selection-start-column="9" selection-end-line="195" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#163#164#0" expanded="false" />
+            <element signature="e#185#186#0" expanded="false" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Provinces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1062#1063#0" expanded="false" />
+            <element signature="e#1097#1098#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1153,79 +1089,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Provinces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="435">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
+        <state relative-caret-position="-23">
+          <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/te/controller/TestCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="184" column="72" lean-forward="true" selection-start-line="184" selection-start-column="72" selection-end-line="184" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="208" column="139" lean-forward="false" selection-start-line="208" selection-start-column="139" selection-end-line="208" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3210#3211#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/SystemCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#494#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/js/we/weCustomer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

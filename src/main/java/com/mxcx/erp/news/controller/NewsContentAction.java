@@ -186,10 +186,12 @@ public class NewsContentAction extends BaseController{
 		String cityId=request.getParameter("cityId");
 		String car_type= request.getParameter("car_type");
 		String address=request.getParameter("address");
+		String areaId=request.getParameter("areaId");
 		if(StringUtils.isNotEmpty(car_type)&&StringUtils.isNotEmpty(address)) {
 			try {
 				car_type = new String(car_type.getBytes("ISO-8859-1"), "UTF-8");
 				address = new String(address.getBytes("ISO-8859-1"), "UTF-8");
+				areaId = new String(areaId.getBytes("ISO-8859-1"), "UTF-8");
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
@@ -204,7 +206,7 @@ public class NewsContentAction extends BaseController{
 		}else
 		{
 		
-		diProcessService.saveProcessInfo(request,view, diSendRecode, openId, cardId, auEmployee,provId,cityId,car_type,address,phone);
+		diProcessService.saveProcessInfo(request,view, diSendRecode, openId, cardId, auEmployee,provId,cityId,car_type,address,phone,areaId);
 		}
 		view.addObject("auEmployee",auEmployee);
 		

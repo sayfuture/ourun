@@ -42,7 +42,8 @@ public class WeCustomer extends BasePo {
 	private Date next_maintain_time;
 	@Column(name = "NEXT_MAINTAIN_CONTENT")
 	private String next_maintain_content;
-	
+    @Column(name = "AREA")
+    private String area;
 	public void setWechat_name(String wechat_name){
 	this.wechat_name=wechat_name;
 	}
@@ -126,6 +127,14 @@ public class WeCustomer extends BasePo {
 
 	   public void setAddress(String address) {
 		   this.address = address;
+	   }
+
+	   public String getArea() {
+		   return area;
+	   }
+
+	   public void setArea(String area) {
+		   this.area = area;
 	   }
    }
 

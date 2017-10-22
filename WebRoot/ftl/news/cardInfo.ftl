@@ -80,7 +80,7 @@
         function receiveCard(){
             var provId=$(".prov").val();
             var cityId=$(".city").val();
-            var distId=$(".dist").val();
+            var areaId=$(".dist").val();
             var car_type=$("#car_type").val();
             var address=$("#address").val();
             var phone=$("#phone").val();
@@ -101,7 +101,7 @@
                 return;
             }
             location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0&provId='
-            +provId+'&cityId='+cityId+'&distId='+distId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
+            +provId+'&cityId='+cityId+'&areaId='+areaId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
         }
     </script>
     <#else >
@@ -141,7 +141,7 @@
         <h2>使用说明: ${diCard.use_explain}</h2>
         <#if whether=="false">
             <div id="city_1">
-               省: <select class="prov" name="prov" style="height:35px"></select>
+               省: <select class="prov" name="prov" style="height:35px"></select>‘
                 </br>
                 市:<select class="city" disabled="disabled" name="city" style="height:35px"></select>
                 </br>

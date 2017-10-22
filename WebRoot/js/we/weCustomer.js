@@ -73,6 +73,27 @@ $(function() {
                 return temp;
             }
         }, {
+            field : 'area',
+            title : '县区',
+            width : 80,
+            formatter:function(value,row){
+                var temp;
+                $.ajax({
+                    method : 'get',
+                    url : getCurProjPath()+'/news/erp/findAreaById.do',
+                    data : 'areaId=' + value,
+                    dataType : "json",
+                    async : false,
+                    success : function(data) {
+                        temp= data.s;
+                    },
+                    error : function(msg) {
+                        temp= msg;
+                    }
+                });
+                return temp;
+            }
+        }, {
             field : 'address',
             title : '地址',
             width : 200

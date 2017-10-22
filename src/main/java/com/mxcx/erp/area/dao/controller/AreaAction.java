@@ -2,6 +2,7 @@ package com.mxcx.erp.area.dao.controller;
 
 import com.mxcx.ec.base.commons.dao.entity.PageParameter;
 import com.mxcx.ec.base.commons.util.DataGrid;
+import com.mxcx.erp.area.dao.entity.Areas;
 import com.mxcx.erp.area.dao.entity.Cities;
 import com.mxcx.erp.area.dao.entity.CityList;
 import com.mxcx.erp.area.dao.entity.Provinces;
@@ -37,7 +38,6 @@ public class AreaAction extends BaseController {
 	@RequestMapping(value = "/news/erp/findProvinces.do")
 	@ResponseBody
 	public CityList findList(HttpServletRequest request) {
-		System.out.println("进入了/news/erp/findProvinces.do");
 		CityList list=new CityList();
 		list.setCitylist(areaService.findProvinces());
 		return list;
@@ -61,5 +61,12 @@ public class AreaAction extends BaseController {
 		String cityId=request.getParameter("cityId");
 		Cities cities=areaService.findCitiesById(cityId);
 		return cities;
+	}
+	@RequestMapping(value = "/news/erp/findAreaById.do")
+	@ResponseBody
+	public Areas findDistById(HttpServletRequest request) {
+		String areaId=request.getParameter("areaId");
+		Areas areas=areaService.findDistById(areaId);
+		return areas;
 	}
 }

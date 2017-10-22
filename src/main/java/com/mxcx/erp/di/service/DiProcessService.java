@@ -28,7 +28,7 @@ public interface DiProcessService {
 	public Boolean saveDiProcessInfo(AuEmployee auEmployee, DiCard diCard,
 			WeCustomer weCustomer);
 	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode,
-                                String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone);
+                                String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone, String distId);
 	
 }
 
