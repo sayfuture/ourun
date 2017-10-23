@@ -82,26 +82,13 @@
             var cityId=$(".city").val();
             var areaId=$(".dist").val();
             var car_type=$("#car_type").val();
-            var address=$("#address").val();
             var phone=$("#phone").val();
-            if(provId==null||cityId==null||distId==null){
+            if(provId==null||cityId==null||areaId==null){
                 alert("请选择省市地区信息");
                 return;
             }
-            if(car_type==null){
-                alert("请填写车辆类型");
-                return;
-            }
-            if(phone==null){
-                alert("请填写手机号码");
-                return;
-            }
-            if(address==null){
-                alert("请填写具体地址信息");
-                return;
-            }
             location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0&provId='
-            +provId+'&cityId='+cityId+'&areaId='+areaId+'&car_type='+car_type+'&address='+address+'&phone='+phone;
+           +provId+'&cityId='+cityId+'&areaId='+areaId+'&car_type='+car_type+'&phone='+phone;
         }
     </script>
     <#else >
@@ -141,17 +128,15 @@
         <h2>使用说明: ${diCard.use_explain}</h2>
         <#if whether=="false">
             <div id="city_1">
-               省: <select class="prov" name="prov" style="height:35px"></select>‘
+               省: <select class="prov" name="prov" style="height:35px"></select>
                 </br>
                 市:<select class="city" disabled="disabled" name="city" style="height:35px"></select>
                 </br>
                 县(区):<select class="dist" disabled="disabled" name="dist" style="height:35px"></select>
-                </br>
-                具体地址:<input type="text" name="address" id="address" style="background: white "/><font color="red">*</font>
                 <br/>
-                车辆品牌型号:<input type="text" name="car_type"  id="car_type" style="background: white "><font color="red">*</font>
+                车辆品牌型号:<input type="text" name="car_type"  id="car_type" style="background: white ">
                 <br/>
-                手机号:<input type="text" name="phone"  id="phone" style="background: white "><font color="red">*</font>
+                手机号:<input type="text" name="phone"  id="phone" style="background: white ">
             </div>
         </#if>
         <div class="liquimg">

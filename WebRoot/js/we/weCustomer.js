@@ -46,7 +46,7 @@ $(function() {
                         temp=data.p;
                     },
                     error : function(msg) {
-                        temp=msg;
+                        temp="";
                     }
                 });
                 return temp;
@@ -67,7 +67,7 @@ $(function() {
                         temp= data.n;
                     },
                     error : function(msg) {
-                        temp= msg;
+                        temp="";
                     }
                 });
                 return temp;
@@ -88,15 +88,11 @@ $(function() {
                         temp= data.s;
                     },
                     error : function(msg) {
-                        temp= msg;
+                        temp="";
                     }
                 });
                 return temp;
             }
-        }, {
-            field : 'address',
-            title : '地址',
-            width : 200
         }, {
 			field : 'kilometers',
 			title : '行驶公里数',

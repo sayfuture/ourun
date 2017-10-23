@@ -178,7 +178,7 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 			return null;
 	}
 	@Override
-	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode, String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String address, String phone, String areaId){
+	public void saveProcessInfo(HttpServletRequest request, ModelAndView view, DiSendRecode diSendRecode, String openId, String cardId, AuEmployee auEmployee, String provId, String cityId, String car_type, String phone, String areaId){
 		Date date=new Date();
 		if(diSendRecode!=null){
 			//同一个人
@@ -208,9 +208,8 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 						view.addObject("messageInfo", "本次活动优惠券已领取完了，请关注下次活动！");
 					}
 					WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
-					if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(car_type)||StringUtils.isEmpty(phone)){
+					if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(cityId)||StringUtils.isEmpty(areaId)){
 					}else{
-					weCustomer.setAddress(address);
 					weCustomer.setCar_type(car_type);
 					weCustomer.setCity(cityId);
 					weCustomer.setPhone(phone);
@@ -243,9 +242,8 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 							if(weCustomer==null){
 								diSendRecode.setNew_weuser(diSendRecode.getNew_weuser()+1);
 							}else{
-								if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(car_type)||StringUtils.isEmpty(phone)){
+								if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(cityId)||StringUtils.isEmpty(areaId)){
 								}else{
-									weCustomer.setAddress(address);
 									weCustomer.setCar_type(car_type);
 									weCustomer.setCity(cityId);
 									weCustomer.setPhone(phone);
