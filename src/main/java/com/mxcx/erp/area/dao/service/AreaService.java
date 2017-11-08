@@ -25,5 +25,9 @@ public interface AreaService {
     Cities findCitiesById(String cityId);
 
     Areas findDistById(String distId);
+
+    List<Provinces> findProvinceses();
+
+    List<Areas> findAreas(String cityId);
 }
 

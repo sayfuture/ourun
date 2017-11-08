@@ -49,12 +49,26 @@ public class AreaAction extends BaseController {
 		Provinces provinces=areaService.findProvincesById(pid);
 		return provinces;
 	}
-	@RequestMapping(value = "/wechat/erp/findCities.do")
+	@RequestMapping(value = "/news/erp/findCities.do")
 	@ResponseBody
 	public List<Cities> findCities(HttpServletRequest request) {
 		String pid=request.getParameter("provincesId");
 		return areaService.findCities(pid);
 	}
+	@RequestMapping(value = "/news/erp/findProvinceses.do")
+	@ResponseBody
+	public List<Provinces> findProvinceses(HttpServletRequest request) {
+		return areaService.findProvinceses();
+	}
+	@RequestMapping(value = "/news/erp/findAreas.do")
+	@ResponseBody
+	public List<Areas> findAreas(HttpServletRequest request) {
+		String cityId=request.getParameter("cityId");
+		return areaService.findAreas(cityId);
+	}
+
+
+
 	@RequestMapping(value = "/news/erp/findCitiesById.do")
 	@ResponseBody
 	public Cities findCitiesById(HttpServletRequest request) {

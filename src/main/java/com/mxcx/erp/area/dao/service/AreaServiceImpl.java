@@ -26,7 +26,7 @@ public class AreaServiceImpl extends BaseService<T> implements
 	@Override
 	public List<Cities> findCities(String povincesId) {
 		StringBuffer hql = new StringBuffer(
-				"from Cities cities where cities.povinces.povincesId='"+povincesId+"'");
+				"from Cities cities where cities.povinces.id='"+povincesId+"'");
 		List list=Dao.find(hql.toString());
 		return list;
 	}
@@ -71,5 +71,17 @@ public class AreaServiceImpl extends BaseService<T> implements
 		List list=Dao.find(hql.toString());
 		Areas areas= (Areas) list.get(0);
 		return areas;
+	}
+
+	@Override
+	public List<Provinces> findProvinceses() {
+		List list=Dao.find("from Provinces");
+		return list;
+	}
+
+	@Override
+	public List<Areas> findAreas(String cityId) {
+		List list=Dao.find("from Areas a where a.cities.id='"+cityId+"'");
+		return list;
 	}
 }

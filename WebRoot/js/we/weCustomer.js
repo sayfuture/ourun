@@ -175,6 +175,42 @@ function editWeCustomerbutton1(row) {
 				$("#next_maintain_time").datebox('setValue',testStr);
 			}
 			$("#next_maintain_content").val(data.next_maintain_content);
+            $('#province').combobox({
+                url:getCurProjPath()+'/news/erp/findProvinceses.do',
+                valueField:'id',
+                textField: 'p' ,
+                editable:false ,
+                panelHeight:'auto',
+                onSelect: function(record){
+                        $('#city').combobox({
+                            url:getCurProjPath()+'/news/erp/findCities.do?provincesId='+record.id,
+                            valueField:'id',
+                            textField: 'n' ,
+                            editable:false ,
+                            panelHeight:'auto',
+                            onSelect: function(record1) {
+                            	if(record1!=null) {
+                                    $('#area').combobox({
+                                        url: getCurProjPath() + '/news/erp/findAreas.do?cityId=' + record1.id,
+                                        valueField: 'id',
+                                        textField: 's',
+                                        editable: false,
+                                        panelHeight: 'auto',
+                                        onLoadSuccess: function () {
+                                            $('#area').combobox('select', data.area);
+                                        }
+                                    });
+                                }
+                            },
+                            onLoadSuccess:function(){
+                                    $('#city').combobox('select', data.city);
+                            }
+                        });
+                    },
+                onLoadSuccess:function() {
+                   		 $('#province').combobox('select', data.province);
+                }
+            });
 		},
 		error : function(msg) {
 			message_op(false, null);

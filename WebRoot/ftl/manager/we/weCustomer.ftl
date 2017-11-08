@@ -49,6 +49,18 @@
 					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">客户名称</th> 
 					<td class="shandan"><span><input name="customer_name"  id="customer_name" class="easyui-validatebox" data-options="required:true,validType:'length[1,12]'" style="width:200px;"/></span></td> 
 				</tr>
+                <tr>
+                    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">省</th>
+                    <td class="shandan"><span><input name="province"  id="province" class="easyui-combobox"  style="width:200px;"/></span></td>
+                </tr>
+                <tr>
+                    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">市</th>
+                    <td class="shandan"><span><input name="city"  id="city" class="easyui-combobox"  style="width:200px;"/></span></td>
+                </tr>
+                <tr>
+                    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">区县</th>
+                    <td class="shandan"><span><input name="area"  id="area" class="easyui-combobox"  style="width:200px;"/></span></td>
+                </tr>
 				<tr>
 					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">车型</th> 
 					<td class="shandan"><span><input name="car_type"  id="car_type" class="easyui-validatebox" data-options="validType:'length[1,12]'" style="width:200px;"/></span></td> 

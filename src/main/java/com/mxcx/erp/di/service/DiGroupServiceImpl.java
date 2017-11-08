@@ -44,7 +44,7 @@ DiGroupService {
 		 Map<String,Object> content=new HashMap<String,Object>();
 	    String redirect_url="http://www.vanloon456.cn/ourun/news/user.do";
 	    String redurl=Constant.AUTHORIZE_CODE.replace("APPID",auEmployee.getAppid()).replace("REDIRECT_URI",redirect_url)
-	    		.replace("STATE", "auappid="+auEmployee.getAppid()+"-secret="+auEmployee.getAppsecret()+"-openId="+openids.get(0)+"-cardId="+cardId)
+	    		.replace("STATE", "auappid="+auEmployee.getAppid()+"-secret="+auEmployee.getAppsecret()+"-openId=abcdef-cardId="+cardId)
 	    		.replace("snsapi_base", "snsapi_userinfo");
 		 content.put("content", desc+"<a href='"+redurl+"'>"+clickDesc+"</a>");
 		 param.put("touser", openids);

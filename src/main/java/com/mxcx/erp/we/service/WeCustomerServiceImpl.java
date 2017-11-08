@@ -106,6 +106,9 @@ public class WeCustomerServiceImpl extends BaseService<WeCustomer> implements
 			weCustomerTemp.setKilometers(weCustomer.getKilometers());
 			weCustomerTemp.setNext_maintain_content(weCustomer.getNext_maintain_content());
 			weCustomerTemp.setNext_maintain_time(weCustomer.getNext_maintain_time());
+			weCustomerTemp.setArea(weCustomer.getArea());
+			weCustomerTemp.setProvince(weCustomer.getProvince());
+			weCustomerTemp.setCity(weCustomer.getCity());
 			this.modify(weCustomerTemp, auEmployee);
 		} catch (Exception e) {
 			e.printStackTrace();

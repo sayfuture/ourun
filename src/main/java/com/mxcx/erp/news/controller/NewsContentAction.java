@@ -93,7 +93,11 @@ public class NewsContentAction extends BaseController{
 		System.out.println("newOpenid:-------"+newOpenid);
 			DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
 		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
-		DiSendRecode diSendRecode=diSendRecodeService.findDiSendRecode(openid, cardId);
+			DiSendRecode diSendRecode;
+		if(openid.equals("abcdef")){
+			diSendRecode=diSendRecodeService.findDiSendRecode(newOpenid, cardId);
+		}else
+			 diSendRecode=diSendRecodeService.findDiSendRecode(openid, cardId);
 		try {
 			view.addObject("card_num", diCard.getUse_num());
 			view.addObject("recode", diSendRecode.getId());
