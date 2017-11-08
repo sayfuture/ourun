@@ -231,7 +231,12 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 //						view.addObject("messageInfo", "已领取，请到店铺："+auEmployee.getAddress()+"使用！");}
 //				}else{
 				view.setViewName("/ftl/news/sharePage");
-					String sence_id="41"+diSendRecode.getMeMember().getUser_id()+cardId;
+				String sence_id;
+				if (diSendRecode.getMeMember()==null){
+					sence_id="410100"+cardId;
+				}else{
+					sence_id="41"+diSendRecode.getMeMember().getUser_id()+cardId;
+				}
 					String filePath=weChatService.generQRcode(request,sence_id,auEmployee);
 					view.addObject("path", PropertiesReader.getInstance().getConfigItem("rootPath")+"/upload/QRcode/"+filePath);
 					DiCard diCard=diSendRecode.getDiCard();

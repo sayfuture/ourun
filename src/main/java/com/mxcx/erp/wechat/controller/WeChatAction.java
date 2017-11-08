@@ -138,6 +138,8 @@ public class WeChatAction extends BaseController {
          if(eventKey.substring(0, 2).equals("41")){
      		Date date=new Date();
         	  user_id=eventKey.substring(2, 6);
+        	  if(user_id.equals("0100"))
+        	  	user_id=null;
         	  cardId=Integer.valueOf(eventKey.substring(6, eventKey.length()));
          	 DiProcess diProcess=diProcessService.findDiProcessByID(cardId+"", openId);
          	diCard=diCardService.findDiCardByID(cardId);
