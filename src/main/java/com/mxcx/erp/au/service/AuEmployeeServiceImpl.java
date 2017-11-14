@@ -179,9 +179,9 @@ public class AuEmployeeServiceImpl extends BaseService<AuEmployee> implements
 			auEmployeeTemp2.setSex(auEmployee.getSex());
 			auEmployeeTemp2.setTel(auEmployee.getTel());
 			auEmployeeTemp2.setTel2(auEmployee.getTel2());
-			auEmployeeTemp2.setAppid(auEmployee.getAppid());
-			auEmployeeTemp2.setAppsecret(auEmployee.getAppsecret());
-			auEmployeeTemp2.setWxname(auEmployee.getWxname());
+//			auEmployeeTemp2.setAppid(auEmployee.getAppid());
+//			auEmployeeTemp2.setAppsecret(auEmployee.getAppsecret());
+//			auEmployeeTemp2.setWxname(auEmployee.getWxname());
 			auEmployeeTemp2.setAddress(auEmployee.getAddress());
 			if (auEmployeeTemp2.getPositionList() != null) {
 				Set positionlist = auEmployeeTemp2.getPositionList();
