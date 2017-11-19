@@ -185,6 +185,20 @@ public class WeChatAction extends BaseController {
               user_id=eventKey.substring(0, 4);
               cardId=Integer.valueOf(eventKey.substring(4, eventKey.length()));
               diCard=diCardService.findDiCardByID(cardId);
+			 WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
+			 if(weCustomer==null){
+				 weCustomer=new WeCustomer();
+				 weCustomer.setOpenId(openId);
+				 weCustomer.setIs_follow(1);
+				 weCustomer.setCompanyIds(auEmployee.getCompany().getId()+"|");
+				 weCustomerService.addWeCustomer(weCustomer, auEmployee);
+			 }else{
+					 weCustomer.setIs_follow(1);
+					 if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else{
+						 weCustomer.setCompanyIds(weCustomer.getCompanyIds()+auEmployee.getCompany().getId()+"|");
+					 weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
+				 }
+			 }
               Map<String,Object> resultMap=weChatService.CustomerSend(auEmployee, openId, diCard);
      				weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
          }
