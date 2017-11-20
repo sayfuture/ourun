@@ -35,6 +35,7 @@
 		<form id="fm_groupInfo" novalidate method="post">
 			<input type="hidden" name="openids" id="openids"/>
 			<input type="hidden" id="cardId" name="cardId" />
+            <input type="hidden" id="meId" name="meId" />
 			<table class="mytable" id="mytable" cellspacing="0"> 
 				<tr>
 					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">描述信息</th> 
@@ -53,10 +54,19 @@
 			</table>
 		</form>
 	</div>
-	<div id="dlg_templateCard" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:800px; height:480px; padding:1px 1px;top:1px;">
-		<table id="templateCardlist" style="height:410px;" ></table>
-		<a href="javascript:inputGroupSend();" class="easyui-linkbutton" iconCls="icon-ok">填写发送信息</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg_templateCard').dialog('close')">取消</a>
+	<div id="dlg_meinfo" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:800px; height:480px; padding:1px 1px;top:1px;">
+		<table id="meinfolist" style="height:410px;" ></table>
+		<a href="javascript:inputmeinfo();" class="easyui-linkbutton" iconCls="icon-ok">选择发送优惠券</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg_meinfo').dialog('close')">取消</a>
 	</div>
+
+    <div id="dlg_templateCard" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:400px; height:200px; padding:1px 1px;top:1px;">
+        <#--<table id="templateCardlist" style="height:410px;" ></table>-->
+		<input type="radio" value="1" name="cardinfo">第一张</input>&nbsp;&nbsp;&nbsp;
+        <input type="radio" value="2" name="cardinfo">第二张</input>
+        <a href="javascript:inputGroupSend();" class="easyui-linkbutton" iconCls="icon-ok">填写发送信息</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg_templateCard').dialog('close')">取消</a>
+    </div>
+
 </body>
 </html>

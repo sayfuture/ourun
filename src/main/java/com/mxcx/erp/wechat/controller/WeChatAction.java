@@ -130,7 +130,7 @@ public class WeChatAction extends BaseController {
          String eventKey=EventKey.getText().replace("qrscene_", "");
          String openId=FromUserName.getText();
          System.out.println(eventKey+"-----------openId:"+openId);
-         AuEmployee auEmployee=auEmployeeService.getAuEmployeeBywxname(ToUserName.getText());
+//         AuEmployee auEmployee=auEmployeeService.getAuEmployeeBywxname(ToUserName.getText());
          DiCard diCard;
          String user_id;
          Integer cardId;
@@ -138,9 +138,11 @@ public class WeChatAction extends BaseController {
          if(eventKey.substring(0, 2).equals("41")){
      		Date date=new Date();
         	  user_id=eventKey.substring(2, 6);
-        	  if(user_id.equals("0100"))
-        	  	user_id=null;
-        	  cardId=Integer.valueOf(eventKey.substring(6, eventKey.length()));
+			 //获取店铺信息方式
+			 MeMember meMember =iMeMemberService.findMemerByUserId(user_id);
+			 AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(meMember.getCreateUser());
+
+        	   cardId=Integer.valueOf(eventKey.substring(6, eventKey.length()));
          	 DiProcess diProcess=diProcessService.findDiProcessByID(cardId+"", openId);
          	diCard=diCardService.findDiCardByID(cardId);
          	WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
@@ -183,22 +185,12 @@ public class WeChatAction extends BaseController {
         	   weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
          }else{
               user_id=eventKey.substring(0, 4);
-              cardId=Integer.valueOf(eventKey.substring(4, eventKey.length()));
+			 //获取店铺信息方式
+			 MeMember meMember =iMeMemberService.findMemerByUserId(user_id);
+			 AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(meMember.getCreateUser());
+			 cardId=Integer.valueOf(eventKey.substring(4, eventKey.length()));
               diCard=diCardService.findDiCardByID(cardId);
 			 WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
-			 if(weCustomer==null){
-				 weCustomer=new WeCustomer();
-				 weCustomer.setOpenId(openId);
-				 weCustomer.setIs_follow(1);
-				 weCustomer.setCompanyIds(auEmployee.getCompany().getId()+"|");
-				 weCustomerService.addWeCustomer(weCustomer, auEmployee);
-			 }else{
-					 weCustomer.setIs_follow(1);
-					 if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else{
-						 weCustomer.setCompanyIds(weCustomer.getCompanyIds()+auEmployee.getCompany().getId()+"|");
-					 weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
-				 }
-			 }
               Map<String,Object> resultMap=weChatService.CustomerSend(auEmployee, openId, diCard);
      				weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
          }

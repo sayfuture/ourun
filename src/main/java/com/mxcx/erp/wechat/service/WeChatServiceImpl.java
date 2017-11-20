@@ -447,38 +447,6 @@ public class WeChatServiceImpl implements WeChatService{
 		diSendRecode.setSharenum(0);
 		diSendRecodeService.addDiSendRecode(diSendRecode, auEmployee);
 	}
-
-	//	@Override
-//	public void screenSend(String openId,AuEmployee auEmployee,DiCard diCard,String user_id){
-//		WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
-//		DiSendRecode diSendRecode=new DiSendRecode();
-//		diSendRecode.setNew_weuser(0);
-//		DiProcess diProcess=new DiProcess();
-//		diProcess.setCompanyId(auEmployee.getCompany().getId());
-//		diProcess.setDiCard(diCard);
-//		diProcess.setWeCustomer(weCustomer);
-//		Date date=new Date();
-//		diProcess.setGettime(date);
-//		 Calendar   calendar   =   new   GregorianCalendar();
-//	     calendar.setTime(date);
-//	     calendar.add(calendar.DATE,diCard.getVaildtime());
-//	     date=calendar.getTime();
-//		diProcess.setEnd_time(date);
-//		diProcess.setStatus(0);
-//		diProcess.setCard_num(diCard.getUse_num());
-//		diProcess.setShare_card_num(diCard.getShare_num());
-//		diProcessService.addDiProcess(diProcess, auEmployee);
-//		diSendRecode.setCompanyId(auEmployee.getCompany().getId());
-//		diSendRecode.setDiCard(diCard);
-//		if(StringUtils.isNotEmpty(user_id)){
-//		MeMember meMember=iMeMemberService.findMemerByUserId(user_id);
-//		diSendRecode.setMeMember(meMember);
-//		}
-//		diSendRecode.setWeCustomer(weCustomer);
-//		//需要做分享区分
-//		diSendRecode.setSharenum(0);
-//		diSendRecodeService.addDiSendRecode(diSendRecode, auEmployee);
-//	}
 	@Override
 	public Map<String,Object> newsTemplateList(AuEmployee auEmployee) throws Exception{
 		String toke=token.get(auEmployee.getAppid());

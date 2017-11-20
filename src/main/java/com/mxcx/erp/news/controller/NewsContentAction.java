@@ -162,7 +162,6 @@ public class NewsContentAction extends BaseController{
 			else{
 			view.addObject("whether","true");
 		}
-
 		view.addObject("cardId",diCard.getId());
 		view.addObject("diCard",diCard);
 		view.addObject("endtime",endtime);
@@ -207,7 +206,6 @@ public class NewsContentAction extends BaseController{
 			
 		}else
 		{
-		
 		diProcessService.saveProcessInfo(request,view, diSendRecode, openId, cardId, auEmployee,provId,cityId,car_type,phone,areaId);
 		}
 		view.addObject("auEmployee",auEmployee);

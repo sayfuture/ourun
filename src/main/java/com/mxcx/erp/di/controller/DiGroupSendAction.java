@@ -44,7 +44,7 @@ public class DiGroupSendAction extends BaseController {
 	
 	@RequestMapping(value = "/manager/erp/di/groupSend.do", method = RequestMethod.POST)
 	@ResponseBody
-	public boolean groupSend( HttpServletRequest request,String desc,String clickDesc,String openids,String cardId) {
+	public boolean groupSend( HttpServletRequest request,String desc,String clickDesc,String openids,String cardId,String meId) {
 		Boolean flag=true;
 		if(StringUtils.isEmpty(desc)||StringUtils.isEmpty(clickDesc)||StringUtils.isEmpty(openids))
 		{
@@ -61,7 +61,7 @@ public class DiGroupSendAction extends BaseController {
 				if(flag){
 					DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
 					for(String openId:list){
-						weChatService.saveSendRecord(openId, this.getLoginUser(request), diCard, null);
+						weChatService.saveSendRecord(openId, this.getLoginUser(request), diCard, meId);
 					}
 				}
 			}

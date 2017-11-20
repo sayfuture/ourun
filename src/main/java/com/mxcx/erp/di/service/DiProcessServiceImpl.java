@@ -223,20 +223,8 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 			}
 			//分享出去的情况
 			else{
-//				DiProcess diProcess=this.findDiProcessByID(cardId, openId);
-//				if(diProcess!=null){
-//					if(diProcess.getStatus().equals(Constant.USED_SIGN)){
-//						view.addObject("messageInfo", "您已使用过这张优惠券，敬请关注下次活动");
-//					}else{
-//						view.addObject("messageInfo", "已领取，请到店铺："+auEmployee.getAddress()+"使用！");}
-//				}else{
 				view.setViewName("/ftl/news/sharePage");
-				String sence_id;
-				if (diSendRecode.getMeMember()==null){
-					sence_id="410100"+cardId;
-				}else{
-					sence_id="41"+diSendRecode.getMeMember().getUser_id()+cardId;
-				}
+				String sence_id="41"+diSendRecode.getMeMember().getUser_id()+cardId;
 					String filePath=weChatService.generQRcode(request,sence_id,auEmployee);
 					view.addObject("path", PropertiesReader.getInstance().getConfigItem("rootPath")+"/upload/QRcode/"+filePath);
 					DiCard diCard=diSendRecode.getDiCard();
@@ -261,31 +249,10 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 							}
 							diSendRecode.setSharenum(diSendRecode.getSharenum()+1);
 							diSendRecodeService.updateDiSendRecode(diSendRecode);
-//							WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
-//							if(weCustomer==null){
-//								weCustomer=new WeCustomer();
-//								weCustomer.setOpenId(openId);
-//								weCustomer.setIs_follow(1);
-//								weCustomer.setCompanyId(auEmployee.getCompany().getId());
-//								weCustomerService.addWeCustomer(weCustomer, auEmployee);
-//							}
-//							if(weCustomer!=null&&weCustomer.getIs_follow().equals(0)){
-//								weCustomer.setIs_follow(1);
-//								weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
-//							}
-//							this.saveDiProcessInfo(auEmployee, diSendRecode.getDiCard(), weCustomer);
-//							view.addObject("messageInfo","恭喜您，领取成功！请到店铺："+auEmployee.getAddress()+"使用");
-//						}else{
-//							view.addObject("messageInfo", "优惠券已过期，敬请关注下次活动！");
-//						}
-//					}else{
-//						view.addObject("messageInfo", "本次活动优惠券已领取完了，敬请关注下次活动！");
 					}
 				}
 			}
 		}else
 		{	view.addObject("messageInfo", "领取失败，请重新领取！");}
 	}
-	
-	
 }

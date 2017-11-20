@@ -33,7 +33,7 @@ DiGroupService {
 	
 	
 	@Override
-	public Boolean groupSend(AuEmployee auEmployee, String desc,String clickDesc,List<String> openids,String cardId) throws Exception {
+	public Boolean groupSend(AuEmployee auEmployee, String desc, String clickDesc, List<String> openids, String cardId) throws Exception {
 		Boolean flag=true;
 		String toke=token.get(auEmployee.getAppid());
 		if(StringUtils.isEmpty(toke)){

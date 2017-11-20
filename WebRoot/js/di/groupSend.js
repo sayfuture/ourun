@@ -79,9 +79,9 @@ function search() {
 function groupSendbutton(){
 	var rows = $('#weCustomerGrouplist').datagrid('getSelections');
 	if(rows.length>1){
-	$('#dlg_templateCard').dialog('open').dialog('setTitle', '发送集客券');
-		$('#templateCardlist').datagrid({
-			url : getCurProjPath()+'/manager/erp/di/findDiCardList.do',
+	$('#dlg_meinfo').dialog('open').dialog('setTitle', '员工及卡券信息');
+		$('#meinfolist').datagrid({
+			url : getCurProjPath()+'/manager/erp/me/findMemberByConditionGroup.do',
 			singleSelect : true,
 			pagination : true,
 			pageSize : 10,
@@ -93,39 +93,92 @@ function groupSendbutton(){
 				width : 100,
 				checkbox : true
 			}, {
-				field : 'card_name',
-				title : '卡券名称',
-				width : 120
+				field : 'realName',
+				title : '员工姓名',
+				width : 100
 			}, {
-				field : 'vaildtime',
-				title : '有效期',
+				field : 'diCard.card_name',
+				title : '优惠券（一）',
 				width : 100,
-				formatter:function(value){
-					if(value!=null){
-						var testDate = new Date(value); 
-						var testStr = testDate.format("yyyy-MM-dd"); 
-						return testStr;
-						}else
-							return "";
+				formatter:function(value,row){
+					if(row.diCard!=null)
+						return row.diCard.card_name;
+					else
+						return "";
 				}
 			}, {
-				field : 'use_num',
-				title : '可使用数量',
-				width : 100
+				field : 'get_limit',
+				title : '活动总数量',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard!=null)
+						return row.diCard.total_num;
+					else
+						return "";
+				}
 			}, {
-				field : 'share_num',
-				title : '分享数量',
-				width : 100
+				field : 'used_num',
+				title : '已领取数量',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard!=null)
+						return row.diCard.used_num;
+					else
+						return "";
+				}
 			}, {
-				field : 'card_worth',
-				title : '卡券面值',
-				width : 100
+				field : 'end_time',
+				title : '活动截止日期',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard!=null){
+						var testDate = new Date(row.diCard.vaildtime);
+						var testStr = testDate.format("yyyy-MM-dd");
+						return testStr;
+					}else
+						return "";
+				}
 			}, {
-				field : 'companyId',
-				title : '门店',
-				width : 150,
-				formatter:function(value){
-					
+				field : 'diCard1.card_name',
+				title : '优惠券（二）',
+				width : 100,
+				formatter:function(value,row){
+					if(row.diCard1!=null)
+						return row.diCard1.card_name;
+					else
+						return "";
+				}
+			}, {
+				field : 'get_limit1',
+				title : '活动总数量',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard!=null)
+						return row.diCard1.total_num;
+					else
+						return "";
+				}
+			}, {
+				field : 'used_num1',
+				title : '已领取数量',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard1!=null)
+						return row.diCard1.used_num;
+					else
+						return "";
+				}
+			}, {
+				field : 'end_time',
+				title : '活动截止日期',
+				width : 80,
+				formatter:function(value,row){
+					if(row.diCard1!=null){
+						var testDate = new Date(row.diCard1.vaildtime);
+						var testStr = testDate.format("yyyy-MM-dd");
+						return testStr;
+					}else
+						return "";
 				}
 			}] ]
 		});
@@ -133,11 +186,26 @@ function groupSendbutton(){
 		$.messager.alert('操作提示', '群发最少选择两条客户记录！', 'info');
 	}
 }
-function inputGroupSend(){
-	var openids="";
+function inputmeinfo(){
 	$('#fm_groupInfo').form('clear');
+	var merow=$('#meinfolist').datagrid('getSelected');
+	if(merow){
+		$('#dlg_templateCard').dialog('open').dialog('setTitle', '发送集客券');
+		$('#meId').val(merow.user_id);
+	}else{
+		$.messager.alert('操作提示', '请选择需要发送的员工信息！', 'info');
+	}
+}
+function inputGroupSend(){
+	var cardInfo=$("input[name='cardinfo']:checked").val();
+	if(cardInfo==null||cardInfo==""){
+		$.messager.alert('操作提示', '请选择需要的优惠券！', 'info');
+		return;
+	}
+	var openids="";
+	$('#templateCardlist').datagrid('getSelected');
 	$('#clickDesc').val("请点击");
-	var row=$('#templateCardlist').datagrid('getSelected');
+	var row=$('#meinfolist').datagrid('getSelected');
 	var rows = $('#weCustomerGrouplist').datagrid('getSelections');
 	if(row){
 		if(rows.length>1){
@@ -145,14 +213,17 @@ function inputGroupSend(){
 				openids=openids+rows[i].openId+",";
 			}
 			$('#openids').val(openids);
-			$('#cardId').val(row.id);
+			if(cardInfo=="1")
+				$('#cardId').val(row.diCard.id);
+			if(cardInfo=="2")
+				$('#cardId').val(row.diCard1.id);
 			$('#dlg_gruopInfo').dialog('open').dialog('setTitle', '发送消息');
 			url=getCurProjPath()+'/manager/erp/di/groupSend.do';
 		}else{
 			$.messager.alert('操作提示', '群发最少选择两条客户记录！', 'info');
 		}
 	}else{
-		$.messager.alert('操作提示', '请选择需要发送的集客券！', 'info');
+		$.messager.alert('操作提示', '请选择员工信息！', 'info');
 	}
 }
 function sendGroupInfo(){
@@ -166,6 +237,7 @@ function sendGroupInfo(){
 				$.messager.alert('操作提示', '发送失败，达到调用次数上限或选择发送数据不正确，请重新尝试', 'error');
 			}else{
 				$('#dlg_gruopInfo').dialog('close');
+				$('#dlg_meinfo').dialog('close');
 				$('#dlg_templateCard').dialog('close');
 				message_op(true, 'weCustomerGrouplist');
 			}

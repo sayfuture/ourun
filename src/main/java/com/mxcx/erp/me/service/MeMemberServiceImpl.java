@@ -97,10 +97,6 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 		return flag;
 	}
 
-	/**
-	 * @see com.mxcx.erp.me.service.IMeMemberService#findMemberList(PageParameter
-	 *      pageParameter, MeMember MeMember)
-	 */
 	@Override
 	public DataGrid findMemberList(PageParameter pageParameter) {
 //		StringBuilder sql=new StringBuilder("select x.id,x.RECONNEND_NO as reconnendNo,x.REAL_NAME as realName,x.sex,x.birthday,x.identity,");
@@ -196,7 +192,7 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 	}
 
 	/**
-	 * @see com.mxcx.erp.me.service.IMeMemberService#findMemberByConditionGroup(PageParameter
+	 * @see PageParameter
 	 *      pageParameter)
 	 */
 	@Override
@@ -209,10 +205,8 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 		String loginName = (String) pageParameter.getParaMap().get("loginName");
 		String realName = (String) pageParameter.getParaMap().get("realName");
 		String cellphone = (String) pageParameter.getParaMap().get("cellphone");
-//		String isDealer =(String)pageParameter.getParaMap().get("isDealer");
-//		String reconnendNo=(String)pageParameter.getParaMap().get("reconnendNo");
+//		String isDealer =(String)pageParameter.getParaMap().get("companyId");
 		String availability = (String) pageParameter.getParaMap().get("availability");
-//		String level = (String) pageParameter.getParaMap().get("level");
 		String companyId=auEmployee.getCompanyId();
 		// 封装查询参数，如果为空就不拼接
 		if (StringCheck.stringCheck(loginName)) {
@@ -233,18 +227,6 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 			hql.append(" and x.availability = :availability ");
 			paraMap.put("availability", Integer.valueOf(availability));
 		}
-//		if (StringCheck.stringCheck(level) && !level.equals("-1")) {
-//			hql.append(" and (x.level.id = :levelID)");
-//			paraMap.put("levelID", level);
-//		}
-//		if(StringUtils.isNotEmpty(isDealer) && !isDealer.equals("-1")){
-//			hql.append(" and x.isDealer = :isDealer");
-//			paraMap.put("isDealer", isDealer);
-//		}
-//		if(StringUtils.isNotEmpty(reconnendNo)){
-//			hql.append(" and x.reconnendNo = :reconnendNo");
-//			paraMap.put("reconnendNo", reconnendNo);
-//		}
 		if(StringUtils.isNotEmpty(companyId)&&!companyId.equals(Constant.COMPANYID)){
 			hql.append(" and x.companyId = :companyId");
 			paraMap.put("companyId", companyId);
@@ -255,9 +237,6 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 		return memberDao.findByhql(hql.toString(), pageParameter);
 	}
 
-	/**
-	 * @see com.mxcx.erp.me.service.IMeMemberService#validateMemer(String id)
-	 */
 	@Override
 	public Boolean validateMemer(String id, AuEmployee auEmployee) {
 		Boolean flag = true;
