@@ -62,10 +62,14 @@
 
     <div id="dlg_templateCard" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:400px; height:200px; padding:1px 1px;top:1px;">
         <#--<table id="templateCardlist" style="height:410px;" ></table>-->
-		<input type="radio" value="1" name="cardinfo">第一张</input>&nbsp;&nbsp;&nbsp;
-        <input type="radio" value="2" name="cardinfo">第二张</input>
+		<div align="center"><input type="radio" value="1" name="cardinfo">优惠券（一）</input>&nbsp;&nbsp;&nbsp;
+        <input type="radio" value="2" name="cardinfo">优惠券（二）</input>
+        </div>
+				</br></br>
+			<div align="center">
         <a href="javascript:inputGroupSend();" class="easyui-linkbutton" iconCls="icon-ok">填写发送信息</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg_templateCard').dialog('close')">取消</a>
+            </div>
     </div>
 
 </body>

@@ -428,13 +428,11 @@ public class WeChatServiceImpl implements WeChatService{
 			weCustomerService.addWeCustomer(weCustomer, auEmployee);
 			diSendRecode.setNew_weuser(1);
 		}else{
-			if(weCustomer.getIs_follow()!=null&&weCustomer.getIs_follow().equals(0))
-			{	weCustomer.setIs_follow(1);
+				weCustomer.setIs_follow(1);
 				if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){
 				}else
 				weCustomer.setCompanyIds(weCustomer.getCompanyIds()+auEmployee.getCompany().getId()+"|");
 				weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
-			}
 		}
 		diSendRecode.setCompanyId(auEmployee.getCompany().getId());
 		diSendRecode.setDiCard(diCard);

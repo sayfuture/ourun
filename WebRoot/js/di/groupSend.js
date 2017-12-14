@@ -203,7 +203,6 @@ function inputGroupSend(){
 		return;
 	}
 	var openids="";
-	$('#templateCardlist').datagrid('getSelected');
 	$('#clickDesc').val("请点击");
 	var row=$('#meinfolist').datagrid('getSelected');
 	var rows = $('#weCustomerGrouplist').datagrid('getSelections');

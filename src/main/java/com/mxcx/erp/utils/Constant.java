@@ -18,7 +18,7 @@ public class Constant {
 	 * 微信appid与secret
 	 */
 	public static final String APPID="wx1a998ac595c7e6f4";
-	public static final String APPSECRET="2fa702eab5b7c69899765ae0e3f91c99";
+	public static final String APPSECRET="c2d45bb1abbe76bce6ee6568c62ce218";
 	public static final String WXNAME="gh_7ced5e7bab26";
 	/**
 	 * tokenURL
