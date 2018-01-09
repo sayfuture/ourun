@@ -1,109 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="297cb252-7296-4e1c-b022-4649040fcc43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/controller/AreaAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/controller/AreaAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/DiffType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/DiffType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/FunctionType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/FunctionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuAuthorityAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuAuthorityAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuButtonAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuButtonAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuDeptAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuDeptAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuEmployeeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuEmployeeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuMenuAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuMenuAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuPositionAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuPositionAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/LoginAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/ValidateCodeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/ValidateCodeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityPositionServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityPositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuButtonServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuButtonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuDeptServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuDeptServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeAuthorityServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeAuthorityServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeDeptServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeDeptServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuMenuServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuMenuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuPositionServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuPositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/FilePath.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/FilePath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/BaseController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MoreUploaderAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MoreUploaderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MyFreeMarkerView.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MyFreeMarkerView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/filter/AuthorityFilter.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/filter/AuthorityFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/BaseService.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/BaseService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/SystemUpload.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/SystemUpload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoContentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoContentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTemplateAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTemplateAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTypeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTypeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileBrowerController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileBrowerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileUploadController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoContentServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoContentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTemplateServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTemplateServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTypeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTypeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiCardAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiCardAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiGroupSendAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiGroupSendAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiPermanentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiPermanentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessRecordAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessRecordAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiSendRecodeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiSendRecodeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiCardServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiCardServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiGroupServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiGroupServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiPermanentServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiPermanentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessRecordServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessRecordServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiSendRecodeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiSendRecodeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsPictureAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsPictureAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsTypeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsTypeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsKuPropAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsKuPropAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropNameAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropNameAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropValueAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropValueAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsSkuAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsSkuAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgBrowerController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgBrowerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgUploadController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsAdditionalServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsAdditionalServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsPictureServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsPictureServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsTypeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsTypeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsKuPropServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsKuPropServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropNameServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropNameServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropValueServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropValueServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuShowServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuShowServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/LogManagementAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/LogManagementAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/MemberLogAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/MemberLogAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/LogManagementServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/LogManagementServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/MemberLogServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/MemberLogServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeLevelAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeLevelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$Chart.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$Chart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$LineChartNode.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$LineChartNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$PieChart.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$PieChart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeLevelServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeLevelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeMemberServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeMemberServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/qr/QRcode.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/qr/QRcode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/solr/SolrJSearch.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/solr/SolrJSearch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/Client.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/utils/SerializeUtil.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/utils/SerializeUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/HttpClientUtil.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/HttpClientUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/service/WeCustomerServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/service/WeCustomerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/controller/WeChatAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/controller/WeChatAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/service/WeChatServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/service/WeChatServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/service/MeMemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/service/MeMemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
-    </list>
+    <list default="true" id="297cb252-7296-4e1c-b022-4649040fcc43" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1324,7 +1222,7 @@
       <workItem from="1515377458070" duration="5296000" />
       <workItem from="1515383573940" duration="3898000" />
       <workItem from="1515394514804" duration="1218000" />
-      <workItem from="1515489751360" duration="8000" />
+      <workItem from="1515489751360" duration="73000" />
     </task>
     <task id="LOCAL-00001" summary="ourun">
       <created>1506257579086</created>
@@ -1403,11 +1301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511100606114</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新一次">
+      <created>1515489805411</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1515489805411</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159285000" />
+    <option name="totallyTimeSpent" value="159350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1479,7 +1384,8 @@
     <MESSAGE value="修改店铺更新之后appid等为空的BUG" />
     <MESSAGE value="修改扫码之后立马保存微信客户信息，未修改完，问题是拿店铺信息时候有BUG" />
     <MESSAGE value="修改信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改信息" />
+    <MESSAGE value="更新一次" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新一次" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
