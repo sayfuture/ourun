@@ -118,6 +118,7 @@ public class NewsContentAction extends BaseController{
 		ModelAndView view = new ModelAndView();
 		String code=request.getParameter("code");
 		String state=request.getParameter("state");
+		System.out.println("state:"+state);
 		int appidstart=state.lastIndexOf("auappid=");
 		int appidend=state.indexOf("-openId");
 		String appid=state.substring(appidstart+8, appidend);

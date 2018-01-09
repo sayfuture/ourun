@@ -57,6 +57,7 @@ public class MeMemberServiceImpl extends BaseService<MeMember> implements
 		Boolean flag = true;
 		try {
 			member = (MeMember) this.getOne(id, MeMember.class);
+			member.setUser_id(null);
 			flag = removeByState(member);
 		} catch (Exception e) {
 			e.printStackTrace();
