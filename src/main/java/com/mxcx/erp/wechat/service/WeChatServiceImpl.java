@@ -1,52 +1,44 @@
 package com.mxcx.erp.wechat.service;
 
-		import java.io.BufferedReader;
-		import java.io.File;
-		import java.io.InputStream;
-		import java.io.InputStreamReader;
-		import java.math.BigDecimal;
-		import java.util.ArrayList;
-		import java.util.Calendar;
-		import java.util.Date;
-		import java.util.GregorianCalendar;
-		import java.util.HashMap;
-		import java.util.List;
-		import java.util.Map;
-		import java.util.Random;
+import java.io.*;
+import java.math.BigDecimal;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
 
-		import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
-		import net.sf.json.JSONArray;
-		import net.sf.json.JSONObject;
-		import net.sf.json.JsonConfig;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
 
-		import org.apache.commons.lang3.StringUtils;
-		import org.apache.log4j.Logger;
-		import org.springframework.beans.factory.annotation.Autowired;
-		import org.springframework.stereotype.Service;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-		import com.google.gson.Gson;
-		import com.mxcx.ec.base.commons.util.PropertiesReader;
-		import com.mxcx.erp.au.dao.entity.AuEmployee;
-		import com.mxcx.erp.co.dao.entity.CoContent;
-		import com.mxcx.erp.co.service.CoContentService;
-		import com.mxcx.erp.di.dao.entity.DiCard;
-		import com.mxcx.erp.di.dao.entity.DiProcess;
-		import com.mxcx.erp.di.dao.entity.DiSendRecode;
-		import com.mxcx.erp.di.service.DiProcessService;
-		import com.mxcx.erp.di.service.DiSendRecodeService;
-		import com.mxcx.erp.me.dao.entity.MeMember;
-		import com.mxcx.erp.me.service.IMeMemberService;
-		import com.mxcx.erp.qr.QRcode;
-		import com.mxcx.erp.utils.Constant;
-		import com.mxcx.erp.utils.HttpClientUtil;
-		import com.mxcx.erp.we.dao.entity.WeCustomer;
-		import com.mxcx.erp.we.service.WeCustomerService;
+import com.google.gson.Gson;
+import com.mxcx.ec.base.commons.util.PropertiesReader;
+import com.mxcx.erp.au.dao.entity.AuEmployee;
+import com.mxcx.erp.co.dao.entity.CoContent;
+import com.mxcx.erp.co.service.CoContentService;
+import com.mxcx.erp.di.dao.entity.DiCard;
+import com.mxcx.erp.di.dao.entity.DiProcess;
+import com.mxcx.erp.di.dao.entity.DiSendRecode;
+import com.mxcx.erp.di.service.DiProcessService;
+import com.mxcx.erp.di.service.DiSendRecodeService;
+import com.mxcx.erp.me.dao.entity.MeMember;
+import com.mxcx.erp.me.service.IMeMemberService;
+import com.mxcx.erp.qr.QRcode;
+import com.mxcx.erp.utils.Constant;
+import com.mxcx.erp.utils.HttpClientUtil;
+import com.mxcx.erp.we.dao.entity.WeCustomer;
+import com.mxcx.erp.we.service.WeCustomerService;
 @Service
 public class WeChatServiceImpl implements WeChatService{
 	private final static Logger log = Logger.getLogger(WeChatServiceImpl.class);
 	private  static Map<String,String> token=new HashMap<String,String>();
-	private  static Map<String,String> jsJpatoken=new HashMap<String,String>();
+	private  static Map<String,Map<String,Date>> jsJpatoken=new HashMap<String,Map<String,Date>>();
 	@Autowired
 	private CoContentService coContentService;
 	@Autowired
@@ -133,8 +125,8 @@ public class WeChatServiceImpl implements WeChatService{
 		}
 		return token;
 	}
-
-	public void getJsapi_ticket(String appid,String appsecret)throws Exception{
+	//	https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
+	private void getJsapi_ticket(String appid,String appsecret)throws Exception{
 		if(StringUtils.isEmpty(token.get(appid))){
 			this.getToken(appid, appsecret);
 		}
@@ -142,14 +134,68 @@ public class WeChatServiceImpl implements WeChatService{
 		String jsapi_ticket=HttpClientUtil.get(url);
 		Map<String,Object> map=json(jsapi_ticket);
 		if(map.containsKey("errcode")&&map.get("errcode").equals(0)){
-			jsJpatoken.put(appid, map.get("ticket").toString());
+			Map<String,Date> ticket=new HashMap<String, Date>();
+			ticket.put(map.get("ticket").toString(),new Date());
+			jsJpatoken.put(appid, ticket);
 		}
 		if(map.containsKey("errcode")){
 			this.getToken(appid, appsecret);
 			throw new Exception("getJsapi_ticket errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
 		}
 	}
-
+	private String getTicket(Date date,String appid,String appsecret) throws Exception {
+		Map<String,Date> map=jsJpatoken.get(appid);
+		Iterator iterator=map.entrySet().iterator();
+		String key="";
+		Date val=null;
+		while (iterator.hasNext()){
+			Map.Entry entry = (Map.Entry) iterator.next();
+			 key = (String) entry.getKey();
+			 val = (Date) entry.getValue();
+			 break;
+		}
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(val);//date 换成已经已知的Date对象
+		cal.add(Calendar.HOUR_OF_DAY, 1);// before 1 hour
+		if(cal.getTime().getTime()<date.getTime()){
+			this.getJsapi_ticket( appid, appsecret);
+			this.getTicket(date,appid, appsecret);
+		}
+			return 	key;
+	}
+	/**
+	 *@Author: hmy
+	 *@Description:  获得签名验证消息
+	 * @param
+	 *@Date: 18:01 2018/1/10
+	 */
+	@Override
+	public  Map<String, String> sign(String jsapi_ticket, String url,String appid,String appsecret) throws Exception{
+		Map<String, String> ret = new HashMap<String, String>();
+		String nonce_str = Constant.TOKEN;
+		Date date=new Date();
+		String timestamp = String.valueOf(date.getTime());
+		String string1;
+		String signature = "";
+		jsapi_ticket=this.getTicket(date,appid, appsecret);
+		string1 = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + nonce_str+ "×tamp=" + timestamp + "&url=" + url;
+		try {
+			MessageDigest crypt = MessageDigest.getInstance("SHA-1");
+			crypt.reset();
+			crypt.update(string1.getBytes("UTF-8"));
+			signature = byteToHex(crypt.digest());
+		} catch (NoSuchAlgorithmException e) {
+			log.error("sign--------"+e);
+		} catch (UnsupportedEncodingException e) {
+			log.error("sign--------"+e);
+		}
+		ret.put("url", url);
+		ret.put("jsapi_ticket", jsapi_ticket);
+		ret.put("nonceStr", nonce_str);
+		ret.put("timestamp", timestamp);
+		ret.put("signature", signature);
+		return ret;
+	}
 	@Override
 	public String generQRcode(HttpServletRequest request,String sence_id,AuEmployee auEmployee) {
 		String path="";
@@ -428,11 +474,11 @@ public class WeChatServiceImpl implements WeChatService{
 			weCustomerService.addWeCustomer(weCustomer, auEmployee);
 			diSendRecode.setNew_weuser(1);
 		}else{
-				weCustomer.setIs_follow(1);
-				if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){
-				}else
+			weCustomer.setIs_follow(1);
+			if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){
+			}else
 				weCustomer.setCompanyIds(weCustomer.getCompanyIds()+auEmployee.getCompany().getId()+"|");
-				weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
+			weCustomerService.modifyWeCustomer(weCustomer, auEmployee);
 		}
 		diSendRecode.setCompanyId(auEmployee.getCompany().getId());
 		diSendRecode.setDiCard(diCard);
@@ -521,5 +567,15 @@ public class WeChatServiceImpl implements WeChatService{
 			}
 //			 throw new Exception("sendNews errcode:"+resultMap.get("errcode")+"---errmsg:"+resultMap.get("errmsg"));
 		}
+	}
+
+	private static String byteToHex(final byte[] hash) {
+		Formatter formatter = new Formatter();
+		for (byte b : hash) {
+			formatter.format("%02x", b);
+		}
+		String result = formatter.toString();
+		formatter.close();
+		return result;
 	}
 }

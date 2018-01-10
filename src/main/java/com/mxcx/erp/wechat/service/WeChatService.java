@@ -32,4 +32,6 @@ public Map<String,Object> sendNews(AuEmployee auEmployee,String templateId,Strin
 
 public Map<String,Object> CustomerSendText(AuEmployee auEmployee,String openId,String text) throws Exception;
 public void groupSendByOpenId(AuEmployee loginUser) throws Exception;
+
+	public  Map<String, String> sign(String jsapi_ticket, String url,String appid,String appsecret) throws Exception;
 }
