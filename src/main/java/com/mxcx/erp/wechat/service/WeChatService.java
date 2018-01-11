@@ -17,11 +17,11 @@ public  Map<String,String> getToken(String appid,String appsecret) throws Except
 public String generQRcode(HttpServletRequest request, String sence_id,
 		AuEmployee auEmployee);
 public String generPermanentQRcode(HttpServletRequest request,String sence_str,AuEmployee auEmployee);
-public List<String> userList(AuEmployee auEmployee) throws Exception;
+//public List<String> userList(AuEmployee auEmployee) throws Exception;
 public Map<String,Object> getUserinfo(String openId)throws Exception;
 
-public Map<String,Object> sendNewsInfo(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;
-public Map<String,Object> addMedia(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;
+//public Map<String,Object> sendNewsInfo(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;
+//public Map<String,Object> addMedia(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception;
 
 public Map<String,Object> CustomerSend(AuEmployee auEmployee,String openId,DiCard diCard) throws Exception;
 public void saveSendRecord(String openId,AuEmployee auEmployee,DiCard diCard,String user_id);
@@ -33,5 +33,5 @@ public Map<String,Object> sendNews(AuEmployee auEmployee,String templateId,Strin
 public Map<String,Object> CustomerSendText(AuEmployee auEmployee,String openId,String text) throws Exception;
 public void groupSendByOpenId(AuEmployee loginUser) throws Exception;
 
-	public  Map<String, String> sign(String jsapi_ticket, String url,String appid,String appsecret) throws Exception;
+public  Map<String, String> sign( String url,String appid,String appsecret) throws Exception;
 }

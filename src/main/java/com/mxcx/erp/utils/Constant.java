@@ -8,7 +8,8 @@ public class Constant {
 	public static String TOKEN="ourun2015";
 	
 	public static Integer USED_SIGN=2;
-	
+
+	public static Integer JSTICKET_TIME=1;//一小时
 	
 	/**
 	 * 总公司ID

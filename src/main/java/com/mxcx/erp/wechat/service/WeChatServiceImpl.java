@@ -156,7 +156,7 @@ public class WeChatServiceImpl implements WeChatService{
 		}
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(val);//date 换成已经已知的Date对象
-		cal.add(Calendar.HOUR_OF_DAY, 1);// before 1 hour
+		cal.add(Calendar.HOUR_OF_DAY, Constant.JSTICKET_TIME);// before 1 hour
 		if(cal.getTime().getTime()<date.getTime()){
 			this.getJsapi_ticket( appid, appsecret);
 			this.getTicket(date,appid, appsecret);
@@ -170,14 +170,14 @@ public class WeChatServiceImpl implements WeChatService{
 	 *@Date: 18:01 2018/1/10
 	 */
 	@Override
-	public  Map<String, String> sign(String jsapi_ticket, String url,String appid,String appsecret) throws Exception{
+	public  Map<String, String> sign( String url,String appid,String appsecret) throws Exception{
 		Map<String, String> ret = new HashMap<String, String>();
 		String nonce_str = Constant.TOKEN;
 		Date date=new Date();
 		String timestamp = String.valueOf(date.getTime());
 		String string1;
 		String signature = "";
-		jsapi_ticket=this.getTicket(date,appid, appsecret);
+		String jsapi_ticket=this.getTicket(date,appid, appsecret);
 		string1 = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + nonce_str+ "×tamp=" + timestamp + "&url=" + url;
 		try {
 			MessageDigest crypt = MessageDigest.getInstance("SHA-1");
@@ -265,33 +265,33 @@ public class WeChatServiceImpl implements WeChatService{
 		return map;
 	}
 
-	@Override
-	public List<String> userList(AuEmployee auEmployee) throws Exception {
-		String url=Constant.USERLIST.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid())).replace("&next_openid=NEXT_OPENID","");
-		log.info(url);
-		String result=HttpClientUtil.get(url);
-		Map<String,Object> map=json(result);
-		if(map.containsKey("errcode")){
-			if(map.get("errcode").equals(42001)){
-				this.getToken(auEmployee.getAppid(),auEmployee.getAppsecret());
-			}
-			throw new Exception("userList errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
-		}
-		String data=map.get("data").toString();
-		Map<String,Object> map1=json(data);
-		JSONArray arr=(JSONArray) map1.get("openid");
-		List<String> lists=JSONArray.toList(arr, String.class, new JsonConfig());
-		Double d=Double.valueOf((String) map.get("total"))/10000d;
-		Integer t=(int) Math.ceil(d);
-		for(int i=1;i<t;i++){
-			String result1=HttpClientUtil.get(Constant.USERLIST.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid())).replace("NEXT_OPENID",map.get("next_openid").toString()));
-			Map<String,Object> map2=json(result);
-			String data2=map2.get("data").toString();
-			Map<String,Object> map3=json(data2);
-			lists.addAll(JSONArray.toList((JSONArray) map3.get("openid"), String.class, new JsonConfig()));
-		}
-		return lists;
-	}
+//	@Override
+//	public List<String> userList(AuEmployee auEmployee) throws Exception {
+//		String url=Constant.USERLIST.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid())).replace("&next_openid=NEXT_OPENID","");
+//		log.info(url);
+//		String result=HttpClientUtil.get(url);
+//		Map<String,Object> map=json(result);
+//		if(map.containsKey("errcode")){
+//			if(map.get("errcode").equals(42001)){
+//				this.getToken(auEmployee.getAppid(),auEmployee.getAppsecret());
+//			}
+//			throw new Exception("userList errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
+//		}
+//		String data=map.get("data").toString();
+//		Map<String,Object> map1=json(data);
+//		JSONArray arr=(JSONArray) map1.get("openid");
+//		List<String> lists=JSONArray.toList(arr, String.class, new JsonConfig());
+//		Double d=Double.valueOf((String) map.get("total"))/10000d;
+//		Integer t=(int) Math.ceil(d);
+//		for(int i=1;i<t;i++){
+//			String result1=HttpClientUtil.get(Constant.USERLIST.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid())).replace("NEXT_OPENID",map.get("next_openid").toString()));
+//			Map<String,Object> map2=json(result);
+//			String data2=map2.get("data").toString();
+//			Map<String,Object> map3=json(data2);
+//			lists.addAll(JSONArray.toList((JSONArray) map3.get("openid"), String.class, new JsonConfig()));
+//		}
+//		return lists;
+//	}
 
 	@Override
 	public Map<String, Object> getUserinfo(String openId) throws Exception {
@@ -311,92 +311,92 @@ public class WeChatServiceImpl implements WeChatService{
 		}
 		return map;
 	}
-	@Override
-	public Map<String,Object> sendNewsInfo(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception{
-		Map<String,String> param=new HashMap<String,String>();
-		Map<String,Object> param1=new HashMap<String,Object>();
-		Map<String,Object> map=new HashMap<String,Object>();
-		String thumb_media_id;
-		if(StringUtils.isNotEmpty(coContent.getMedia_id())){
-			try{
-				map=this.addMedia(auEmployee, coContent,cardId);
-			}catch(Exception e){
-				try{
-					map=this.addMedia(auEmployee, coContent,cardId);
-				}catch(Exception e1){
-					log.info("sendNewsInfo errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
-					log.info(e1.getMessage());
-				}
-			}
-			thumb_media_id=(String) map.get("media_id");
-		}else{
-			thumb_media_id=coContent.getMedia_id();
-		}
-		param1.put("thumb_media_id",thumb_media_id);
-		param1.put("title", coContent.getTitle());
-		param1.put("content", coContent.getBody());
-		param1.put("show_cover_pic", 1);
-		param1.put("content_source_url", "http://www.vanloon456.cn/ourun/news/user.do?auappid="+auEmployee.getAppid()+"&secret="+auEmployee.getAppsecret());
-		Gson json1=new Gson();
-		json1.toJson(param1);
-		param.put("articles", json1.toString());
-		String newsurl=Constant.UPLOADNEWS.replace("ACCESS_TOKEN",token.get(auEmployee.getAppid()));
-		String newsResult=HttpClientUtil.post(newsurl, param);
-		map=this.json(newsResult);
-		map.put("media_id",thumb_media_id );
-		coContent.setWeimg_url(map.get("url").toString());
-		coContent.setWetype(map.get("type").toString());
-		coContent.setCreated_at(Long.parseLong(map.get("created_at").toString()));
-
-		return map;
-	}
-	@Override
-	public Map<String,Object> addMedia(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception{
-		String fileurl=PropertiesReader.getInstance().getConfigItem("frontProjectAddress")+"upload/co/"+coContent.getFileUrl();
-		StringBuilder imgurl=new StringBuilder();
-		String url=Constant.ADDNEWS.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid()));
-		Map<String,Object> param=new HashMap<String,Object>();
-		Map<String,Object> param1=new HashMap<String,Object>();
-		param1.put("title", coContent.getTitle());
-		param1.put("thumb_media_id", coContent.getId());
-		param1.put("author", coContent.getSource());
-		param1.put("digest", coContent.getIntroduce());
-		param1.put("show_cover_pic",1);
-		param1.put("content", coContent.getBody());
-		String redirect=Constant.AUTHORIZE_CODE.replace("APPID", auEmployee.getAppid()).replace("REDIRECT_URI", "http://www.vanloon456.cn/ourun/news/user.do?auappid="+auEmployee.getAppid()+"&secret="+auEmployee.getAppsecret())
-				.replace("STATE", cardId);
-		param1.put("content_source_url",redirect);
-		Gson json=new Gson();
-		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
-		list.add((param1));
-		param.put("articles", list);
-		System.out.println(JSONObject.fromObject(param).toString()+"--------66666666666666666");
-		String command1 ="curl -F media=@"+fileurl.replace("//", "/")+" "+Constant.UPLOADIMG.replace("ACCESS_TOKEN",token.get(auEmployee.getAppid()));
-		log.info("addMedia--->执行的URL:"+command1);
-		Process	process = Runtime.getRuntime().exec(command1);
-		process.waitFor();
-		InputStream is=process.getInputStream();
-		InputStream nois=process.getErrorStream();
-		BufferedReader br = new BufferedReader(new InputStreamReader(is));
-		imgurl.append(br.readLine().replaceAll("\\/", "/"));
-		System.out.println(imgurl.toString()+"------222222");
-		Map<String,Object> map=this.json(imgurl.toString());
-		if(map.containsKey("errcode")){
-			if(map.get("errcode").equals(42001)){
-				this.getToken(auEmployee.getAppid(),auEmployee.getAppsecret());
-			}
-			throw new Exception("addMedia errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
-		}
-		String wechaturl=(String) map.get("url");
-		Gson gson=new Gson();
-		String jsonObj=gson.toJson(param);
-		System.out.println(jsonObj+"--------88888888-----------"+JSONObject.fromObject(jsonObj));
-		String result=HttpClientUtil.post1(url, JSONObject.fromObject(jsonObj));
-		System.out.println(result+"------1111111111111");
-		map=this.json(result);
-		map.put("url", wechaturl);
-		return map;
-	}
+//	@Override
+//	public Map<String,Object> sendNewsInfo(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception{
+//		Map<String,String> param=new HashMap<String,String>();
+//		Map<String,Object> param1=new HashMap<String,Object>();
+//		Map<String,Object> map=new HashMap<String,Object>();
+//		String thumb_media_id;
+//		if(StringUtils.isNotEmpty(coContent.getMedia_id())){
+//			try{
+//				map=this.addMedia(auEmployee, coContent,cardId);
+//			}catch(Exception e){
+//				try{
+//					map=this.addMedia(auEmployee, coContent,cardId);
+//				}catch(Exception e1){
+//					log.info("sendNewsInfo errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
+//					log.info(e1.getMessage());
+//				}
+//			}
+//			thumb_media_id=(String) map.get("media_id");
+//		}else{
+//			thumb_media_id=coContent.getMedia_id();
+//		}
+//		param1.put("thumb_media_id",thumb_media_id);
+//		param1.put("title", coContent.getTitle());
+//		param1.put("content", coContent.getBody());
+//		param1.put("show_cover_pic", 1);
+//		param1.put("content_source_url", "http://www.vanloon456.cn/ourun/news/user.do?auappid="+auEmployee.getAppid()+"&secret="+auEmployee.getAppsecret());
+//		Gson json1=new Gson();
+//		json1.toJson(param1);
+//		param.put("articles", json1.toString());
+//		String newsurl=Constant.UPLOADNEWS.replace("ACCESS_TOKEN",token.get(auEmployee.getAppid()));
+//		String newsResult=HttpClientUtil.post(newsurl, param);
+//		map=this.json(newsResult);
+//		map.put("media_id",thumb_media_id );
+//		coContent.setWeimg_url(map.get("url").toString());
+//		coContent.setWetype(map.get("type").toString());
+//		coContent.setCreated_at(Long.parseLong(map.get("created_at").toString()));
+//
+//		return map;
+//	}
+//	@Override
+//	public Map<String,Object> addMedia(AuEmployee auEmployee,CoContent coContent,String cardId) throws Exception{
+//		String fileurl=PropertiesReader.getInstance().getConfigItem("frontProjectAddress")+"upload/co/"+coContent.getFileUrl();
+//		StringBuilder imgurl=new StringBuilder();
+//		String url=Constant.ADDNEWS.replace("ACCESS_TOKEN", token.get(auEmployee.getAppid()));
+//		Map<String,Object> param=new HashMap<String,Object>();
+//		Map<String,Object> param1=new HashMap<String,Object>();
+//		param1.put("title", coContent.getTitle());
+//		param1.put("thumb_media_id", coContent.getId());
+//		param1.put("author", coContent.getSource());
+//		param1.put("digest", coContent.getIntroduce());
+//		param1.put("show_cover_pic",1);
+//		param1.put("content", coContent.getBody());
+//		String redirect=Constant.AUTHORIZE_CODE.replace("APPID", auEmployee.getAppid()).replace("REDIRECT_URI", "http://www.vanloon456.cn/ourun/news/user.do?auappid="+auEmployee.getAppid()+"&secret="+auEmployee.getAppsecret())
+//				.replace("STATE", cardId);
+//		param1.put("content_source_url",redirect);
+//		Gson json=new Gson();
+//		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+//		list.add((param1));
+//		param.put("articles", list);
+//		System.out.println(JSONObject.fromObject(param).toString()+"--------66666666666666666");
+//		String command1 ="curl -F media=@"+fileurl.replace("//", "/")+" "+Constant.UPLOADIMG.replace("ACCESS_TOKEN",token.get(auEmployee.getAppid()));
+//		log.info("addMedia--->执行的URL:"+command1);
+//		Process	process = Runtime.getRuntime().exec(command1);
+//		process.waitFor();
+//		InputStream is=process.getInputStream();
+//		InputStream nois=process.getErrorStream();
+//		BufferedReader br = new BufferedReader(new InputStreamReader(is));
+//		imgurl.append(br.readLine().replaceAll("\\/", "/"));
+//		System.out.println(imgurl.toString()+"------222222");
+//		Map<String,Object> map=this.json(imgurl.toString());
+//		if(map.containsKey("errcode")){
+//			if(map.get("errcode").equals(42001)){
+//				this.getToken(auEmployee.getAppid(),auEmployee.getAppsecret());
+//			}
+//			throw new Exception("addMedia errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
+//		}
+//		String wechaturl=(String) map.get("url");
+//		Gson gson=new Gson();
+//		String jsonObj=gson.toJson(param);
+//		System.out.println(jsonObj+"--------88888888-----------"+JSONObject.fromObject(jsonObj));
+//		String result=HttpClientUtil.post1(url, JSONObject.fromObject(jsonObj));
+//		System.out.println(result+"------1111111111111");
+//		map=this.json(result);
+//		map.put("url", wechaturl);
+//		return map;
+//	}
 
 	@Override
 	public Map<String,Object> CustomerSend(AuEmployee auEmployee,String openId,DiCard diCard) throws Exception{

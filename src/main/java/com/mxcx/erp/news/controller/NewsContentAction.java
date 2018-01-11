@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mxcx.erp.we.dao.entity.WeCustomer;
+import com.mxcx.erp.wechat.service.WeChatService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,8 @@ public class NewsContentAction extends BaseController{
 	private AuEmployeeService auEmployeeService;
 	@Autowired
 	private WeCustomerService weCustomerService;
+	@Autowired
+	private WeChatService weChatService;
 	private final static Logger log = Logger.getLogger(NewsContentAction.class);
 	@RequestMapping(value = "/news/{id}")
 	public ModelAndView newsInfo(@PathVariable String id,HttpServletRequest request, HttpServletResponse response) {
@@ -119,60 +122,65 @@ public class NewsContentAction extends BaseController{
 		String code=request.getParameter("code");
 		String state=request.getParameter("state");
 		System.out.println("state:"+state);
-		int appidstart=state.lastIndexOf("auappid=");
-		int appidend=state.indexOf("-openId");
-		String appid=state.substring(appidstart+8, appidend);
-		int openstart=state.indexOf("openId=");
-		int opentend=state.indexOf("-cardId");
-		String openid=state.substring(openstart+7, opentend);
-		int cardIdstart=state.indexOf("cardId=");
-		int cardIdend=state.indexOf("-recode");
-		String cardId=state.substring(cardIdstart+7,cardIdend);
-		int recordstart=state.indexOf("recode=");
-		String record=state.substring(recordstart+7,state.length());
-		String newOpenid=openid;
-		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
-		AuEmployee auEmployee=auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
-		if(StringUtils.isNotEmpty(code)){
-		System.out.println("code------------:"+code);
-		System.out.println("appid:"+appid+"--secret:"+auEmployee.getAppsecret()+"--openid:"+openid+"--cardId:"+cardId);
-		String url=Constant.OAUTH_ACCESS_TOKEN.replace("APPID", appid).replace("SECRET", auEmployee.getAppsecret()).replace("CODE", code);
-		String result=HttpClientUtil.get(url);
-		Map<String,Object> map=WeChatServiceImpl.json(result);
-		if(map.containsKey("errcode")){
-			log.error("wechatUserInfo errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
-			if(map.get("errcode").equals(40163)||map.get("errcode").equals(40029)){
-				view.addObject("recode", record);
-				view.addObject("openId", openid);
-				view.addObject("cardId",cardId);
-				view.addObject("appid",appid);
-				view.addObject("secret",auEmployee.getAppsecret());
-				view.addObject("auEmployeeInfo",auEmployee );
-				view.setViewName("/ftl/news/publicInfo");
-				return view;
+		try {
+			int appidstart = state.lastIndexOf("auappid=");
+			int appidend = state.indexOf("-openId");
+			String appid = state.substring(appidstart + 8, appidend);
+			int openstart = state.indexOf("openId=");
+			int opentend = state.indexOf("-cardId");
+			String openid = state.substring(openstart + 7, opentend);
+			int cardIdstart = state.indexOf("cardId=");
+			int cardIdend = state.indexOf("-recode");
+			String cardId = state.substring(cardIdstart + 7, cardIdend);
+			int recordstart = state.indexOf("recode=");
+			String record = state.substring(recordstart + 7, state.length());
+			String newOpenid = openid;
+			DiCard diCard = diCardService.findDiCardByID(Integer.valueOf(cardId));
+			AuEmployee auEmployee = auEmployeeService.findAuEmployeeById(diCard.getCreateUser());
+			if (StringUtils.isNotEmpty(code)) {
+				System.out.println("code------------:" + code);
+				System.out.println("appid:" + appid + "--secret:" + auEmployee.getAppsecret() + "--openid:" + openid + "--cardId:" + cardId);
+				String url = Constant.OAUTH_ACCESS_TOKEN.replace("APPID", appid).replace("SECRET", auEmployee.getAppsecret()).replace("CODE", code);
+				String result = HttpClientUtil.get(url);
+				Map<String, Object> map = WeChatServiceImpl.json(result);
+				if (map.containsKey("errcode")) {
+					log.error("wechatUserInfo errcode:" + map.get("errcode") + "---errmsg:" + map.get("errmsg"));
+					if (map.get("errcode").equals(40163) || map.get("errcode").equals(40029)) {
+						view.addObject("recode", record);
+						view.addObject("openId", openid);
+						view.addObject("cardId", cardId);
+						view.addObject("appid", appid);
+						view.addObject("secret", auEmployee.getAppsecret());
+						view.addObject("auEmployeeInfo", auEmployee);
+						view.setViewName("/ftl/news/publicInfo");
+						return view;
+					}
+				}
+				newOpenid = (String) map.get("openid");
+				System.out.println("cardInfo---newOpenId:" + newOpenid);
 			}
+			String endtime = DateUtil.format(diCard.getVaildtime(), "yyyy-MM-dd");
+			String url = "http://www.vanloon456.cn/ourun/news/cardInfo.do?state=auappid=" + appid + "-openId=" + newOpenid + "-cardId=" + diCard.getId() + "-recode=" + record;
+			Map<String, String> map=weChatService.sign(url, appid, auEmployee.getAppsecret());
+			WeCustomer weCustomer = weCustomerService.findWeCustomerByID(newOpenid);
+			if (weCustomer == null || StringUtils.isEmpty(weCustomer.getProvince()) || StringUtils.isEmpty(weCustomer.getCity())) {
+				view.addObject("whether", "false");
+			} else {
+				view.addObject("whether", "true");
+			}
+			view.addObject("cardId", diCard.getId());
+			view.addObject("diCard", diCard);
+			view.addObject("endtime", endtime);
+			view.addObject("auEmployee", auEmployee);
+			view.addObject("type", 0);
+			view.addObject("diSendRecode", record);
+			view.addObject("openId", newOpenid);
+			view.addObject("appid", appid);
+			view.addObject("secret", auEmployee.getAppsecret());
+			view.setViewName("/ftl/news/cardInfo");
+		}catch (Exception e){
+			log.error(e);
 		}
-		 newOpenid=(String) map.get("openid");
-		System.out.println("cardInfo---newOpenId:"+newOpenid);
-		}
-		String endtime=DateUtil.format(diCard.getVaildtime(), "yyyy-MM-dd");
-		WeCustomer weCustomer=weCustomerService.findWeCustomerByID(newOpenid);
-		if(weCustomer==null||StringUtils.isEmpty(weCustomer.getProvince())||StringUtils.isEmpty(weCustomer.getCity())){
-			view.addObject("whether","false");
-		}
-			else{
-			view.addObject("whether","true");
-		}
-		view.addObject("cardId",diCard.getId());
-		view.addObject("diCard",diCard);
-		view.addObject("endtime",endtime);
-		view.addObject("auEmployee",auEmployee);
-		view.addObject("type",0);
-		view.addObject("diSendRecode",record);
-		view.addObject("openId",newOpenid);
-		view.addObject("appid",appid);
-		view.addObject("secret",auEmployee.getAppsecret());
-		view.setViewName("/ftl/news/cardInfo");
 		return view;
 	}
 	
@@ -214,29 +222,6 @@ public class NewsContentAction extends BaseController{
 		return view;
 	}
 	
-//	@RequestMapping(value = "/news/shareCardInfo.do")
-//	public ModelAndView shareCardInfo(HttpServletRequest request){
-//		ModelAndView view = new ModelAndView();
-//		String cardId=request.getParameter("cardId");
-//		String openId=request.getParameter("openId");
-//		String processId=request.getParameter("processId");
-//		String type=request.getParameter("type");
-//		String appid=request.getParameter("appid");
-//		String secret=request.getParameter("secret");
-//		String share_card_num=request.getParameter("share_card_num");
-//		AuEmployee auEmployee=auEmployeeService.findAuEmployeeBywxInfo(appid,secret);
-//		DiProcess diProcess=diProcessService.findDiProcessByID(processId);
-//		Date endDate=diProcess.getEnd_time();
-//		String endtime=DateUtil.format(endDate, "yyyy-MM-dd");
-//		DiCard diCard=diCardService.findDiCardByID(Integer.valueOf(cardId));
-//		view.addObject("diCard",diCard);
-//		view.addObject("endtime",endtime);
-//		view.addObject("auEmployee",auEmployee);
-//		view.addObject("share_card_num",Integer.valueOf(share_card_num));
-//		view.addObject("type",type);
-//		view.setViewName("/ftl/news/shareCardInfo");
-//		return view;
-//	}
 	public static void main(String[] args) {
 		String state="auappid=${appid}-secret=${secret}-openId=${openId}-cardId=${cardId}-recode=${recode}";
 		int appidstart=state.lastIndexOf("auappid=");
