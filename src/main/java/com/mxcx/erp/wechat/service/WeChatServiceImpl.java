@@ -55,6 +55,8 @@ public class WeChatServiceImpl implements WeChatService{
 		if(StringUtils.isEmpty(toke)){
 			this.getToken(auEmployee.getAppid(), auEmployee.getAppsecret());
 		}
+		System.out.println("appid:"+auEmployee.getAppid());
+		System.out.println("token:----"+token.get(auEmployee.getAppid()));
 		String url=Constant.QRCODE.replace("TOKEN", token.get(auEmployee.getAppid()));
 		log.info("getQRcode URL:"+url);
 		Map<String,Object> params=new HashMap<String,Object>();
@@ -109,8 +111,8 @@ public class WeChatServiceImpl implements WeChatService{
 
 	@Override
 	public Map<String,String> getToken(String appid,String appsecret) throws Exception {
-		appid=Constant.APPID;
-		appsecret=Constant.APPSECRET;
+		appid=appid;
+		appsecret=appsecret;
 		String url=Constant.TOKENURL.replace("APPID", appid).replace("APPSECRET",appsecret);
 		log.info(url);
 		String tokentemp=HttpClientUtil.get(url);
@@ -137,6 +139,7 @@ public class WeChatServiceImpl implements WeChatService{
 			Map<String,Date> ticket=new HashMap<String, Date>();
 			ticket.put(map.get("ticket").toString(),new Date());
 			jsJpatoken.put(appid, ticket);
+			return;
 		}
 		if(map.containsKey("errcode")){
 			this.getToken(appid, appsecret);
@@ -145,6 +148,10 @@ public class WeChatServiceImpl implements WeChatService{
 	}
 	private String getTicket(Date date,String appid,String appsecret) throws Exception {
 		Map<String,Date> map=jsJpatoken.get(appid);
+		if(map==null){
+			this.getJsapi_ticket( appid, appsecret);
+			map=jsJpatoken.get(appid);
+		}
 		Iterator iterator=map.entrySet().iterator();
 		String key="";
 		Date val=null;
@@ -174,24 +181,23 @@ public class WeChatServiceImpl implements WeChatService{
 		Map<String, String> ret = new HashMap<String, String>();
 		String nonce_str = Constant.TOKEN;
 		Date date=new Date();
-		String timestamp = String.valueOf(date.getTime());
+		String timestamp = String.valueOf((date.getTime())/1000);
 		String string1;
 		String signature = "";
 		String jsapi_ticket=this.getTicket(date,appid, appsecret);
-		string1 = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + nonce_str+ "×tamp=" + timestamp + "&url=" + url;
+		string1 = "jsapi_ticket=" + jsapi_ticket + "&noncestr=" + nonce_str+ "&timestamp=" + timestamp + "&url=" + url;
+		System.out.println("string1============="+string1);
 		try {
 			MessageDigest crypt = MessageDigest.getInstance("SHA-1");
-			crypt.reset();
-			crypt.update(string1.getBytes("UTF-8"));
+			crypt.update(string1.getBytes());
 			signature = byteToHex(crypt.digest());
+			System.out.println("signature---------------"+signature);
 		} catch (NoSuchAlgorithmException e) {
-			log.error("sign--------"+e);
-		} catch (UnsupportedEncodingException e) {
 			log.error("sign--------"+e);
 		}
 		ret.put("url", url);
 		ret.put("jsapi_ticket", jsapi_ticket);
-		ret.put("nonceStr", nonce_str);
+		ret.put("noncestr", nonce_str);
 		ret.put("timestamp", timestamp);
 		ret.put("signature", signature);
 		return ret;
@@ -570,12 +576,15 @@ public class WeChatServiceImpl implements WeChatService{
 	}
 
 	private static String byteToHex(final byte[] hash) {
-		Formatter formatter = new Formatter();
-		for (byte b : hash) {
-			formatter.format("%02x", b);
+		StringBuffer hexStr = new StringBuffer();
+		// 字节数组转换为 十六进制 数
+		for (int i = 0; i < hash.length; i++) {
+			String shaHex = Integer.toHexString(hash[i] & 0xFF);
+			if (shaHex.length() < 2) {
+				hexStr.append(0);
+			}
+			hexStr.append(shaHex);
 		}
-		String result = formatter.toString();
-		formatter.close();
-		return result;
+		return hexStr.toString();
 	}
 }

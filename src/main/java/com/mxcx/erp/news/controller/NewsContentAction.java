@@ -1,6 +1,7 @@
 package com.mxcx.erp.news.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -160,7 +161,8 @@ public class NewsContentAction extends BaseController{
 				System.out.println("cardInfo---newOpenId:" + newOpenid);
 			}
 			String endtime = DateUtil.format(diCard.getVaildtime(), "yyyy-MM-dd");
-			String url = "http://www.vanloon456.cn/ourun/news/cardInfo.do?state=auappid=" + appid + "-openId=" + newOpenid + "-cardId=" + diCard.getId() + "-recode=" + record;
+			String url = "http://www.vanloon456.cn/ourun/news/cardInfo.do?code="+code+"&state=";
+			url=url+URLEncoder.encode("auappid=" + appid + "-openId=" + newOpenid + "-cardId=" + diCard.getId() + "-recode=" + record,"UTF-8");
 			Map<String, String> map=weChatService.sign(url, appid, auEmployee.getAppsecret());
 			WeCustomer weCustomer = weCustomerService.findWeCustomerByID(newOpenid);
 			if (weCustomer == null || StringUtils.isEmpty(weCustomer.getProvince()) || StringUtils.isEmpty(weCustomer.getCity())) {
@@ -168,6 +170,11 @@ public class NewsContentAction extends BaseController{
 			} else {
 				view.addObject("whether", "true");
 			}
+			view.addObject("timestamp",map.get("timestamp"));
+			view.addObject("signature",map.get("signature"));
+			view.addObject("noncestr",map.get("noncestr"));
+			view.addObject("timestamp",map.get("timestamp"));
+			view.addObject("timestamp",map.get("timestamp"));
 			view.addObject("cardId", diCard.getId());
 			view.addObject("diCard", diCard);
 			view.addObject("endtime", endtime);
@@ -180,6 +187,7 @@ public class NewsContentAction extends BaseController{
 			view.setViewName("/ftl/news/cardInfo");
 		}catch (Exception e){
 			log.error(e);
+			e.printStackTrace();
 		}
 		return view;
 	}
