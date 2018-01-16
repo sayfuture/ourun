@@ -180,6 +180,7 @@ public class NewsContentAction extends BaseController{
 			view.addObject("endtime", endtime);
 			view.addObject("auEmployee", auEmployee);
 			view.addObject("type", 0);
+			view.addObject("code",code);
 			view.addObject("diSendRecode", record);
 			view.addObject("openId", newOpenid);
 			view.addObject("appid", appid);

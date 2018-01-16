@@ -22,7 +22,7 @@
         wx.ready(function(){
             wx.onMenuShareTimeline({
                 title: '${diCard.card_name}', // 分享标题
-                link: 'http://www.vanloon456.cn/ourun/news/cardInfo.do?state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${diSendRecode}', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                link: 'http://www.vanloon456.cn/ourun/news/cardInfo.do?code=${code}&state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${diSendRecode}', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                 imgUrl: '/upload/co/${diCard.coContent.fileUrl}', // 分享图标
                 success: function () {
                     alert("分享成功！");
@@ -34,7 +34,7 @@
             wx.onMenuShareAppMessage({
                 title: '${diCard.card_name}', // 分享标题
                 desc: '${diCard.use_explain}', // 分享描述
-                link: 'http://www.vanloon456.cn/ourun/news/cardInfo.do?state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${diSendRecode}', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                link: 'http://www.vanloon456.cn/ourun/news/cardInfo.do?code=${code}&state=auappid=${appid}-openId=${openId}-cardId=${cardId}-recode=${diSendRecode}', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                 imgUrl: '/upload/co/${diCard.coContent.fileUrl}', // 分享图标
                 type: '', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
