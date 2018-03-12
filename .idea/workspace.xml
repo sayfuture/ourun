@@ -2,104 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297cb252-7296-4e1c-b022-4649040fcc43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/controller/AreaAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/area/dao/controller/AreaAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateAdaptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/ActDateType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/AuHQL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/DiffType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/DiffType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/FunctionType.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/adaptor/FunctionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuAuthorityAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuAuthorityAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuButtonAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuButtonAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuDeptAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuDeptAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuEmployeeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuEmployeeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuMenuAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuMenuAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuPositionAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/AuPositionAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/LoginAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/ValidateCodeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/controller/ValidateCodeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityPositionServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityPositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuAuthorityServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuButtonServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuButtonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuDeptServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuDeptServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeAuthorityServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeAuthorityServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeDeptServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeDeptServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuEmployeeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuMenuServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuMenuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuPositionServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/au/service/AuPositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/FilePath.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/FilePath.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/BaseController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MoreUploaderAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MoreUploaderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MyFreeMarkerView.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/controller/MyFreeMarkerView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/filter/AuthorityFilter.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/filter/AuthorityFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/BaseService.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/BaseService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/SystemUpload.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/commons/service/SystemUpload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoContentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoContentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTemplateAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTemplateAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTypeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/CoTypeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileBrowerController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileBrowerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileUploadController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/controller/FileUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoContentServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoContentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTemplateServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTemplateServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTypeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/co/service/CoTypeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiCardAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiCardAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiGroupSendAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiGroupSendAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiPermanentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiPermanentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessRecordAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiProcessRecordAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiSendRecodeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/controller/DiSendRecodeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiCardServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiCardServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiGroupServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiGroupServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiPermanentServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiPermanentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessRecordServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessRecordServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiProcessServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiSendRecodeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/di/service/DiSendRecodeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsPictureAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsPictureAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsTypeAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsGoodsTypeAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsKuPropAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsKuPropAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropNameAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropNameAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropValueAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsPropValueAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsSkuAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/GsSkuAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgBrowerController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgBrowerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgUploadController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/controller/ImgUploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsAdditionalServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsAdditionalServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsPictureServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsPictureServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsTypeServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsGoodsTypeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsKuPropServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsKuPropServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropNameServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropNameServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropValueServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsPropValueServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuShowServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/gs/service/GsSkuShowServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/LogManagementAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/LogManagementAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/MemberLogAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/controller/MemberLogAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/LogManagementServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/LogManagementServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/MemberLogServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/lo/service/MemberLogServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeLevelAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeLevelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$Chart.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$Chart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$LineChartNode.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$LineChartNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$PieChart.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction$PieChart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/controller/MeMemberStatisticsAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeLevelServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/me/service/MeLevelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/news/controller/NewsContentAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/qr/QRcode.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/qr/QRcode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/solr/SolrJSearch.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/solr/SolrJSearch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest$1.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/CallBackTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/Client.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/utils/SerializeUtil.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/te/utils/SerializeUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/HttpClientUtil.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/HttpClientUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/Constant.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/Constant.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/service/WeCustomerServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/service/WeCustomerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/controller/WeChatAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/wechat/controller/WeChatAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" afterPath="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -113,59 +31,76 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ourun" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java">
+      <file leaf-file-name="WxMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="276">
+              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cardInfo.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl">
+      <file leaf-file-name="AuDeptServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuDeptServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="345">
+              <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsContentAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java">
+      <file leaf-file-name="WxMenuServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="181" column="38" selection-start-line="181" selection-start-column="38" selection-end-line="181" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sharePage.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/sharePage.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeChatServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3938">
-              <caret line="179" column="48" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="48" />
+            <state relative-caret-position="1376">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3794#3808#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auDept.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/js/au/auDept.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2089">
+              <caret line="192" column="25" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxMenu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/js/we/wxMenu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxMenu.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#0;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#1;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,19 +109,62 @@
       <file leaf-file-name="WeChatAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1628">
-              <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
+            <state relative-caret-position="271">
+              <caret line="126" column="22" lean-forward="false" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeChatService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java">
+      <file leaf-file-name="TreeWxMenuVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
+            <state relative-caret-position="529">
+              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <folding>
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
+                <element signature="e#1050#1051#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1108#1109#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1166#1167#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1218#1219#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1323#1324#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
+                <element signature="e#1504#1505#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeAuDeptVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/TreeAuDeptVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxMenuAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -228,7 +206,13 @@
       <find>cardInfo</find>
       <find>getPermanentQRcode</find>
       <find>recode</find>
+      <find>crm</find>
+      <find>user</find>
     </findStrings>
+    <replaceStrings>
+      <replace>erp</replace>
+      <replace>wx</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -275,11 +259,21 @@
         <option value="$PROJECT_DIR$/WebRoot/js/di/groupSend.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/service/MeMemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/sharePage.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
+        <option value="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" />
+        <option value="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" />
       </list>
     </option>
   </component>
@@ -303,22 +297,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -335,156 +320,155 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ftl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ftl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ourun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="au" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="au" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="ftl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="ftl" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="ftl" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="au" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="we" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -499,10 +483,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mxcx.erp.we.dao.entity" />
+      <recent name="com.mxcx.erp.we.service" />
+      <recent name="com.mxcx.erp.we.controller" />
       <recent name="com.mxcx.erp.area.dao.entity" />
       <recent name="com.mxcx.erp.area.dao.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\ourun\WebRoot\js\we" />
+      <recent name="D:\workspace\ourun\WebRoot\ftl\manager\we" />
       <recent name="D:\workspace\ourun\WebRoot\js\news" />
       <recent name="D:\workspace\ourun\src\main\java\com\mxcx\erp\area\dao\service" />
     </key>
@@ -520,6 +509,89 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.ourun">
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -580,63 +652,46 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-      <patterns />
-      <method />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -758,36 +813,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -858,46 +883,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
@@ -928,15 +917,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
@@ -950,7 +930,7 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="ourun" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.571" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="D:/jdk1.7">
+    <configuration name="ourun" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.571" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="D:/jdk1.7">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <file path="$PROJECT_DIR$/WebRoot">
@@ -1021,9 +1001,6 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.ourun" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1078,6 +1055,7 @@
       <workItem from="1516068798078" duration="547000" />
       <workItem from="1516071664799" duration="1671000" />
       <workItem from="1516073977595" duration="161000" />
+      <workItem from="1520859822270" duration="7034000" />
     </task>
     <task id="LOCAL-00001" summary="ourun">
       <created>1506257579086</created>
@@ -1188,7 +1166,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187333000" />
+    <option name="totallyTimeSpent" value="203106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1200,38 +1178,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31578946" sideWeight="0.48122317" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29057017" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22431506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39064327" sideWeight="0.8535408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18003026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.034795765" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.02414163" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4608187" sideWeight="0.7693133" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2688356" sideWeight="0.7693133" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31678084" sideWeight="0.48122317" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39064327" sideWeight="0.8535408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.49785408" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1269,7 +1246,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1278,312 +1255,178 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/dao/entity/DiCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/commons/controller/BasePo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/jdk1.7/src.zip!/java/lang/StringCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1978">
-          <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/CityList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/js/news/jquery.cityselect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="98" column="72" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/te/controller/TestCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/SystemCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/js/commons/utility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Areas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WeCustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WeCustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Cities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/entity/Provinces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/js/commons/tools.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3082">
-          <caret line="148" column="11" selection-start-line="128" selection-start-column="4" selection-end-line="148" selection-end-column="11" />
+          <caret line="148" column="11" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="148" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/controller/AreaAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
-          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <caret line="63" column="17" lean-forward="false" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/area/dao/service/AreaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/weCustomer.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1403">
-          <caret line="61" column="74" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="74" />
+          <caret line="61" column="74" lean-forward="false" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/js/we/weCustomer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <caret line="202" column="33" lean-forward="false" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/di/diPermanent.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/di/diScanSend.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WeCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/dao/entity/MeMember.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1173">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/dao/entity/DiSendRecode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+          <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="110" column="50" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
+          <caret line="110" column="50" lean-forward="false" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/controller/DiGroupSendAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
-          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuEmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3828">
-          <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
+          <caret line="184" column="22" lean-forward="false" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/di/groupSend.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="29" />
+          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/js/di/groupSend.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4686">
-          <caret line="213" column="39" selection-start-line="213" selection-start-column="39" selection-end-line="213" selection-end-column="39" />
+          <caret line="213" column="39" lean-forward="false" selection-start-line="213" selection-start-column="39" selection-end-line="213" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/controller/AuEmployeeAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4025">
-          <caret line="204" column="39" selection-start-line="204" selection-start-column="39" selection-end-line="204" selection-end-column="39" />
+          <caret line="204" column="39" lean-forward="false" selection-start-line="204" selection-start-column="39" selection-end-line="204" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuEmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1288">
-          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <caret line="94" column="13" lean-forward="false" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/service/MeMemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiProcessServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3381">
-          <caret line="180" column="16" selection-start-line="180" selection-start-column="16" selection-end-line="180" selection-end-column="16" />
+          <caret line="180" column="16" lean-forward="false" selection-start-line="180" selection-start-column="16" selection-end-line="180" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/shareCardInfo.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1100">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/resultPage.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/di/service/DiGroupServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
-          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/jdk1.7/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
-          <caret line="124" column="47" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="47" />
+          <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/jdk1.7/src.zip!/java/security/MessageDigest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+          <caret line="155" column="32" lean-forward="false" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/AuEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3942">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="644">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1591,31 +1434,29 @@
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/singlenews.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/publicInfo.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1628">
-          <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="667">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3938">
-          <caret line="179" column="48" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="48" />
+        <state relative-caret-position="3358">
+          <caret line="179" column="48" lean-forward="false" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <marker date="1515863234164" expanded="false" signature="11931:11946" ph="&lt;~&gt;" />
+            <marker date="1515863234164" expanded="false" signature="11991:12006" ph="&lt;~&gt;" />
+            <marker date="1515863234164" expanded="false" signature="12048:12063" ph="&lt;~&gt;" />
+            <marker date="1515863234164" expanded="false" signature="13888:13903" ph="&lt;~&gt;" />
+            <marker date="1515863234164" expanded="false" signature="13948:13963" ph="&lt;~&gt;" />
+            <marker date="1515863234164" expanded="false" signature="14628:14648" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -1623,23 +1464,209 @@
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/sharePage.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="181" column="38" selection-start-line="181" selection-start-column="38" selection-end-line="181" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="2898">
+          <caret line="158" column="17" lean-forward="false" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+        <state relative-caret-position="161">
+          <caret line="75" column="51" lean-forward="false" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="123" column="21" lean-forward="false" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/commons/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="60" column="19" lean-forward="false" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="136" column="45" lean-forward="true" selection-start-line="136" selection-start-column="45" selection-end-line="136" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="175" column="8" lean-forward="true" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/AuEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="91" column="14" lean-forward="true" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/AuDept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-485">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/AuEmployeeDept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/TreeAuDeptVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuDeptServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/js/au/auDept.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2089">
+          <caret line="192" column="25" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="126" column="22" lean-forward="false" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1376">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3794#3808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#0;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#1;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/js/we/wxMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
           <folding />
         </state>
       </provider>

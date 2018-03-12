@@ -117,4 +117,17 @@ public class Constant {
 	 * http请求方式: POST
 	 */
 	public static final String SEND_OPENID="https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token=ACCESS_TOKEN";
+
+
+	/**
+	 * 自定义菜单创建接口
+	 * http请求方式: POST
+	 */
+	public static final String  CREATE_MENU="https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
+
+	/**
+	 * 自定义菜单删除接口
+	 * http请求方式：GET
+	 */
+	public static final String DELETE_MENU="https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN";
 }

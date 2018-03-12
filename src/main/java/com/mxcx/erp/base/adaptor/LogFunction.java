@@ -132,7 +132,9 @@ public enum LogFunction {
 	 DIPERMANENT_CREATE("长期二维码创建",LogModule.DIPERMANENT),
 	 DIPERMANENT_UPDATE("长期二维码修改",LogModule.DIPERMANENT),
 	 DIPERMANENT_DELETE("长期二维码删除",LogModule.DIPERMANENT),
-	;
+	WXMENU_CREATE("微信菜单创建",LogModule.WXMENU),
+	WXMENU_UPDATE("微信菜单修改",LogModule.WXMENU),
+	WXMENU_DELETE("微信菜单删除",LogModule.WXMENU);
 	
  	public String name;
 	public LogModule logModule;

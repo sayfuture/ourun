@@ -169,8 +169,11 @@ public enum LogModule {
 	DIPERMANENT("长期二维码模块","071",new LogFunction[]{
 			LogFunction.DIPERMANENT_CREATE,LogFunction.DIPERMANENT_UPDATE,
 			LogFunction.DIPERMANENT_DELETE
-	}), 
-	;
+	}),
+    WXMENU("微信菜单管理","072" ,new LogFunction[]{
+			LogFunction.WXMENU_CREATE,LogFunction.WXMENU_UPDATE,
+			LogFunction.WXMENU_DELETE
+	} );
 	
 	private String name;
 	private String moduleNo;

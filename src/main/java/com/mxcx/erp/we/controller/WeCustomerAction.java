@@ -49,14 +49,7 @@ public class WeCustomerAction extends BaseController {
 	
 	@RequestMapping("/manager/erp/we/findWeCustomerList.do")
 	@ResponseBody
-	public DataGrid findWeCustomerList(HttpServletRequest request,
-			@ModelAttribute("pp") PageParameter pageParameter) {
-//		try {
-//			weChatService.groupSendByOpenId(this.getLoginUser(request));
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+	public DataGrid findWeCustomerList(HttpServletRequest request,@ModelAttribute("pp") PageParameter pageParameter) {
 		DataGrid dataGrid = weCustomerService.findWeCustomerList(pageParameter,this.getLoginUser(request));
 		return dataGrid;
 	}
