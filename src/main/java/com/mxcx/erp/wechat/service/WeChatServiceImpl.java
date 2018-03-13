@@ -210,7 +210,18 @@ public class WeChatServiceImpl implements WeChatService{
 			}
 		}
 		params.put("button",firstMenu);
-		return null;
+		Gson gson=new Gson();
+		String jsonObj=gson.toJson(params);
+		System.out.println("createWXMenu---------"+jsonObj);
+		String result=HttpClientUtil.post1(url,JSONObject.fromObject(jsonObj));
+		Map<String,Object> map=json(result);
+		if(map.containsKey("errcode")){
+			if(map.get("errcode").equals(42001)){
+				this.getToken(Constant.APPID, Constant.APPSECRET);
+			}
+			throw new Exception("createWXMenu errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
+		}
+		return map;
 	}
 
 	@Override

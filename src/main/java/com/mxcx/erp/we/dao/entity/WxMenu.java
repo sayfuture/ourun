@@ -23,7 +23,7 @@ public class WxMenu implements TransparentPo {
     private WxMenu superWxMenu;
     @Column(name = "TYPE")
     private String type;
-    @Column(name = "KEY")
+    @Column(name = "KEYINFO")
     private String key;
     @Column(name = "URL")
     private String url;

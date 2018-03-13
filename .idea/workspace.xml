@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="297cb252-7296-4e1c-b022-4649040fcc43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogFunction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/base/adaptor/LogModule.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/Constant.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/utils/Constant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/mxcx/erp/we/controller/WeCustomerAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/utils/Constant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" afterPath="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" afterPath="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -39,18 +29,8 @@
       <file leaf-file-name="WxMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuDeptServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuDeptServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
+            <state relative-caret-position="184">
+              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -59,11 +39,10 @@
       <file leaf-file-name="WxMenuServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1376">
-              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="1049">
+              <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3794#3808#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +51,7 @@
       <file leaf-file-name="auDept.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/js/au/auDept.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2089">
+            <state relative-caret-position="230">
               <caret line="192" column="25" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="25" />
               <folding />
             </state>
@@ -82,8 +61,8 @@
       <file leaf-file-name="wxMenu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/js/we/wxMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+            <state relative-caret-position="138">
+              <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -92,15 +71,10 @@
       <file leaf-file-name="wxMenu.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="34" />
+            <state relative-caret-position="115">
+              <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#0;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#1;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,8 +83,43 @@
       <file leaf-file-name="WeChatAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="126" column="22" lean-forward="false" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="22" />
+            <state relative-caret-position="409">
+              <caret line="177" column="41" lean-forward="false" selection-start-line="177" selection-start-column="41" selection-end-line="177" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeChatServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="218" column="47" lean-forward="false" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="47" />
+              <folding>
+                <element signature="e#7874#7889#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxMenuAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3513#3529#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeChatService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -119,8 +128,8 @@
       <file leaf-file-name="TreeWxMenuVo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="667">
+              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
               <folding>
                 <element signature="e#980#981#0" expanded="true" />
                 <element signature="e#1001#1002#0" expanded="true" />
@@ -142,28 +151,6 @@
                 <element signature="e#1467#1468#0" expanded="true" />
                 <element signature="e#1504#1505#0" expanded="true" />
                 <element signature="e#1527#1528#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeAuDeptVo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/TreeAuDeptVo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WxMenuAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,7 +246,6 @@
         <option value="$PROJECT_DIR$/WebRoot/js/di/groupSend.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/me/service/MeMemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/sharePage.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/news/controller/NewsContentAction.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/news/cardInfo.ftl" />
@@ -267,12 +253,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/base/adaptor/LogFunction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WeCustomerAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java" />
         <option value="$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java" />
         <option value="$PROJECT_DIR$/WebRoot/js/we/wxMenu.js" />
       </list>
     </option>
@@ -319,8 +306,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -415,6 +404,25 @@
             <path>
               <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
               <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourun" type="462c0819:PsiDirectoryNode" />
               <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -468,8 +476,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1055,7 +1061,8 @@
       <workItem from="1516068798078" duration="547000" />
       <workItem from="1516071664799" duration="1671000" />
       <workItem from="1516073977595" duration="161000" />
-      <workItem from="1520859822270" duration="7034000" />
+      <workItem from="1520859822270" duration="7123000" />
+      <workItem from="1520947568668" duration="4913000" />
     </task>
     <task id="LOCAL-00001" summary="ourun">
       <created>1506257579086</created>
@@ -1162,11 +1169,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515684449514</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="新增菜单维护功能">
+      <created>1520867528452</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1520867528452</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203106000" />
+    <option name="totallyTimeSpent" value="208108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1189,20 +1203,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29057017" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22431506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22339182" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39064327" sideWeight="0.8535408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.02414163" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4608187" sideWeight="0.7693133" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4608187" sideWeight="0.7693133" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1242,11 +1256,12 @@
     <MESSAGE value="分享功能调用以及优化部分代码，删除没有用的代码" />
     <MESSAGE value="js分享功能完成，wechatServiceimpl类中部分功能注掉，简化代码" />
     <MESSAGE value="js分享修改BUG，code引起的BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="js分享修改BUG，code引起的BUG" />
+    <MESSAGE value="新增菜单维护功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增菜单维护功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1423,14 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/ftl/news/singlenews.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1442,22 +1449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3358">
-          <caret line="179" column="48" lean-forward="false" selection-start-line="179" selection-start-column="45" selection-end-line="179" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1515863234164" expanded="false" signature="11931:11946" ph="&lt;~&gt;" />
-            <marker date="1515863234164" expanded="false" signature="11991:12006" ph="&lt;~&gt;" />
-            <marker date="1515863234164" expanded="false" signature="12048:12063" ph="&lt;~&gt;" />
-            <marker date="1515863234164" expanded="false" signature="13888:13903" ph="&lt;~&gt;" />
-            <marker date="1515863234164" expanded="false" signature="13948:13963" ph="&lt;~&gt;" />
-            <marker date="1515863234164" expanded="false" signature="14628:14648" ph="&lt;~&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1501,7 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="60" column="19" lean-forward="false" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,26 +1540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/dao/entity/TreeAuDeptVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuDeptServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1582,18 +1556,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/js/au/auDept.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2089">
-          <caret line="192" column="25" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/TreeWxMenuVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="667">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
             <element signature="e#980#981#0" expanded="true" />
             <element signature="e#1001#1002#0" expanded="true" />
@@ -1619,54 +1585,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/au/service/AuDeptServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="126" column="22" lean-forward="false" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="22" />
+        <state relative-caret-position="23">
+          <caret line="168" column="19" lean-forward="false" selection-start-line="168" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/service/WxMenuServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1376">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="1049">
+          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3794#3808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/service/WeChatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="218" column="47" lean-forward="false" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="47" />
+          <folding>
+            <element signature="e#7874#7889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/dao/entity/WxMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/wechat/controller/WeChatAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="177" column="41" lean-forward="false" selection-start-line="177" selection-start-column="41" selection-end-line="177" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/js/au/auDept.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="192" column="25" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mxcx/erp/we/controller/WxMenuAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="290">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/ftl/manager/we/wxMenu.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#0;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#1;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#0;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#td#0;n#tr#1;n#div#2;n#table#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3513#3529#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/js/we/wxMenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="161" column="38" lean-forward="true" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+        <state relative-caret-position="138">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
           <folding />
         </state>
       </provider>

@@ -6,6 +6,7 @@ import com.mxcx.erp.base.commons.controller.BaseController;
 import com.mxcx.erp.we.dao.entity.TreeWxMenuVo;
 import com.mxcx.erp.we.dao.entity.WxMenu;
 import com.mxcx.erp.we.service.WxMenuService;
+import com.mxcx.erp.wechat.service.WeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * WxMenuAction
@@ -28,6 +31,8 @@ public class WxMenuAction extends BaseController {
 
     @Autowired
     private WxMenuService wxMenuService;
+    @Autowired
+    private WeChatService weChatService;
 
     @RequestMapping(value = "/manager/erp/wx/wxMenu.do")
     public String index() {
@@ -37,7 +42,7 @@ public class WxMenuAction extends BaseController {
     @RequestMapping("/manager/erp/wx/findWxMenuList.do")
     @ResponseBody
     public List<TreeWxMenuVo> findWxMenuList(HttpServletRequest request) {
-        String parentId=request.getParameter("parentId");
+        String parentId=request.getParameter("id");
         List<TreeWxMenuVo> TreeWxMenuVos = wxMenuService.findTree(parentId);
         return TreeWxMenuVos;
     }
@@ -45,6 +50,19 @@ public class WxMenuAction extends BaseController {
     @RequestMapping(value = "/manager/erp/wx/addWxMenu.do", method = RequestMethod.POST)
     @ResponseBody
     public boolean addWxMenu(WxMenu wxMenu, HttpServletRequest request) {
+        if(wxMenu.getType().equals("view")){
+            wxMenu.setPagepath(null);
+            wxMenu.setKey(null);
+            wxMenu.setAppid(null);
+        }
+        if(wxMenu.getType().equals("click")){
+            wxMenu.setPagepath(null);
+            wxMenu.setUrl(null);
+            wxMenu.setAppid(null);
+        }
+        if(wxMenu.getType().equals("miniprogram")){
+            wxMenu.setKey(null);
+        }
         return wxMenuService.addWxMenu(wxMenu, this.getLoginUser(request));
     }
 
@@ -78,5 +96,23 @@ public class WxMenuAction extends BaseController {
         WxMenu wxMenu = wxMenuService.findWxMenuByID(id);
         return wxMenu;
     }
+
+
+    @RequestMapping(value = "/manager/erp/wx/createWxMenu.do")
+    @ResponseBody
+    public Boolean createWxMenu(String id) {
+        Boolean flag=true;
+        Map<String, Object> map=new HashMap<String, Object>();
+        try {
+            map = weChatService.createWXMenu();
+            if(!map.get("errcode").equals(0))
+                flag=false;
+        }catch(Exception e){
+            flag=false;
+            e.printStackTrace();
+        }
+        return flag;
+    }
+
 }
 

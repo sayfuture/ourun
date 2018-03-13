@@ -11,8 +11,7 @@ $(function() {
 		columns : [ [ {
 			field : 'name',
 			title : '菜单名称',
-			width : 100,
-			checkbox : true
+			width : 300
 		}, {
             field : 'type',
             title : '菜单类型',
@@ -20,11 +19,11 @@ $(function() {
         }, {
 			field : 'url',
 			title : '链接',
-			width : 150
+			width : 300
 		}, {
 			field : 'pagepath',
 			title : '小程序链接',
-			width : 150
+			width : 300
 		}] ],
 		onBeforeLoad : function() {},
 		onLoadSuccess : function() {
@@ -44,11 +43,19 @@ $(function() {
 function addWxMenubutton() {
 	$('#dlg_wxMenu').dialog('open').dialog('setTitle', '添加微信菜单管理');
 	$('#wxMenufm').form('clear');
-	$("#state").val("1");
+    var row = $('#wxMenulist').treegrid('getSelected');
+    if(row!=null&&row.p_id==""&&row.p_id==null){
+    	$("#p_id").val(row.id);
+    	$("#p_idInfo").val(row.name);
+	}
 	url = getCurProjPath()+'/manager/erp/wx/addWxMenu.do';
 }
 function editWxMenubutton() {
-	var row = $('#wxMenulist').datagrid('getSelected');
+	var row = $('#wxMenulist').treegrid('getSelected');
+    if(row!=null&&(row.p_id==""&&row.p_id==null)){
+        $("#p_id").val(row.id);
+        $("#p_idInfo").val(row.name);
+    }
 	if (row) {
 		editWxMenubutton1(row);
 	} else {
@@ -74,6 +81,7 @@ function editWxMenubutton1(row) {
 	url = getCurProjPath()+'/manager/erp/wx/modifyWxMenu.do';
 }
 function saveWxMenubutton() {
+	alert($("#p_id").val());
 	$('#wxMenufm').form('submit', {
 		url : url,
 		onSubmit : function() {
@@ -147,29 +155,28 @@ function buttons() {
 $(function () {
 	$("#seltype").combobox({
         onSelect: function(record){
-        	debugger
             if(record.value=="view"){
-            	$("#clickType").hide();
+/*            	$("#clickType").hide();
                 $("#viewType").show();
-                $("#miniprogramType").hide();
+                $("#miniprogramType").hide();*/
                 $("#key").validatebox('disableValidation');
                 $("#url").validatebox('enableValidation');
                 $("#appid").validatebox('disableValidation');
                 $("#pagepath").validatebox('disableValidation');
 			}
             if(record.value=="click"){
-                $("#clickType").show();
+/*                $("#clickType").show();
                 $("#viewType").hide();
-                $("#miniprogramType").hide();
+                $("#miniprogramType").hide();*/
                 $("#key").validatebox('enableValidation');
                 $("#url").validatebox('disableValidation');
                 $("#appid").validatebox('disableValidation');
                 $("#pagepath").validatebox('disableValidation');
             }
             if(record.value=="miniprogram"){
-                $("#clickType").hide();
+           /*     $("#clickType").hide();
                 $("#viewType").show();
-                $("#miniprogramType").show();
+                $("#miniprogramType").show();*/
                 $("#key").validatebox('disableValidation');
                 $("#url").validatebox('enableValidation');
                 $("#appid").validatebox('enableValidation');
@@ -178,4 +185,22 @@ $(function () {
         }
     });
 
-})
+});
+function createWxMenubutton(){
+    $.ajax({
+        method : 'post',
+        url : getCurProjPath()+'/manager/erp/wx/createWxMenu.do',
+        data : 'id=' + row.id,
+        dataType : "json",
+        success : function(data) {
+       		if(data=="true"||data==true){
+                $.messager.alert('操作提示', '操作成功!', 'info');
+			}else {
+                $.messager.alert('操作提示', '发布菜单失败!', 'info');
+			}
+        },
+        error : function(msg) {
+            message_op(false, null);
+        }
+    });
+}

@@ -29,14 +29,19 @@
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addWxMenubutton()">新增微信菜单管理 </a>
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editWxMenubutton()">修改微信菜单管理 </a>
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyWxMenubutton()">删除微信菜单管理</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="createWxMenubutton()">发布微信菜单</a>
 	</div>
 	<table id="wxMenulist" style="height:410px;" ></table>
-	<div id="dlg_wxMenu" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:770px; height:370px; padding:1px 1px;top:1px;">
+	<div id="dlg_wxMenu" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:790px; height:400px; padding:1px 1px;top:1px;">
 		<div class="ftitle" style="margin:10px;"></div>
 		<form id="wxMenufm" novalidate method="post">
 			<input type="hidden" id="id" name="id" />
-            <input type="hidden" name="p_id"  id="p_id" />
-			<table class="mytable2" id="mytable" cellspacing="0"> 
+            <input type="hidden" name="superWxMenu.id"  id="p_id" />
+			<table class="mytable2" id="mytable" cellspacing="0">
+                <tr>
+                    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">一级菜单</th>
+                    <td class="shandan"><span><input   id="p_idInfo" class="easyui-validatebox" data-options="validType:'length[1,20]'" style="width:200px;"readonly="readonly"/></span></td>
+                </tr>
 				<tr>
 					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">菜单名称</th>
 					<td class="shandan"><span><input name="name"  id="name" class="easyui-validatebox" data-options="required:true,validType:'length[1,12]'" style="width:200px;"/></span></td> 
