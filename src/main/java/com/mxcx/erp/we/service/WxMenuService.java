@@ -22,5 +22,6 @@ public interface WxMenuService {
  public Boolean modifyWxMenu(WxMenu wxMenu, AuEmployee auEmployee);
  public List<TreeWxMenuVo> findTree(String parentId);
  public WxMenu findWxMenuByID(String id);
+ public List<WxMenu> findWxMenuTree(String parentId);
 }
 

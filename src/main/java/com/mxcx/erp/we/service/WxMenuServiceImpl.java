@@ -128,7 +128,14 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         }
         return treeWxMenus;
     }
-
+    @Override
+    public List<WxMenu> findWxMenuTree(String parentId) {
+        String hql="from WxMenu x where  1=1 ";
+        hql+= StringUtils.isEmpty(parentId) ? " and x.superWxMenu is null  " : " and x.superWxMenu.id='"+parentId+"'";
+        hql=hql+" order by x.id asc";
+        List<WxMenu> lists=wxMenuDao.find(hql);
+        return lists;
+    }
 
 }
 

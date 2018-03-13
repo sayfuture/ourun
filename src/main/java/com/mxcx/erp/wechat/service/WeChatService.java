@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.mxcx.erp.au.dao.entity.AuEmployee;
 import com.mxcx.erp.co.dao.entity.CoContent;
 import com.mxcx.erp.di.dao.entity.DiCard;
+import com.mxcx.erp.we.dao.entity.TreeWxMenuVo;
 
 public interface WeChatService {
 
@@ -34,4 +35,5 @@ public Map<String,Object> CustomerSendText(AuEmployee auEmployee,String openId,S
 public void groupSendByOpenId(AuEmployee loginUser) throws Exception;
 
 public  Map<String, String> sign( String url,String appid,String appsecret) throws Exception;
+public Map<String,Object> createWXMenu() throws Exception;
 }

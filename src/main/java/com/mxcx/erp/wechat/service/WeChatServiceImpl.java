@@ -1,46 +1,37 @@
 package com.mxcx.erp.wechat.service;
 
-import java.io.*;
-import java.math.BigDecimal;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.*;
-
-import javax.servlet.http.HttpServletRequest;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.google.gson.Gson;
-import com.mxcx.ec.base.commons.util.PropertiesReader;
 import com.mxcx.erp.au.dao.entity.AuEmployee;
-import com.mxcx.erp.co.dao.entity.CoContent;
-import com.mxcx.erp.co.service.CoContentService;
 import com.mxcx.erp.di.dao.entity.DiCard;
-import com.mxcx.erp.di.dao.entity.DiProcess;
 import com.mxcx.erp.di.dao.entity.DiSendRecode;
-import com.mxcx.erp.di.service.DiProcessService;
 import com.mxcx.erp.di.service.DiSendRecodeService;
 import com.mxcx.erp.me.dao.entity.MeMember;
 import com.mxcx.erp.me.service.IMeMemberService;
 import com.mxcx.erp.qr.QRcode;
 import com.mxcx.erp.utils.Constant;
 import com.mxcx.erp.utils.HttpClientUtil;
+import com.mxcx.erp.we.dao.entity.TreeWxMenuVo;
 import com.mxcx.erp.we.dao.entity.WeCustomer;
+import com.mxcx.erp.we.dao.entity.WxMenu;
 import com.mxcx.erp.we.service.WeCustomerService;
+import com.mxcx.erp.we.service.WxMenuService;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.math.BigDecimal;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
 @Service
 public class WeChatServiceImpl implements WeChatService{
 	private final static Logger log = Logger.getLogger(WeChatServiceImpl.class);
 	private  static Map<String,String> token=new HashMap<String,String>();
 	private  static Map<String,Map<String,Date>> jsJpatoken=new HashMap<String,Map<String,Date>>();
-	@Autowired
-	private CoContentService coContentService;
 	@Autowired
 	private WeCustomerService weCustomerService;
 	@Autowired
@@ -48,7 +39,7 @@ public class WeChatServiceImpl implements WeChatService{
 	@Autowired
 	private DiSendRecodeService diSendRecodeService;
 	@Autowired
-	private DiProcessService diProcessService;
+	private WxMenuService wxMenuService;
 	@Override
 	public Map<String, Object> getQRcode(String scene_id,AuEmployee auEmployee) throws Exception {
 		String toke=token.get(auEmployee.getAppid());
@@ -202,6 +193,26 @@ public class WeChatServiceImpl implements WeChatService{
 		ret.put("signature", signature);
 		return ret;
 	}
+
+	@Override
+	public Map<String,Object> createWXMenu() throws Exception {
+		String toke=token.get(Constant.APPID);
+		if(StringUtils.isEmpty(toke)){
+			this.getToken(Constant.APPID, Constant.APPSECRET);
+		}
+		String url=Constant.CREATE_MENU.replace("ACCESS_TOKEN", token.get(Constant.APPID));
+		log.info("createWXMenu URL:"+url);
+		Map<String,Object> params=new HashMap<String,Object>();
+		List<WxMenu> firstMenu=wxMenuService.findWxMenuTree(null);
+		for(WxMenu wxMenu:firstMenu){
+			for(WxMenu secendMenu:wxMenu.getWxMenuset()){
+				secendMenu.setSuperWxMenu(null);
+			}
+		}
+		params.put("button",firstMenu);
+		return null;
+	}
+
 	@Override
 	public String generQRcode(HttpServletRequest request,String sence_id,AuEmployee auEmployee) {
 		String path="";
