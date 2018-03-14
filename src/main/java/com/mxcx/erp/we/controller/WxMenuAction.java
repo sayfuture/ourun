@@ -69,6 +69,19 @@ public class WxMenuAction extends BaseController {
     @RequestMapping(value = "/manager/erp/wx/modifyWxMenu.do", method = RequestMethod.POST)
     @ResponseBody
     public Boolean modifyWxMenu(WxMenu wxMenu, HttpServletRequest request) {
+        if(wxMenu.getType().equals("view")){
+            wxMenu.setPagepath(null);
+            wxMenu.setKey(null);
+            wxMenu.setAppid(null);
+        }
+        if(wxMenu.getType().equals("click")){
+            wxMenu.setPagepath(null);
+            wxMenu.setUrl(null);
+            wxMenu.setAppid(null);
+        }
+        if(wxMenu.getType().equals("miniprogram")){
+            wxMenu.setKey(null);
+        }
         return wxMenuService.modifyWxMenu(wxMenu, this.getLoginUser(request));
     }
 
@@ -94,6 +107,13 @@ public class WxMenuAction extends BaseController {
     @ResponseBody
     public WxMenu goToModifyWxMenu(String id) {
         WxMenu wxMenu = wxMenuService.findWxMenuByID(id);
+        if(wxMenu.getSuperWxMenu()!=null){
+            wxMenu.getSuperWxMenu().setWxMenuset(null);
+        }
+        if(wxMenu.getWxMenuset().size()>0){
+            for(WxMenu subwxMenu:wxMenu.getWxMenuset())
+                subwxMenu.setSuperWxMenu(null);
+        }
         return wxMenu;
     }
 

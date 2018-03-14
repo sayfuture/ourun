@@ -11,10 +11,14 @@ $(function() {
 		columns : [ [ {
 			field : 'name',
 			title : '菜单名称',
-			width : 300
+			width : 150
 		}, {
             field : 'type',
             title : '菜单类型',
+            width : 80
+        }, {
+            field : 'key',
+            title : '点击信息',
             width : 150
         }, {
 			field : 'url',
@@ -24,7 +28,13 @@ $(function() {
 			field : 'pagepath',
 			title : '小程序链接',
 			width : 300
-		}] ],
+		},{field:'optAu',title:'添加二级菜单',width:90,
+			formatter:function(value,row,index){
+            if(row.superWxMenu==null||row.superWxMenu=="")
+                  return  "<img alt='img' src='../../../js/jquery-easyui-1.3.5/themes/icons/band.png' style='margin:6px 2px 3px 0;width: 15px; height: 15px;' /><a style='cursor:pointer;display:block;margin:-19px 0 1px 20px;' class='easyui-linkbutton btn' onclick='addWxMenubutton(\""+row.id+"\");'>功能设置</a>";
+        	else return "";
+		} }
+		] ],
 		onBeforeLoad : function() {},
 		onLoadSuccess : function() {
 			buttons();
@@ -40,7 +50,7 @@ $(function() {
 		parameter : "{'name':'" + $('#searchname').val()+ "'}"
 	});
 }*/
-function addWxMenubutton() {
+function addWxMenubutton(superId) {
 	$('#dlg_wxMenu').dialog('open').dialog('setTitle', '添加微信菜单管理');
 	$('#wxMenufm').form('clear');
     var row = $('#wxMenulist').treegrid('getSelected');
@@ -69,10 +79,36 @@ function editWxMenubutton1(row) {
 		data : 'id=' + row.id,
 		dataType : "json",
 		success : function(data) {
-			$("#id").val(row.id);
-			$("#name").val(row.name);
-			$("#state").val(row.state);
-		},
+			$("#id").val(data.id);
+			if(data.superWxMenu!=null&&data.superWxMenu!=""){
+                $("#p_id").val(data.superWxMenu.id);
+                $("#p_idInfo").val(data.superWxMenu.name);
+			}
+			$("#seltype").combobox('select',data.type);
+			$("#name").val(data.name);
+			if(data.type=="view"){
+                $("#key").validatebox('disableValidation');
+                $("#url").validatebox('enableValidation');
+                $("#appid").validatebox('disableValidation');
+                $("#pagepath").validatebox('disableValidation');
+                $("#url").val(data.url);
+			}
+			if(data.type=="click"){
+                $("#key").validatebox('enableValidation');
+                $("#url").validatebox('disableValidation');
+                $("#appid").validatebox('disableValidation');
+                $("#pagepath").validatebox('disableValidation');
+                $("#key").val(data.key);
+			}
+            if(data.type=="miniprogram"){
+                $("#key").validatebox('disableValidation');
+                $("#url").validatebox('enableValidation');
+                $("#appid").validatebox('enableValidation');
+                $("#pagepath").validatebox('enableValidation');
+                $("#url").val(data.url);
+                $("#appid").val(data.appid);
+                $("#pagepath").val(data.pagepath);
+			}},
 		error : function(msg) {
 			message_op(false, null);
 		}
@@ -81,7 +117,6 @@ function editWxMenubutton1(row) {
 	url = getCurProjPath()+'/manager/erp/wx/modifyWxMenu.do';
 }
 function saveWxMenubutton() {
-	alert($("#p_id").val());
 	$('#wxMenufm').form('submit', {
 		url : url,
 		onSubmit : function() {
@@ -155,6 +190,7 @@ function buttons() {
 $(function () {
 	$("#seltype").combobox({
         onSelect: function(record){
+        	if(record==null) return;
             if(record.value=="view"){
 /*            	$("#clickType").hide();
                 $("#viewType").show();

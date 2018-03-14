@@ -3,10 +3,7 @@ package com.mxcx.erp.we.service;
 
 import com.mxcx.ec.base.commons.dao.IBaseDao;
 import com.mxcx.ec.base.commons.dao.entity.PageParameter;
-import com.mxcx.ec.base.commons.util.DataGrid;
-import com.mxcx.ec.base.commons.util.StringCheck;
-import com.mxcx.ec.base.commons.util.ToolUtils;
-import com.mxcx.ec.base.commons.util.UuidDitch;
+import com.mxcx.ec.base.commons.util.*;
 
 import com.mxcx.erp.au.dao.entity.AuDept;
 import com.mxcx.erp.au.dao.entity.AuEmployee;
@@ -45,6 +42,9 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         boolean flag = false;
         try {
             wxMenu.setId(UuidDitch.getId(LogModule.WXMENU.getModuleNo()));
+            if(StringUtil.isEmpty(wxMenu.getSuperWxMenu().getId())){
+                wxMenu.setSuperWxMenu(null);
+            }
             flag = addPo(wxMenu);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,8 +60,15 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         WxMenu wxMenu = null;
         Boolean flag = true;
         try {
-//            wxMenu = (WxMenu) this.getOne(id, WxMenu.class);
-//            removeByState(wxMenu);
+            wxMenu = (WxMenu) this.getOne(id, WxMenu.class);
+            if(wxMenu.getWxMenuset().size()>0){
+                for(WxMenu subwxMenu:wxMenu.getWxMenuset()){
+                    String hql="delete from WxMenu where id='"+subwxMenu.getId()+"'";
+                    wxMenuDao.executeHql(hql);
+                }
+            }
+            String hql="delete from WxMenu where id='"+wxMenu.getId()+"'";
+            wxMenuDao.executeHql(hql);
         } catch (Exception e) {
             e.printStackTrace();
             flag = false;
@@ -78,6 +85,11 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         try {
             wxMenuTemp = (WxMenu) this.wxMenuDao.getById(WxMenu.class, wxMenu.getId());
             wxMenuTemp.setName(wxMenu.getName());
+            wxMenuTemp.setUrl(wxMenu.getUrl());
+            wxMenuTemp.setAppid(wxMenu.getAppid());
+            wxMenuTemp.setKey(wxMenu.getKey());
+            wxMenuTemp.setPagepath(wxMenu.getPagepath());
+            wxMenuTemp.setType(wxMenu.getType());
             this.modify(wxMenuTemp);
         } catch (Exception e) {
             e.printStackTrace();
@@ -115,11 +127,11 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
             vo.setId(wxMenu.getId());
             vo.setName(wxMenu.getName());
             if(wxMenu.getType().equals("view"))
-                vo.setType("链接");
+                vo.setType("网页链接类型");
             if(wxMenu.getType().equals("click"))
-                vo.setType("点击事件");
+                vo.setType("点击类型");
             if(wxMenu.getType().equals("miniprogram")) {
-                vo.setType("小程序");
+                vo.setType("小程序类型");
                 vo.setPagepath(wxMenu.getPagepath());
             }
             vo.setUrl(wxMenu.getUrl());

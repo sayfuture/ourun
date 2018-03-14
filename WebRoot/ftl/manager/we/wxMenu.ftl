@@ -15,16 +15,16 @@
 	<script type="text/javascript" src="${base}/js/we/wxMenu.js" charset="utf-8"></script>
 </head>
 <body>
-	<div>
-		<table>
-		<tr>
+<!--<div>
+    <table>
+    <tr>
+        <td>
+            微信菜单管理名称：<input type="text" id="searchname" />
+            <input type="button" onclick="search()" value="查询" id="search" disabled />
 			<td>
-				微信菜单管理名称：<input type="text" id="searchname" />
-				<input type="button" onclick="search()" value="查询" id="search" disabled />
-			<td>
 		<tr>
 		<table>
-	</div>
+	</div>-->
 	<div id="toolbar">
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addWxMenubutton()">新增微信菜单管理 </a>
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editWxMenubutton()">修改微信菜单管理 </a>
@@ -80,6 +80,7 @@
                 </div>
 				<tr>
 				<td colspan="4" style="text-align:right;">
+					<font color="red">*</font>微信一级菜单最多有3个，每1个一级菜单最多有5个二级菜单
 					<a href="javascript:saveWxMenubutton();" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
 					<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg_wxMenu').dialog('close')">取消</a>
 				</td>
