@@ -38,12 +38,25 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
     private LogManagementService logManagementService;
 
     @Override
-    public Boolean addWxMenu(WxMenu wxMenu, AuEmployee auEmployee) {
-        boolean flag = false;
+    public String addWxMenu(WxMenu wxMenu, AuEmployee auEmployee) {
+        String info ="";
+        boolean flag=true;
         try {
             wxMenu.setId(UuidDitch.getId(LogModule.WXMENU.getModuleNo()));
+            //校验一级菜单小于3个，二级菜单少于5个
             if(StringUtil.isEmpty(wxMenu.getSuperWxMenu().getId())){
                 wxMenu.setSuperWxMenu(null);
+                List<WxMenu> firstMenu=this.findWxMenuTree(null);
+                if(firstMenu.size()>2){
+                    info="一级菜单数量不能大于3个";
+                return info;
+                }
+            }else{
+                List<WxMenu> secMenu=this.findWxMenuTree(wxMenu.getSuperWxMenu().getId());
+                if(secMenu.size()>4){
+                    info="二级菜单数量不能大于5个";
+                    return info;
+                }
             }
             flag = addPo(wxMenu);
         } catch (Exception e) {
@@ -52,7 +65,7 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         } finally {
             logManagementService.addLogManagement(auEmployee, ToolUtils.getHostAddress(), flag, LogModule.WXMENU.toString(), LogFunction.WXMENU_CREATE.toString(), wxMenu.toString());
         }
-        return flag;
+        return info;
     }
 
     @Override
@@ -61,8 +74,8 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
         Boolean flag = true;
         try {
             wxMenu = (WxMenu) this.getOne(id, WxMenu.class);
-            if(wxMenu.getWxMenuset().size()>0){
-                for(WxMenu subwxMenu:wxMenu.getWxMenuset()){
+            if(wxMenu.getSub_button().size()>0){
+                for(WxMenu subwxMenu:wxMenu.getSub_button()){
                     String hql="delete from WxMenu where id='"+subwxMenu.getId()+"'";
                     wxMenuDao.executeHql(hql);
                 }
@@ -109,7 +122,7 @@ public class WxMenuServiceImpl extends BaseService<WxMenu> implements WxMenuServ
 
     private String ischildren(WxMenu wxMenu){
         Boolean flag=true;
-        for(WxMenu wx:wxMenu.getWxMenuset()){
+        for(WxMenu wx:wxMenu.getSub_button()){
                 flag=false;
         }
         return flag== true ? "open" : "closed";

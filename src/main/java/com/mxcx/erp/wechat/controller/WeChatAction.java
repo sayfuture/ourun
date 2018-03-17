@@ -184,6 +184,13 @@ public class WeChatAction extends BaseController {
         	 weChatService.CustomerSendText(auEmployee, openId, "领取成功！");
         	   weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
          }else{
+			 if(MsgType.equals("event")&&Event.equals("CLICK")){
+				 if(Event.equals("VIEW"))
+				 System.out.println("WX MENU return EventKey:"+EventKey.toString());
+				 else{
+					 weChatService.CustomerSendTextNoOpter( openId,EventKey.toString());
+				 }
+			 }else{
               user_id=eventKey.substring(0, 4);
 			 //获取店铺信息方式
 			 MeMember meMember =iMeMemberService.findMemerByUserId(user_id);
@@ -193,6 +200,7 @@ public class WeChatAction extends BaseController {
 			 WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
               Map<String,Object> resultMap=weChatService.CustomerSend(auEmployee, openId, diCard);
      				weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
+         	}
          }
 		}catch(Exception e){
 			e.printStackTrace();

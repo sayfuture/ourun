@@ -32,8 +32,10 @@ public Map<String,Object> newsTemplateList(AuEmployee auEmployee) throws Excepti
 public Map<String,Object> sendNews(AuEmployee auEmployee,String templateId,String openId,DiCard diCard) throws Exception;
 
 public Map<String,Object> CustomerSendText(AuEmployee auEmployee,String openId,String text) throws Exception;
+public Map<String,Object> CustomerSendTextNoOpter(String openId,String text) throws Exception;
 public void groupSendByOpenId(AuEmployee loginUser) throws Exception;
 
 public  Map<String, String> sign( String url,String appid,String appsecret) throws Exception;
 public Map<String,Object> createWXMenu() throws Exception;
+public Map<String,Object> delWXMenu() throws Exception;
 }

@@ -34,7 +34,7 @@ public class WxMenu implements TransparentPo {
     @Column(name = "PAGEPATH")
     private String pagepath;
     @OneToMany(fetch=FetchType.EAGER,mappedBy="superWxMenu")
-    private Set<WxMenu> wxMenuset;
+    private Set<WxMenu> sub_button;
     public void setId(String id) {
         this.id = id;
     }
@@ -107,12 +107,12 @@ public class WxMenu implements TransparentPo {
         this.superWxMenu = superWxMenu;
     }
 
-    public Set<WxMenu> getWxMenuset() {
-        return wxMenuset;
+    public Set<WxMenu> getSub_button() {
+        return sub_button;
     }
 
-    public void setWxMenuset(Set<WxMenu> wxMenuset) {
-        this.wxMenuset = wxMenuset;
+    public void setSub_button(Set<WxMenu> sub_button) {
+        this.sub_button = sub_button;
     }
 }
 

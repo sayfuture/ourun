@@ -28,8 +28,9 @@
 	<div id="toolbar">
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addWxMenubutton()">新增微信菜单管理 </a>
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editWxMenubutton()">修改微信菜单管理 </a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyWxMenubutton()">删除微信菜单管理</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyWxMenubutton()">删除菜单</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="createWxMenubutton()">发布微信菜单</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="delWXMenu()">删除微信菜单管理</a>
 	</div>
 	<table id="wxMenulist" style="height:410px;" ></table>
 	<div id="dlg_wxMenu" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:790px; height:400px; padding:1px 1px;top:1px;">

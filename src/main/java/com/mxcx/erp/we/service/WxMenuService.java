@@ -17,7 +17,7 @@ import java.util.List;
 
 public interface WxMenuService {
 
- public Boolean addWxMenu(WxMenu wxMenu, AuEmployee auEmployee);
+ public String addWxMenu(WxMenu wxMenu, AuEmployee auEmployee);
  public Boolean deleteWxMenu(String id, AuEmployee auEmployee);
  public Boolean modifyWxMenu(WxMenu wxMenu, AuEmployee auEmployee);
  public List<TreeWxMenuVo> findTree(String parentId);

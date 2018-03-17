@@ -1,5 +1,6 @@
 
 var url;var parameter = "";
+var info="";
 $(function() {
 	//$('#toolbar a').hide();
 	$('#wxMenulist').treegrid({
@@ -31,7 +32,7 @@ $(function() {
 		},{field:'optAu',title:'添加二级菜单',width:90,
 			formatter:function(value,row,index){
             if(row.superWxMenu==null||row.superWxMenu=="")
-                  return  "<img alt='img' src='../../../js/jquery-easyui-1.3.5/themes/icons/band.png' style='margin:6px 2px 3px 0;width: 15px; height: 15px;' /><a style='cursor:pointer;display:block;margin:-19px 0 1px 20px;' class='easyui-linkbutton btn' onclick='addWxMenubutton(\""+row.id+"\");'>功能设置</a>";
+                  return  "<img alt='img' src='" + getCurProjPath() + "/js/jquery-easyui-1.3.5/themes/icons/pencil.png' style='margin:4px 17px 0px 0;width: 15px; height: 12px;' /><span style='cursor:pointer;display:block;margin:-20px 0 4px 19px;' onclick='addWxMenubutton(\""+row.id+"\");'>新增</span>";
         	else return "";
 		} }
 		] ],
@@ -45,7 +46,7 @@ $(function() {
 	});
 });
 /*function search() {
-	$('#wxMenulist').datagrid(
+	$('#wxMenulist').treegrid(
 		'reload',{ 
 		parameter : "{'name':'" + $('#searchname').val()+ "'}"
 	});
@@ -53,11 +54,12 @@ $(function() {
 function addWxMenubutton(superId) {
 	$('#dlg_wxMenu').dialog('open').dialog('setTitle', '添加微信菜单管理');
 	$('#wxMenufm').form('clear');
-    var row = $('#wxMenulist').treegrid('getSelected');
-    if(row!=null&&row.p_id==""&&row.p_id==null){
-    	$("#p_id").val(row.id);
-    	$("#p_idInfo").val(row.name);
+	if(superId!=null&&superId!=""){
+		var node = $('#wxMenulist').treegrid('find',superId);
+		$("#p_id").val(node.id);
+		$("#p_idInfo").val(node.name);
 	}
+	info="add";
 	url = getCurProjPath()+'/manager/erp/wx/addWxMenu.do';
 }
 function editWxMenubutton() {
@@ -71,6 +73,7 @@ function editWxMenubutton() {
 	} else {
 		$.messager.alert('操作提示', '请先选择一个微信菜单管理，再修改！', 'info');
 	}
+	info="";
 }
 function editWxMenubutton1(row) {
 	$.ajax({
@@ -123,8 +126,13 @@ function saveWxMenubutton() {
 			return $(this).form('validate');
 		},
 		success : function(result) {
-			$('#dlg_wxMenu').dialog('close');
-			message_op(true, 'wxMenulist');
+			if(info="add"){
+				$.messager.alert('操作提示', result, 'info');
+				message_op(false, null);
+			}else{
+				$('#dlg_wxMenu').dialog('close');
+				$('#wxMenulist').treegrid('reload');
+			}
 		},
 		error : function() {
 			message_op(false, null);
@@ -132,8 +140,9 @@ function saveWxMenubutton() {
 	});
 }
 function destroyWxMenubutton() {
-	var row = $('#wxMenulist').datagrid('getSelected');
-	var rows = $('#wxMenulist').datagrid('getSelections');
+	info="";
+	var row = $('#wxMenulist').treegrid('getSelected');
+	var rows = $('#wxMenulist').treegrid('getSelections');
 	var ids = '';
 	for ( var i = 0; i < rows.length; i++) {
 		ids = ids == '' ? rows[i].id : ids + ',' + rows[i].id;
@@ -145,10 +154,10 @@ function destroyWxMenubutton() {
 			, function(result) {
 				if (result) {
 					$.messager.alert('操作提示', '操作成功!', 'info');
-					$("#wxMenulist").datagrid("reload");
+					$("#wxMenulist").treegrid("reload");
 				} else {
 					$.messager.alert('操作提示', '操作失败，不能删除！', 'info');
-					$("#wxMenulist").datagrid("reload");
+					$("#wxMenulist").treegrid("reload");
 				}
 			}, 'json');
 		}
@@ -162,10 +171,10 @@ function buttons2() {
 		'functionType' : 'wxMenu'
 	}, function(data) {
 		$.each(eval('(' + data + ')'), function(index, obj) {
-			var opts = $('#wxMenulist').datagrid('getColumnFields', false);
+			var opts = $('#wxMenulist').treegrid('getColumnFields', false);
 			for ( var i = 0; i < opts.length; i++) {
 				if (opts[i] == obj) {
-					$('#wxMenulist').datagrid("showColumn", opts[i]);
+					$('#wxMenulist').treegrid("showColumn", opts[i]);
 				}
 			}
 		});
@@ -223,6 +232,7 @@ $(function () {
 
 });
 function createWxMenubutton(){
+	info="";
     $.ajax({
         method : 'post',
         url : getCurProjPath()+'/manager/erp/wx/createWxMenu.do',
@@ -232,11 +242,29 @@ function createWxMenubutton(){
        		if(data=="true"||data==true){
                 $.messager.alert('操作提示', '操作成功!', 'info');
 			}else {
-                $.messager.alert('操作提示', '发布菜单失败!', 'info');
+                $.messager.alert('操作提示', '微信创建菜单失败!', 'info');
 			}
         },
         error : function(msg) {
             message_op(false, null);
         }
     });
+}
+function delWXMenu(){
+	info="";
+	$.ajax({
+		method : 'post',
+		url : getCurProjPath()+'/manager/erp/wx/delWXMenu.do',
+		dataType : "json",
+		success : function(data) {
+			if(data=="true"||data==true){
+				$.messager.alert('操作提示', '操作成功!', 'info');
+			}else {
+				$.messager.alert('操作提示', '微信删除菜单失败!', 'info');
+			}
+		},
+		error : function(msg) {
+			message_op(false, null);
+		}
+	});
 }

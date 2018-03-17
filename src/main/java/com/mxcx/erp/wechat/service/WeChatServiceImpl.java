@@ -205,8 +205,13 @@ public class WeChatServiceImpl implements WeChatService{
 		Map<String,Object> params=new HashMap<String,Object>();
 		List<WxMenu> firstMenu=wxMenuService.findWxMenuTree(null);
 		for(WxMenu wxMenu:firstMenu){
-			for(WxMenu secendMenu:wxMenu.getWxMenuset()){
+			boolean temp=false;
+			for(WxMenu secendMenu:wxMenu.getSub_button()){
+				temp=true;
 				secendMenu.setSuperWxMenu(null);
+			}
+			if(temp){
+				wxMenu.setType(null);
 			}
 		}
 		params.put("button",firstMenu);
@@ -216,14 +221,31 @@ public class WeChatServiceImpl implements WeChatService{
 		String result=HttpClientUtil.post1(url,JSONObject.fromObject(jsonObj));
 		Map<String,Object> map=json(result);
 		if(map.containsKey("errcode")){
-			if(map.get("errcode").equals(42001)){
+			if(map.get("errcode").equals(42001)&&!map.get("errcode").equals(0)){
 				this.getToken(Constant.APPID, Constant.APPSECRET);
 			}
 			throw new Exception("createWXMenu errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
 		}
 		return map;
 	}
-
+	@Override
+	public Map<String,Object> delWXMenu() throws Exception {
+		String toke=token.get(Constant.APPID);
+		if(StringUtils.isEmpty(toke)){
+			this.getToken(Constant.APPID, Constant.APPSECRET);
+		}
+		String url=Constant.DELETE_MENU.replace("ACCESS_TOKEN", token.get(Constant.APPID));
+		log.info("delWXMenu URL:"+url);
+		String result=HttpClientUtil.get(url);
+		Map<String,Object> map=json(result);
+		if(map.containsKey("errcode")&&!map.get("errcode").equals(0)){
+			if(map.get("errcode").equals(42001)){
+				this.getToken(Constant.APPID, Constant.APPSECRET);
+			}
+			throw new Exception("delWXMenu errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
+		}
+		return map;
+	}
 	@Override
 	public String generQRcode(HttpServletRequest request,String sence_id,AuEmployee auEmployee) {
 		String path="";
@@ -486,7 +508,28 @@ public class WeChatServiceImpl implements WeChatService{
 		}
 		return resultMap;
 	}
-
+	public Map<String,Object> CustomerSendTextNoOpter(String openId,String text) throws Exception{
+		String toke=token.get(Constant.APPID);
+		if(StringUtils.isEmpty(toke)){
+			this.getToken(Constant.APPID, Constant.APPSECRET);
+		}
+		String url =Constant.CUSTOMER_SEND.replace("ACCESS_TOKEN",token.get(Constant.APPID));
+		Map<String,Object> param=new HashMap<String,Object>();
+		param.put("touser", openId);
+		param.put("msgtype", "text");
+		Map<String,Object> param1=new HashMap<String,Object>();
+		param1.put("content", text);
+		param.put("text", param1);
+		String result=HttpClientUtil.post1(url, JSONObject.fromObject(param));
+		Map<String,Object> resultMap=this.json(result);
+		if(resultMap.containsKey("errcode")&&!resultMap.get("errcode").equals(0)){
+			if(resultMap.get("errcode").equals(42001)){
+				this.getToken(Constant.APPID,Constant.APPSECRET);
+			}
+			throw new Exception("CustomerSend errcode:"+resultMap.get("errcode")+"---errmsg:"+resultMap.get("errmsg"));
+		}
+		return resultMap;
+	}
 
 
 	@Override

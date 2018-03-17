@@ -1,7 +1,5 @@
 package com.mxcx.erp.we.controller;
 
-import com.mxcx.ec.base.commons.dao.entity.PageParameter;
-import com.mxcx.ec.base.commons.util.DataGrid;
 import com.mxcx.erp.base.commons.controller.BaseController;
 import com.mxcx.erp.we.dao.entity.TreeWxMenuVo;
 import com.mxcx.erp.we.dao.entity.WxMenu;
@@ -9,15 +7,12 @@ import com.mxcx.erp.we.service.WxMenuService;
 import com.mxcx.erp.wechat.service.WeChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * WxMenuAction
@@ -49,7 +44,7 @@ public class WxMenuAction extends BaseController {
 
     @RequestMapping(value = "/manager/erp/wx/addWxMenu.do", method = RequestMethod.POST)
     @ResponseBody
-    public boolean addWxMenu(WxMenu wxMenu, HttpServletRequest request) {
+    public String addWxMenu(WxMenu wxMenu, HttpServletRequest request) {
         if(wxMenu.getType().equals("view")){
             wxMenu.setPagepath(null);
             wxMenu.setKey(null);
@@ -108,10 +103,10 @@ public class WxMenuAction extends BaseController {
     public WxMenu goToModifyWxMenu(String id) {
         WxMenu wxMenu = wxMenuService.findWxMenuByID(id);
         if(wxMenu.getSuperWxMenu()!=null){
-            wxMenu.getSuperWxMenu().setWxMenuset(null);
+            wxMenu.getSuperWxMenu().setSub_button(null);
         }
-        if(wxMenu.getWxMenuset().size()>0){
-            for(WxMenu subwxMenu:wxMenu.getWxMenuset())
+        if(wxMenu.getSub_button().size()>0){
+            for(WxMenu subwxMenu:wxMenu.getSub_button())
                 subwxMenu.setSuperWxMenu(null);
         }
         return wxMenu;
@@ -122,17 +117,25 @@ public class WxMenuAction extends BaseController {
     @ResponseBody
     public Boolean createWxMenu(String id) {
         Boolean flag=true;
-        Map<String, Object> map=new HashMap<String, Object>();
         try {
-            map = weChatService.createWXMenu();
-            if(!map.get("errcode").equals(0))
-                flag=false;
+            weChatService.createWXMenu();
         }catch(Exception e){
             flag=false;
             e.printStackTrace();
         }
         return flag;
     }
-
+    @RequestMapping(value = "/manager/erp/wx/delWXMenu.do")
+    @ResponseBody
+    public Boolean delWXMenu() {
+        Boolean flag=true;
+        try {
+            weChatService.createWXMenu();
+        }catch(Exception e){
+            flag=false;
+            e.printStackTrace();
+        }
+        return flag;
+    }
 }
 
