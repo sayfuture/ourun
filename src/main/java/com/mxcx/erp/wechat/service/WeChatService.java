@@ -36,6 +36,6 @@ public Map<String,Object> CustomerSendTextNoOpter(String openId,String text) thr
 public void groupSendByOpenId(AuEmployee loginUser) throws Exception;
 
 public  Map<String, String> sign( String url,String appid,String appsecret) throws Exception;
-public Map<String,Object> createWXMenu() throws Exception;
-public Map<String,Object> delWXMenu() throws Exception;
+public Map<String,Object> wxCreateMenu() throws Exception;
+public Map<String,Object> wxDelMenu() throws Exception;
 }

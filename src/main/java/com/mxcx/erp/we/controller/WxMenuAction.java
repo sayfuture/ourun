@@ -118,7 +118,7 @@ public class WxMenuAction extends BaseController {
     public Boolean createWxMenu(String id) {
         Boolean flag=true;
         try {
-            weChatService.createWXMenu();
+            weChatService.wxCreateMenu();
         }catch(Exception e){
             flag=false;
             e.printStackTrace();
@@ -130,7 +130,7 @@ public class WxMenuAction extends BaseController {
     public Boolean delWXMenu() {
         Boolean flag=true;
         try {
-            weChatService.createWXMenu();
+            weChatService.wxDelMenu();
         }catch(Exception e){
             flag=false;
             e.printStackTrace();

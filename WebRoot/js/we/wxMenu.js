@@ -31,8 +31,9 @@ $(function() {
 			width : 300
 		},{field:'optAu',title:'添加二级菜单',width:90,
 			formatter:function(value,row,index){
-            if(row.superWxMenu==null||row.superWxMenu=="")
-                  return  "<img alt='img' src='" + getCurProjPath() + "/js/jquery-easyui-1.3.5/themes/icons/pencil.png' style='margin:4px 17px 0px 0;width: 15px; height: 12px;' /><span style='cursor:pointer;display:block;margin:-20px 0 4px 19px;' onclick='addWxMenubutton(\""+row.id+"\");'>新增</span>";
+            if(row._parentId==null||row._parentId==""){
+                return  "<img alt='img' src='" + getCurProjPath() + "/js/jquery-easyui-1.3.5/themes/icons/pencil.png' style='margin:4px 17px 0px 0;width: 15px; height: 12px;' /><span style='cursor:pointer;display:block;margin:-20px 0 4px 19px;' onclick='addWxMenubutton(\""+row.id+"\");'>新增</span>";
+            }
         	else return "";
 		} }
 		] ],
@@ -126,7 +127,7 @@ function saveWxMenubutton() {
 			return $(this).form('validate');
 		},
 		success : function(result) {
-			if(info="add"){
+			if(info=="add"&&result!="\"\""){
 				$.messager.alert('操作提示', result, 'info');
 				message_op(false, null);
 			}else{
@@ -236,7 +237,7 @@ function createWxMenubutton(){
     $.ajax({
         method : 'post',
         url : getCurProjPath()+'/manager/erp/wx/createWxMenu.do',
-        data : 'id=' + row.id,
+        data : 'id=',
         dataType : "json",
         success : function(data) {
        		if(data=="true"||data==true){
