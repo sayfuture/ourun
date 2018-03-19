@@ -196,11 +196,11 @@ public class WeChatServiceImpl implements WeChatService{
 
 	@Override
 	public Map<String,Object> wxCreateMenu() throws Exception {
-		String toke=token.get("wxcddc3ffbcdf9acf3");
+		String toke=token.get(Constant.APPID);
 		if(StringUtils.isEmpty(toke)){
-			this.getToken("wxcddc3ffbcdf9acf3", "ac3f6ae887ab4a45eae281c8b0db9c6b");
+			this.getToken(Constant.APPID, Constant.APPSECRET);
 		}
-		String url=Constant.CREATE_MENU.replace("ACCESS_TOKEN", token.get("wxcddc3ffbcdf9acf3"));
+		String url=Constant.CREATE_MENU.replace("ACCESS_TOKEN", token.get(Constant.APPID));
 		log.info("createWXMenu URL:"+url);
 		Map<String,Object> params=new HashMap<String,Object>();
 		List<WxMenu> firstMenu=wxMenuService.findWxMenuTree(null);
@@ -222,7 +222,7 @@ public class WeChatServiceImpl implements WeChatService{
 		Map<String,Object> map=json(result);
 		if(map.containsKey("errcode")&&!map.get("errcode").equals(0)){
 			if(map.get("errcode").equals(42001)){
-				this.getToken("wxcddc3ffbcdf9acf3", "ac3f6ae887ab4a45eae281c8b0db9c6b");
+				this.getToken(Constant.APPID, Constant.APPSECRET);
 			}
 			throw new Exception("createWXMenu errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
 		}
@@ -230,17 +230,17 @@ public class WeChatServiceImpl implements WeChatService{
 	}
 	@Override
 	public Map<String,Object> wxDelMenu() throws Exception {
-		String toke=token.get("wxcddc3ffbcdf9acf3");
+		String toke=token.get(Constant.APPID);
 		if(StringUtils.isEmpty(toke)){
-			this.getToken("wxcddc3ffbcdf9acf3", "ac3f6ae887ab4a45eae281c8b0db9c6b");
+			this.getToken(Constant.APPID, Constant.APPSECRET);
 		}
-		String url=Constant.DELETE_MENU.replace("ACCESS_TOKEN", token.get("wxcddc3ffbcdf9acf3"));
+		String url=Constant.DELETE_MENU.replace("ACCESS_TOKEN", token.get(Constant.APPID));
 		log.info("delWXMenu URL:"+url);
 		String result=HttpClientUtil.get(url);
 		Map<String,Object> map=json(result);
 		if(map.containsKey("errcode")&&!map.get("errcode").equals(0)){
 			if(map.get("errcode").equals(42001)){
-				this.getToken("wxcddc3ffbcdf9acf3", "ac3f6ae887ab4a45eae281c8b0db9c6b");
+				this.getToken(Constant.APPID, Constant.APPSECRET);
 			}
 			throw new Exception("delWXMenu errcode:"+map.get("errcode")+"---errmsg:"+map.get("errmsg"));
 		}
@@ -509,11 +509,11 @@ public class WeChatServiceImpl implements WeChatService{
 		return resultMap;
 	}
 	public Map<String,Object> CustomerSendTextNoOpter(String openId,String text) throws Exception{
-		String toke=token.get("wxcddc3ffbcdf9acf3");
+		String toke=token.get(Constant.APPID);
 		if(StringUtils.isEmpty(toke)){
-			this.getToken("wxcddc3ffbcdf9acf3", "ac3f6ae887ab4a45eae281c8b0db9c6b");
+			this.getToken(Constant.APPID,Constant.APPSECRET);
 		}
-		String url =Constant.CUSTOMER_SEND.replace("ACCESS_TOKEN",token.get("wxcddc3ffbcdf9acf3"));
+		String url =Constant.CUSTOMER_SEND.replace("ACCESS_TOKEN",token.get(Constant.APPID));
 		Map<String,Object> param=new HashMap<String,Object>();
 		param.put("touser", openId);
 		param.put("msgtype", "text");

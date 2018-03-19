@@ -51,7 +51,6 @@ import com.mxcx.erp.utils.HttpClientUtil;
 import com.mxcx.erp.we.dao.entity.WeCustomer;
 import com.mxcx.erp.we.service.WeCustomerService;
 import com.mxcx.erp.wechat.service.WeChatService;
-import com.mxcx.erp.wechat.service.WeChatServiceImpl;
 
 /**
  * WeChatAction Thu Dec 29 20:55:34 CST 2016 hmy
@@ -184,11 +183,12 @@ public class WeChatAction extends BaseController {
         	 weChatService.CustomerSendText(auEmployee, openId, "领取成功！");
         	   weChatService.saveSendRecord(openId, auEmployee, diCard, user_id);
          }else{
-			 if(MsgType.equals("event")&&Event.equals("CLICK")){
-				 if(Event.equals("VIEW"))
+			 System.out.println("MsgType--------:"+MsgType.getText()+"----Event-----:"+Event.getText());
+			 if(MsgType.getText().equals("event")&&Event.getText().equals("CLICK")){
+				 if(Event.getText().equals("VIEW"))
 				 System.out.println("WX MENU return EventKey:"+EventKey.toString());
 				 else{
-					 weChatService.CustomerSendTextNoOpter( openId,EventKey.toString());
+					 weChatService.CustomerSendTextNoOpter( openId,EventKey.getText());
 				 }
 			 }else{
               user_id=eventKey.substring(0, 4);
