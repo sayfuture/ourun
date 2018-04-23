@@ -208,13 +208,13 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 						view.addObject("messageInfo", "本次活动优惠券已领取完了，请关注下次活动！");
 					}
 					WeCustomer weCustomer=weCustomerService.findWeCustomerByID(openId);
-					if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(cityId)||StringUtils.isEmpty(areaId)){
-					}else{
-					weCustomer.setCar_type(car_type);
-					weCustomer.setCity(cityId);
-					weCustomer.setPhone(phone);
-					weCustomer.setProvince(provId);
-					weCustomer.setArea(areaId);}
+//					if(StringUtils.isEmpty(provId)||StringUtils.isEmpty(cityId)||StringUtils.isEmpty(areaId)){
+//					}else{
+//					weCustomer.setCar_type(car_type);
+//					weCustomer.setCity(cityId);
+//					weCustomer.setPhone(phone);
+//					weCustomer.setProvince(provId);
+//					weCustomer.setArea(areaId);}
 					if(StringUtils.isNotEmpty(weCustomer.getCompanyIds())&&weCustomer.getCompanyIds().contains(auEmployee.getCompany().getId())){}else {
 						weCustomer.setCompanyIds(weCustomer.getCompanyIds() + auEmployee.getCompany().getId() + "|");
 					}

@@ -118,7 +118,7 @@
             });
         });
         function receiveCard(){
-            var provId=$(".prov").val();
+/*            var provId=$(".prov").val();
             var cityId=$(".city").val();
             var areaId=$(".dist").val();
             var car_type=$("#car_type").val();
@@ -129,6 +129,8 @@
             }
             location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0&provId='
                     +provId+'&cityId='+cityId+'&areaId='+areaId+'&car_type='+car_type+'&phone='+phone;
+        */
+          location.href = 'processInfo.do?cardId=${cardId}&secret=${secret}&appid=${appid}&diSendRecode=${diSendRecode}&openId=${openId}&type=0';
         }
     </script>
 <#else >
@@ -167,7 +169,7 @@
 
     <h2>使用说明: ${diCard.use_explain}</h2>
     <#if whether=="false">
-        <div id="city_1">
+    <!--    <div id="city_1">
             省: <select class="prov" name="prov" style="height:35px"></select>
             </br>
             市:<select class="city" disabled="disabled" name="city" style="height:35px"></select>
@@ -177,7 +179,7 @@
             车辆品牌型号:<input type="text" name="car_type"  id="car_type" style="background: white ">
             <br/>
             手机号:<input type="text" name="phone"  id="phone" style="background: white ">
-        </div>
+        </div>  -->
     </#if>
     <div class="liquimg">
 
