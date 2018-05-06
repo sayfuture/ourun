@@ -45,6 +45,8 @@ public class DiCard extends BasePo {
 	private Integer total_num;
 	@Column(name = "USED_NUM")
 	private Integer used_num;
+    @Column(name = "CARD_PIC")
+    private String card_pic1;
 	public void setId(Integer id){
 	this.id=id;
 	}
@@ -112,6 +114,12 @@ public class DiCard extends BasePo {
 	public void setUsed_num(Integer used_num) {
 		this.used_num = used_num;
 	}
-	
-}
+	   public String getCard_pic1() {
+		   return card_pic1;
+	   }
+
+	   public void setCard_pic1(String card_pic1) {
+		   this.card_pic1 = card_pic1;
+	   }
+   }
 

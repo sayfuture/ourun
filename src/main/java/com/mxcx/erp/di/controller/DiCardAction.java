@@ -42,13 +42,13 @@ public class DiCardAction extends BaseController {
 	@RequestMapping(value = "/manager/erp/di/addDiCard.do", method = RequestMethod.POST)
 	@ResponseBody
 	public boolean addDiCard(DiCard diCard, HttpServletRequest request) {
-		return diCardService.addDiCard(diCard, this.getLoginUser(request));
+		return diCardService.addDiCard(diCard, this.getLoginUser(request),request);
 	}
 
 	@RequestMapping(value = "/manager/erp/di/modifyDiCard.do", method = RequestMethod.POST)
 	@ResponseBody
 	public Boolean modifyDiCard(DiCard diCard, HttpServletRequest request) {
-		return diCardService.modifyDiCard(diCard, this.getLoginUser(request));
+		return diCardService.modifyDiCard(diCard, this.getLoginUser(request),request);
 	}
 
 	@RequestMapping(value = "/manager/erp/di/deleteDiCard.do")

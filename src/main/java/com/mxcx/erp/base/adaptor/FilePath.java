@@ -19,6 +19,7 @@ public enum FilePath {
 	RA_PICTURE_UPLOAD_FILE_PATH("奖品图片上传", "upload"+PropertiesReader.getInstance().getConfigItem("file.separator")+"ra"+PropertiesReader.getInstance().getConfigItem("file.separator")),
 	PI_CYCLE_UPLOAD_FILE_PATH("轮播图图片上传", "upload"+PropertiesReader.getInstance().getConfigItem("file.separator")+"pi"+PropertiesReader.getInstance().getConfigItem("file.separator")),
 	SA_CONSULANT_UPLOAD_FILE_PATH("店铺图像上传", "upload"+PropertiesReader.getInstance().getConfigItem("file.separator")+"sa"+PropertiesReader.getInstance().getConfigItem("file.separator")),
+	DI_CARD_UPLOAD_FILE_PATH("活动图片上传", "upload"+PropertiesReader.getInstance().getConfigItem("file.separator")+"card"+PropertiesReader.getInstance().getConfigItem("file.separator")),
 	FHT_PI_CYCLE_UPLOAD_FILE_PATH("房互通轮播图上传", "upload"+PropertiesReader.getInstance().getConfigItem("file.separator")+"fc"+PropertiesReader.getInstance().getConfigItem("file.separator")),
 	;
 	

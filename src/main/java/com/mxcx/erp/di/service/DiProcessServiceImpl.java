@@ -184,13 +184,13 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 			//同一个人
 			if(diSendRecode.getWeCustomer().getOpenId().equals(openId)||diSendRecode.getWeCustomer().getOpenId().equals("abcdef")){
 				DiProcess diProcess=this.findDiProcessByID(cardId, openId);
+				DiCard diCard=diSendRecode.getDiCard();
 				if(diProcess!=null){
 					if(diProcess.getStatus().equals(Constant.USED_SIGN)){
 						view.addObject("messageInfo", "您已使用过这张优惠券，敬请关注下次活动");}
 					else{
 					view.addObject("messageInfo", "已领取，请到店铺："+auEmployee.getAddress()+"使用！");}
 				}else{
-					DiCard diCard=diSendRecode.getDiCard();
 					Integer used=diCard.getUsed_num();
 					if(diCard.getUsed_num()<diCard.getTotal_num())
 					{
@@ -220,7 +220,12 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 					}
 					weCustomerService.modifyWeCustomer(weCustomer);
 				}
-			}
+				if(StringUtils.isNotEmpty(diCard.getCard_pic1())) {
+					view.addObject("cardPic", diCard.getCard_pic1());
+				}else{
+					view.addObject("cardPic", null);
+				}
+				}
 			//分享出去的情况
 			else{
 				view.setViewName("/ftl/news/sharePage");
@@ -253,6 +258,7 @@ public class DiProcessServiceImpl extends BaseService<DiProcess> implements
 				}
 			}
 		}else
-		{	view.addObject("messageInfo", "领取失败，请重新领取！");}
+		{	view.addObject("messageInfo", "领取失败，请重新领取！");
+			view.addObject("cardPic", null);}
 	}
 }

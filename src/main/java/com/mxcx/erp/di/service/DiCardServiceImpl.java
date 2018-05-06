@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+import com.mxcx.erp.base.adaptor.FilePath;
+import com.mxcx.erp.base.commons.service.ISystemUpload;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,8 @@ import com.mxcx.erp.di.dao.entity.DiCard;
 import com.mxcx.erp.lo.service.LogManagementService;
 import com.mxcx.erp.utils.Constant;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * DiCardServiceImpl Thu Dec 29 20:51:23 CST 2016 hmy
  */
@@ -38,9 +42,10 @@ public class DiCardServiceImpl extends BaseService<DiCard> implements
 	private IBaseDao<DiCard> diCardDao;
 	@Autowired
 	private LogManagementService logManagementService;
-
+	@Autowired
+	private ISystemUpload systemUpload; // 上传
 	@Override
-	public Boolean addDiCard(DiCard diCard, AuEmployee auEmployee) {
+	public Boolean addDiCard(DiCard diCard, AuEmployee auEmployee, HttpServletRequest request) {
 		boolean flag = false;
 		try {
 			Date d=new Date();
@@ -58,6 +63,20 @@ public class DiCardServiceImpl extends BaseService<DiCard> implements
 //			diCard.setId(s.substring(4, s.length()));
 			diCard.setCompanyId(auEmployee.getCompanyId());
 			diCard.setUsed_num(0);
+			String timedate = FilePath.getDatetime()+"//";
+			String pathurl = FilePath.DI_CARD_UPLOAD_FILE_PATH.filePath+timedate;
+			String filePathName=null;
+//			if(this.systemUpload.systemUpload(request, "card_pic", pathurl)==null){
+//
+//			}else{
+				filePathName= this.systemUpload.systemUpload(request, "card_pic", pathurl);
+
+//			}
+			if(null!=filePathName && !filePathName.isEmpty()){
+				diCard.setCard_pic1(timedate.replace("//", "/")+filePathName);
+			}
+
+
 			flag = addPo(diCard, auEmployee);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -91,7 +110,7 @@ public class DiCardServiceImpl extends BaseService<DiCard> implements
 	}
 
 	@Override
-	public Boolean modifyDiCard(DiCard diCard, AuEmployee auEmployee) {
+	public Boolean modifyDiCard(DiCard diCard, AuEmployee auEmployee, HttpServletRequest request) {
 		Boolean flag = true;
 		DiCard diCardTemp = new DiCard();
 		try {
@@ -104,6 +123,17 @@ public class DiCardServiceImpl extends BaseService<DiCard> implements
 			diCardTemp.setVaildtime(diCard.getVaildtime());
 			diCardTemp.setUse_num(diCard.getUse_num());
 			diCardTemp.setTotal_num(diCard.getTotal_num());
+
+			String timedate = FilePath.getDatetime()+"//";
+			//返回图片名称（全文件名） ， 通过fileNameTemp截取32位
+			String pathurl = FilePath.DI_CARD_UPLOAD_FILE_PATH.filePath+timedate;
+			String filePathName=null;
+			filePathName = this.systemUpload.systemUpload(request, "card_pic", pathurl);
+			// 删除文件
+			if(null!=filePathName && !filePathName.isEmpty()){
+				this.systemUpload.systemDeleteFile(request,FilePath.DI_CARD_UPLOAD_FILE_PATH.filePath, diCardTemp.getCard_pic1());
+				diCardTemp.setCard_pic1(timedate.replace("//", "/")+filePathName);
+			}
 			this.modify(diCardTemp, auEmployee);
 		} catch (Exception e) {
 			e.printStackTrace();

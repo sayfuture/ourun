@@ -8,11 +8,14 @@
 
 </head>
 <body class="h">
-	<div class="nopng" >
-		 <i color='red'></i>
-        <p>${messageInfo}</p>
-	</div>
-
+<div class="nopng" >
+<#if cardPic ??>
+    <i style="background: url(../../upload/card/${cardPic})" color='red'></i>
+<#else >
+    <i style="background:url(../image/meiyou.jpg)" color='red'></i>
+</#if>
+    <p>${messageInfo}</p>
+</div>
 </body>
 </html>
 

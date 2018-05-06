@@ -87,12 +87,12 @@ public class AuEmployeeServiceImpl extends BaseService<AuEmployee> implements
 			
 			String pathurl = FilePath.SA_CONSULANT_UPLOAD_FILE_PATH.filePath+timedate;
 			String filePathName=null;
-			if(this.systemUpload.systemUpload(request, "shop_file_name", pathurl)==null){
-				
-			}else{
+//			if(this.systemUpload.systemUpload(request, "shop_file_name", pathurl)==null){
+//
+//			}else{
 				filePathName= this.systemUpload.systemUpload(request, "shop_file_name", pathurl);
 			
-			}
+//			}
 			if(null!=filePathName && !filePathName.isEmpty()){
 				auEmployee.setShop_file_name1(timedate.replace("//", "/")+filePathName);
 			}

@@ -31,9 +31,9 @@
 		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyDiCardbutton()">删除优惠券</a>
 	</div>
 	<table id="diCardlist" style="height:410px;" ></table>
-	<div id="dlg_diCard" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:600px; height:420px; padding:1px 1px;top:1px;">
+	<div id="dlg_diCard" class="easyui-dialog" closed="true"  modal="true"buttons="#dlg-buttons" style="width:700px; height:560px; padding:1px 1px;top:1px;">
 		<div class="ftitle" style="margin:10px;"></div>
-		<form id="diCardfm" novalidate method="post">
+		<form id="diCardfm" novalidate method="post" enctype="multipart/form-data">
 			<input type="hidden" id="id" name="id" />
 			<input type="hidden" id="state" name="state" />
 			<table class="mytable2" id="mytable" cellspacing="0"> 
@@ -65,6 +65,16 @@
 					<th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">使用说明</th> 
 					<td class="shandan" colspan="3"><span><textarea name="use_explain"  id="use_explain"  style="width:400px;height:60px"></textarea></span></td> 
 				</tr>
+                <tr>
+                    <th style="height:41px;" scope="row" abbr="L2 Cache" class="specalt">活动图片</th>
+                    <td class="shandan">
+                        <img id="preview1" pid="" />
+                        <span>
+   					<input id="card_pic" idm="preview1" type="file" size="25" name="card_pic" onchange="javascript:setImagePreview(this);"  data-options="required:true,validType:'length[1,100]'"></input>
+   					</span></td>
+                </tr>
+
+
 				<tr>
 				<td colspan="4" style="text-align:right;">
 					<a href="javascript:saveDiCardbutton();" class="easyui-linkbutton" iconCls="icon-ok">保存</a>

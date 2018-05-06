@@ -106,6 +106,9 @@ function addDiCardbutton() {
 	$('#diCardfm').form('clear');
 	$("#state").val("1");
 	initComS_S("contentType","","name",'',"/manager/erp/co/findCoTypeList.do?level=1","","contentId",'2',"title",'',"/manager/erp/co/getCoContentByAuthority.do");
+    $('#preview1').attr("src","");
+    $('#preview1').attr("width",0);
+    $('#preview1').attr("height",0);
 	url = getCurProjPath()+'/manager/erp/di/addDiCard.do';
 }
 function editDiCardbutton() {
@@ -130,6 +133,19 @@ function editDiCardbutton1(row) {
 				var testStr = testDate.format("yyyy-MM-dd"); 
 				$("#vaildtime").datebox('setValue',testStr);
 			}
+
+            if(null != data.card_pic1 && data.card_pic1 !=""){
+				debugger
+                $('#preview1').attr("src",getProsceniumProjPath()+"/upload/card/"+data.card_pic1);
+                $('#preview1').attr("width",300);
+                $('#preview1').attr("height",120);
+            }else{
+                $('#preview1').attr("src","");
+                $('#preview1').attr("width",0);
+                $('#preview1').attr("height",0);
+            }
+
+
 			$("#use_num").numberbox('setValue',data.use_num);
 			$("#total_num").numberbox('setValue',data.total_num);
 			$("#card_worth").numberbox('setValue',data.card_worth);
@@ -213,4 +229,39 @@ function buttons() {
 			});
 		});
 	});
+}
+
+//选择图片，并显示到指定区域
+function setImagePreview(goal) {
+
+    var $goal = $(goal);
+    var docObj = document.getElementById($goal.attr('id'));
+    var imgObjPreview = document.getElementById($goal.attr('idm'));
+    if (docObj.files && docObj.files[0]) {
+        //火狐下，直接设img属性
+        imgObjPreview.style.display = 'block';
+        imgObjPreview.style.width = '300px';
+        imgObjPreview.style.height = '120px';
+        //imgObjPreview.src = docObj.files[0].getAsDataURL();
+        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+        imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+    } else {
+        //IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        var localImagId = document.getElementById("localImag");
+        //必须设置初始大小
+        localImagId.style.width = "300px";
+        localImagId.style.height = "120px";
+        //图片异常的捕捉，防止用户修改后缀来伪造图片
+        try {
+            localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        } catch (e) {
+            alert("您上传的图片格式不正确，请重新选择!");
+            return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+    }
 }
