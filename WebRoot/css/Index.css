@@ -5358,14 +5358,10 @@ background-color: #fff;
 }
 
 
-.nopng i{
+/*.nopng i{
 
- background-size: 240px 376px;
- display: block;
- width: 240px;
- height: 376px;
- margin-bottom: 15px;
-}.nopng p{
+}*/
+.nopng p{
     display: block;
  
     color: #000000;

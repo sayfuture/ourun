@@ -10,9 +10,9 @@
 <body class="h">
 <div class="nopng" >
 <#if cardPic ??>
-    <i style="background: url(../../upload/card/${cardPic})" color='red'></i>
+    <i style="background: url(../../upload/card/${cardPic});background-size: 240px 376px;display: block;width: 240px;height: 376px;margin-bottom: 15px;" color='red'></i>
 <#else >
-    <i style="background:url(../image/meiyou.jpg)" color='red'></i>
+    <i style="background:url(../image/meiyou.jpg);background-size: 240px 376px;display: block;width: 240px;height: 376px;margin-bottom: 15px;" color='red'></i>
 </#if>
     <p>${messageInfo}</p>
 </div>
