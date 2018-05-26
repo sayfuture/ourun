@@ -18,8 +18,8 @@ public class Constant {
 	/**
 	 * 微信appid与secret
 	 */
-	public static final String APPID="wx1a998ac595c7e6f4";
-	public static final String APPSECRET="c2d45bb1abbe76bce6ee6568c62ce218";
+	public static final String APPID="wx1ea2f4d89c256593";//"wx1a998ac595c7e6f4";
+	public static final String APPSECRET="9e19ae32d729c64fb70215b467f30fc5";//"c2d45bb1abbe76bce6ee6568c62ce218";
 	public static final String WXNAME="gh_7ced5e7bab26";
 //	public static final String APPID="wxcddc3ffbcdf9acf3";
 //	public static final String APPSECRET="ac3f6ae887ab4a45eae281c8b0db9c6b";
